@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.23107.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AutoBarn.WebUI", "AutoBarn.WebUI\AutoBarn.WebUI.csproj", "{086BE813-5EBB-4113-B970-00A05D3BDE59}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AutoBarn.WebUI.Tests", "AutoBarn.WebUI.Tests\AutoBarn.WebUI.Tests.csproj", "{9EF9B9A1-6D7F-4927-8F4D-9860F13FCD6E}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{086BE813-5EBB-4113-B970-00A05D3BDE59}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{086BE813-5EBB-4113-B970-00A05D3BDE59}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{086BE813-5EBB-4113-B970-00A05D3BDE59}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{086BE813-5EBB-4113-B970-00A05D3BDE59}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9EF9B9A1-6D7F-4927-8F4D-9860F13FCD6E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9EF9B9A1-6D7F-4927-8F4D-9860F13FCD6E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9EF9B9A1-6D7F-4927-8F4D-9860F13FCD6E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9EF9B9A1-6D7F-4927-8F4D-9860F13FCD6E}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
