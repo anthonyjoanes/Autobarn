@@ -1,8 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
+﻿using System.Linq;
 using System.Web.Mvc;
+using AutoBarn.WebUI.Data;
 
 namespace AutoBarn.WebUI.Controllers
 {
@@ -10,6 +8,9 @@ namespace AutoBarn.WebUI.Controllers
     {
         public ActionResult Index()
         {
+            var repository = new SqlRepository<Contact>(new AutobarnContext());
+
+            var contacts = repository.GetAll().ToList();
             return View();
         }
 
