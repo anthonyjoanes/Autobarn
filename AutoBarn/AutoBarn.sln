@@ -7,6 +7,11 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AutoBarn.WebUI", "AutoBarn.
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AutoBarn.WebUI.Tests", "AutoBarn.WebUI.Tests\AutoBarn.WebUI.Tests.csproj", "{9EF9B9A1-6D7F-4927-8F4D-9860F13FCD6E}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{21BDD025-3650-4D8C-A77C-574B8FBAD87D}"
+	ProjectSection(SolutionItems) = preProject
+		OldDbSql.sql = OldDbSql.sql
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU

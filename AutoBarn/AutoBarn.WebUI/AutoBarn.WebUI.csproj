@@ -172,6 +172,8 @@
     <Compile Include="Controllers\ManageController.cs" />
     <Compile Include="Data\AutobarnContext.cs" />
     <Compile Include="Data\Contact.cs" />
+    <Compile Include="Data\Entities\Make.cs" />
+    <Compile Include="Data\Entities\Model.cs" />
     <Compile Include="Data\IRepository.cs" />
     <Compile Include="Data\SqlRepository.cs" />
     <Compile Include="Global.asax.cs">
@@ -180,6 +182,18 @@
     <Compile Include="Migrations\201511122207104_initial.cs" />
     <Compile Include="Migrations\201511122207104_initial.Designer.cs">
       <DependentUpon>201511122207104_initial.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201511172147173_MakesModels.cs" />
+    <Compile Include="Migrations\201511172147173_MakesModels.Designer.cs">
+      <DependentUpon>201511172147173_MakesModels.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201511172157099_MakesModels1.cs" />
+    <Compile Include="Migrations\201511172157099_MakesModels1.Designer.cs">
+      <DependentUpon>201511172157099_MakesModels1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201511172205013_MakesModelsService.cs" />
+    <Compile Include="Migrations\201511172205013_MakesModelsService.Designer.cs">
+      <DependentUpon>201511172205013_MakesModelsService.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
@@ -258,6 +272,15 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\201511122207104_initial.resx">
       <DependentUpon>201511122207104_initial.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201511172147173_MakesModels.resx">
+      <DependentUpon>201511172147173_MakesModels.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201511172157099_MakesModels1.resx">
+      <DependentUpon>201511172157099_MakesModels1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201511172205013_MakesModelsService.resx">
+      <DependentUpon>201511172205013_MakesModelsService.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
