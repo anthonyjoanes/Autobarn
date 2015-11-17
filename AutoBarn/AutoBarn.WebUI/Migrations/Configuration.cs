@@ -67,18 +67,18 @@ namespace AutoBarn.WebUI.Migrations
                     Name = "Mercedes-Benz",
                     Models = new List<Model>
                 {
-                    new Model { Name ="A CLASS" },
-                    new Model { Name ="B CLASS" },
-                    new Model { Name ="C CLASS" },
-                    new Model { Name ="CLK"     },
-                    new Model { Name ="E CLASS" },
-                    new Model { Name ="M CLASS" },
-                    new Model { Name ="Other"   },
-                    new Model { Name ="S CLASS" },
-                    new Model { Name ="SLK"     },
-                    new Model { Name ="SPRINTER"},
-                    new Model { Name ="V CLASS" },
-                    new Model { Name ="VITO"   }
+                    new Model { Name ="A CLASS" , Services = new List<Service> { new Service { Name = "Oil Service", Price = 99, DealerPrice = 225}, new Service {Name = "Annual Service", Price = 129, DealerPrice = 295}, new Service { Name = "Major Service", Price = 199, DealerPrice = 460} } },
+                    new Model { Name ="B CLASS" , Services = new List<Service> { new Service { Name = "Oil Service", Price = 99, DealerPrice = 225}, new Service {Name = "Annual Service", Price = 129, DealerPrice = 295}, new Service { Name = "Major Service", Price = 199, DealerPrice = 460} } },
+                    new Model { Name ="C CLASS" , Services = new List<Service> { new Service { Name = "Oil Service", Price = 99, DealerPrice = 225}, new Service {Name = "Annual Service", Price = 129, DealerPrice = 295}, new Service { Name = "Major Service", Price = 199, DealerPrice = 460} } },
+                    new Model { Name ="CLK"     , Services = new List<Service> { new Service { Name = "Oil Service", Price = 99, DealerPrice = 225}, new Service {Name = "Annual Service", Price = 129, DealerPrice = 295}, new Service { Name = "Major Service", Price = 199, DealerPrice = 460} } },
+                    new Model { Name ="E CLASS" , Services = new List<Service> { new Service { Name = "Oil Service", Price = 99, DealerPrice = 225}, new Service {Name = "Annual Service", Price = 129, DealerPrice = 295}, new Service { Name = "Major Service", Price = 199, DealerPrice = 460} } },
+                    new Model { Name ="M CLASS" , Services = new List<Service> { new Service { Name = "Oil Service", Price = 99, DealerPrice = 225}, new Service {Name = "Annual Service", Price = 129, DealerPrice = 295}, new Service { Name = "Major Service", Price = 199, DealerPrice = 460} } },
+                    new Model { Name ="Other"   , Services = new List<Service> { new Service { Name = "Oil Service", Price = 99, DealerPrice = 225}, new Service {Name = "Annual Service", Price = 129, DealerPrice = 295}, new Service { Name = "Major Service", Price = 199, DealerPrice = 460} } },
+                    new Model { Name ="S CLASS" , Services = new List<Service> { new Service { Name = "Oil Service", Price = 99, DealerPrice = 225}, new Service {Name = "Annual Service", Price = 129, DealerPrice = 295}, new Service { Name = "Major Service", Price = 199, DealerPrice = 460} } },
+                    new Model { Name ="SLK"     , Services = new List<Service> { new Service { Name = "Oil Service", Price = 99, DealerPrice = 225}, new Service {Name = "Annual Service", Price = 129, DealerPrice = 295}, new Service { Name = "Major Service", Price = 199, DealerPrice = 460} } },
+                    new Model { Name ="SPRINTER", Services = new List<Service> { new Service { Name = "Oil Service", Price = 99, DealerPrice = 225}, new Service {Name = "Annual Service", Price = 129, DealerPrice = 295}, new Service { Name = "Major Service", Price = 199, DealerPrice = 460} } },
+                    new Model { Name ="V CLASS" , Services = new List<Service> { new Service { Name = "Oil Service", Price = 99, DealerPrice = 225}, new Service {Name = "Annual Service", Price = 129, DealerPrice = 295}, new Service { Name = "Major Service", Price = 199, DealerPrice = 460} } },
+                    new Model { Name ="VITO"    , Services = new List<Service> { new Service { Name = "Oil Service", Price = 99, DealerPrice = 225}, new Service {Name = "Annual Service", Price = 129, DealerPrice = 295}, new Service { Name = "Major Service", Price = 199, DealerPrice = 460} } },
                 }
                 });
 
@@ -98,8 +98,8 @@ namespace AutoBarn.WebUI.Migrations
                     Name = "SEAT",
                     Models = new List<Model>
                 {
-                    new Model { Name ="Ibiza" },
-                    new Model { Name ="Leon" },
+                    new Model { Name ="Ibiza", Services = new List<Service> { new Service { Name = "Oil Service", Price = 99, DealerPrice = 225}, new Service {Name = "Annual Service", Price = 129, DealerPrice = 295}, new Service { Name = "Major Service", Price = 199, DealerPrice = 460} } },
+                    new Model { Name ="Leon" , Services = new List<Service> { new Service { Name = "Oil Service", Price = 99, DealerPrice = 225}, new Service {Name = "Annual Service", Price = 129, DealerPrice = 295}, new Service { Name = "Major Service", Price = 199, DealerPrice = 460} } }
                 }
                 });
 
@@ -109,9 +109,9 @@ namespace AutoBarn.WebUI.Migrations
                     Name = "Skoda",
                     Models = new List<Model>
                 {
-                    new Model { Name ="Fabia" },
-                    new Model { Name ="Octavia" },
-                    new Model { Name ="Superb" },
+                    new Model { Name ="Fabia"   , Services = new List<Service> { new Service { Name = "Oil Service", Price = 99, DealerPrice = 225}, new Service {Name = "Annual Service", Price = 129, DealerPrice = 295}, new Service { Name = "Major Service", Price = 199, DealerPrice = 460} } },
+                    new Model { Name ="Octavia" , Services = new List<Service> { new Service { Name = "Oil Service", Price = 99, DealerPrice = 225}, new Service {Name = "Annual Service", Price = 129, DealerPrice = 295}, new Service { Name = "Major Service", Price = 199, DealerPrice = 460} } },
+                    new Model { Name ="Superb"  , Services = new List<Service> { new Service { Name = "Oil Service", Price = 99, DealerPrice = 225}, new Service {Name = "Annual Service", Price = 129, DealerPrice = 295}, new Service { Name = "Major Service", Price = 199, DealerPrice = 460} } }
                 }
                 });
 
@@ -121,13 +121,13 @@ namespace AutoBarn.WebUI.Migrations
                     Name = "Volkswagen",
                     Models = new List<Model>
                 {
-                    new Model { Name ="Bora" },
-                    new Model { Name ="Fox" },
-                    new Model { Name ="Golf" },
-                    new Model { Name ="Passat" },
-                    new Model { Name ="Polo" },
-                    new Model { Name ="Sharan" },
-                    new Model { Name ="Touran" },
+                    new Model { Name ="Bora"   , Services = new List<Service> { new Service { Name = "Oil Service", Price = 99, DealerPrice = 225}, new Service {Name = "Annual Service", Price = 129, DealerPrice = 295}, new Service { Name = "Major Service", Price = 199, DealerPrice = 460} } },
+                    new Model { Name ="Fox"    , Services = new List<Service> { new Service { Name = "Oil Service", Price = 99, DealerPrice = 225}, new Service {Name = "Annual Service", Price = 129, DealerPrice = 295}, new Service { Name = "Major Service", Price = 199, DealerPrice = 460} } },
+                    new Model { Name ="Golf"   , Services = new List<Service> { new Service { Name = "Oil Service", Price = 99, DealerPrice = 225}, new Service {Name = "Annual Service", Price = 129, DealerPrice = 295}, new Service { Name = "Major Service", Price = 199, DealerPrice = 460} } },
+                    new Model { Name ="Passat" , Services = new List<Service> { new Service { Name = "Oil Service", Price = 99, DealerPrice = 225}, new Service {Name = "Annual Service", Price = 129, DealerPrice = 295}, new Service { Name = "Major Service", Price = 199, DealerPrice = 460} } },
+                    new Model { Name ="Polo"   , Services = new List<Service> { new Service { Name = "Oil Service", Price = 99, DealerPrice = 225}, new Service {Name = "Annual Service", Price = 129, DealerPrice = 295}, new Service { Name = "Major Service", Price = 199, DealerPrice = 460} } },
+                    new Model { Name ="Sharan" , Services = new List<Service> { new Service { Name = "Oil Service", Price = 99, DealerPrice = 225}, new Service {Name = "Annual Service", Price = 129, DealerPrice = 295}, new Service { Name = "Major Service", Price = 199, DealerPrice = 460} } },
+                    new Model { Name ="Touran" , Services = new List<Service> { new Service { Name = "Oil Service", Price = 99, DealerPrice = 225}, new Service {Name = "Annual Service", Price = 129, DealerPrice = 295}, new Service { Name = "Major Service", Price = 199, DealerPrice = 460} } }
                 }
                 });
         }
