@@ -26,6 +26,12 @@ h1 {
 h2 {
     font-size: 24px;
     font-family: 'Montserrat';
+    
+    margin: 0px 0px;
+}
+
+h2 center {
+    border: 1px solid red;
 }
 
 h3 {
@@ -104,11 +110,11 @@ footer.page-footer {
 
 /*Parallaz sizes*/
 .home-banner {
-    height: 450px;
+    height: 500px;
 }
 
 .parallax-container {
-    height: 600px;
+    height: 567px;
 }
 
 .brand-logo {
