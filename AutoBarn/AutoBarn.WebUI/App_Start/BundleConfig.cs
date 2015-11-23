@@ -25,7 +25,8 @@ namespace AutoBarn.WebUI
 
             bundles.Add(new ScriptBundle("~/bundles/materialize").Include(
                       "~/Content/materialize-v0.97.1/js/materialize.js",
-                      "~/Scripts/respond.js"));
+                      "~/Scripts/respond.js",
+                      "~/Scripts/autobarn.js"));
 
             bundles.Add(new StyleBundle("~/Content/materialize").Include(
                 "~/Content/materialize-v0.97.1/css/materialize.css",
