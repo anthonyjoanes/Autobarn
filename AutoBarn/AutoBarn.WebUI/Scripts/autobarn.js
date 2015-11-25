@@ -5,4 +5,11 @@
         $('.parallax').parallax();
 
     }); // end of document ready
+
+
+    $(document).ready(function () {
+        $('select').material_select();
+    });
+
+
 })(jQuery); // end of jQuery name space
