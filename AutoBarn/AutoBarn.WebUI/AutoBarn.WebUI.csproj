@@ -213,7 +213,12 @@
     <Content Include="Content\Images\background1.jpg" />
     <Content Include="Content\Images\background2.jpg" />
     <Content Include="Content\Images\background3.jpg" />
+    <Content Include="Content\Images\checkatrade-logo.png" />
     <Content Include="Content\Images\home-banner.png" />
+    <Content Include="Content\Images\home-image1.png" />
+    <Content Include="Content\Images\home-image2.png" />
+    <Content Include="Content\Images\make-a-booking-banner.png" />
+    <Content Include="Content\Images\make-booking-image.png" />
     <Content Include="Content\materialize-v0.97.1\css\materialize.css" />
     <Content Include="Content\materialize-v0.97.1\css\materialize.min.css" />
     <Content Include="Content\materialize-v0.97.1\font\material-design-icons\LICENSE.txt" />

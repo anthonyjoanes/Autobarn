@@ -16,6 +16,7 @@
 
 body {
     font-size: 18px;
+    font-family: 'Crimson Text';
 }
 
 h1 {
@@ -86,7 +87,7 @@ p {
 }
 
 footer.page-footer {
-  margin: 0;
+    margin: 0;
 }
 
 #nav-bar {
@@ -101,7 +102,12 @@ footer.page-footer {
 
 /*Autobarn Colours*/
 .autobarn {
-    background-color: #2B3442 !important
+    background-color: #2B3442 !important;
+    color: #A4B3CD;
+}
+
+.autobarn a {
+     color: #A4B3CD;
 }
 
 .footer-copyright {
@@ -111,6 +117,8 @@ footer.page-footer {
 /*Parallaz sizes*/
 .home-banner {
     height: 500px;
+    -ms-opacity: 0.5;
+    opacity: 0.5;
 }
 
 .parallax-container {
@@ -129,4 +137,14 @@ footer.page-footer {
 .material-icons.md-ab { 
     font-size: 48px;
     color: #8C96A1;
+}
+
+#double-image img {
+    width: 100%;
+    height: 100%;
+}
+
+.small-hr {
+    border: 5px solid blue;
+    width: 100px;
 }
