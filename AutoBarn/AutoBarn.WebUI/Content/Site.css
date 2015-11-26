@@ -200,3 +200,10 @@ footer.page-footer {
     -webkit-border-top-left-radius:0px;
 }
 
+.box select, button {
+    margin-left: 10px;
+}
+
+input , select {
+    color: black;
+}

@@ -8,6 +8,7 @@ namespace AutoBarn.WebUI.Controllers
     {
         public ActionResult Index()
         {
+            ViewBag.Title = "Home";
             var repository = new SqlRepository<Contact>(new AutobarnContext());
 
             var contacts = repository.GetAll().ToList();
