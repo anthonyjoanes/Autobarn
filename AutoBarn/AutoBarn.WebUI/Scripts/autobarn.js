@@ -17,6 +17,10 @@
 
                 var $select = $('#vehicleMakes');
 
+                $('<option disabled selected>', {
+                    value: ''
+                }).html('Choose Make').appendTo($select);
+
                 for (var i = 0; i < data.length; i++) {
                     console.info(data[i].Name);
 

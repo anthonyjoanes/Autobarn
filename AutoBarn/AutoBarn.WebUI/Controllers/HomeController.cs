@@ -1,6 +1,7 @@
 ﻿using System.Linq;
 using System.Web.Mvc;
 using AutoBarn.WebUI.Data;
+using AutoBarn.WebUI.Data.Entities;
 
 namespace AutoBarn.WebUI.Controllers
 {
@@ -9,9 +10,7 @@ namespace AutoBarn.WebUI.Controllers
         public ActionResult Index()
         {
             ViewBag.Title = "Home";
-            var repository = new SqlRepository<Contact>(new AutobarnContext());
-
-            var contacts = repository.GetAll().ToList();
+           
             return View();
         }
 

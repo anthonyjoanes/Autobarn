@@ -8,10 +8,11 @@ namespace AutoBarn.WebUI.Data
     public class AutobarnContext : IdentityDbContext<ApplicationUser>
     {
         public AutobarnContext() : base("AutobarnContext") { }
-        public virtual DbSet<Contact> Contacts { get; set; }
         public virtual DbSet<Make> Makes { get; set; }
         public virtual DbSet<Model> Models { get; set; }
         public virtual DbSet<Service> Services { get; set; }
+        public virtual DbSet<Contact> Contacts { get; set; }
+        public virtual DbSet<Booking> Bookings { get; set; }
 
         public static AutobarnContext Create()
         {

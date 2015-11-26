@@ -173,9 +173,11 @@
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
     <Compile Include="Data\AutobarnContext.cs" />
-    <Compile Include="Data\Contact.cs" />
+    <Compile Include="Data\Entities\Booking.cs" />
+    <Compile Include="Data\Entities\Contact.cs" />
     <Compile Include="Data\Entities\Make.cs" />
     <Compile Include="Data\Entities\Model.cs" />
+    <Compile Include="Data\Entities\Service.cs" />
     <Compile Include="Data\IRepository.cs" />
     <Compile Include="Data\SqlRepository.cs" />
     <Compile Include="Global.asax.cs">
@@ -200,6 +202,22 @@
     <Compile Include="Migrations\201511172238025_MakesModelsService2.cs" />
     <Compile Include="Migrations\201511172238025_MakesModelsService2.Designer.cs">
       <DependentUpon>201511172238025_MakesModelsService2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201511262233073_bookings.cs" />
+    <Compile Include="Migrations\201511262233073_bookings.Designer.cs">
+      <DependentUpon>201511262233073_bookings.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201511262234122_bookings1.cs" />
+    <Compile Include="Migrations\201511262234122_bookings1.Designer.cs">
+      <DependentUpon>201511262234122_bookings1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201511262244064_bookings2.cs" />
+    <Compile Include="Migrations\201511262244064_bookings2.Designer.cs">
+      <DependentUpon>201511262244064_bookings2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201511262246499_bookings3.cs" />
+    <Compile Include="Migrations\201511262246499_bookings3.Designer.cs">
+      <DependentUpon>201511262246499_bookings3.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
@@ -300,10 +318,10 @@
     <Content Include="Views\Manage\VerifyPhoneNumber.cshtml" />
     <Content Include="Views\Shared\Lockout.cshtml" />
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
+    <Content Include="Views\Booking\New.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Views\Booking\" />
     <Folder Include="Views\Gallery\" />
   </ItemGroup>
   <ItemGroup>
@@ -329,6 +347,18 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201511172238025_MakesModelsService2.resx">
       <DependentUpon>201511172238025_MakesModelsService2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201511262233073_bookings.resx">
+      <DependentUpon>201511262233073_bookings.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201511262234122_bookings1.resx">
+      <DependentUpon>201511262234122_bookings1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201511262244064_bookings2.resx">
+      <DependentUpon>201511262244064_bookings2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201511262246499_bookings3.resx">
+      <DependentUpon>201511262246499_bookings3.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

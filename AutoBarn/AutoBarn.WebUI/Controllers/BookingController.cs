@@ -23,24 +23,24 @@ namespace AutoBarn.WebUI.Controllers
 
         public JsonResult Makes()
         {
-            var makes = _makeRepository.GetAll();
+            var makes = _makeRepository.GetAll().ToList();
             return Json(makes, JsonRequestBehavior.AllowGet);
         }
 
         public JsonResult Models(int id)
         {
-            var models = _modelRepository.GetAll().Where(x => x.Make.Id == id);
+            var models = _modelRepository.GetAll().Where(x => x.Make.Id == id).ToList();
             return Json(models, JsonRequestBehavior.AllowGet);
         }
 
         public JsonResult Services(int id)
         {
-            var services = _serviceRepository.GetAll().Where(x => x.Model.Id == id);
+            var services = _serviceRepository.GetAll().Where(x => x.Model.Id == id).ToList();
             return Json(services, JsonRequestBehavior.AllowGet);
         }
 
         // GET: Booking
-        public ActionResult Index()
+        public ActionResult New()
         {
             return View();
         }
