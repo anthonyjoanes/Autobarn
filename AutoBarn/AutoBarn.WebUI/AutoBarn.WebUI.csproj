@@ -233,6 +233,7 @@
     <Content Include="Content\Images\background1.jpg" />
     <Content Include="Content\Images\background2.jpg" />
     <Content Include="Content\Images\background3.jpg" />
+    <Content Include="Content\Images\booking-banner.jpg" />
     <Content Include="Content\Images\checkatrade-logo.png" />
     <Content Include="Content\Images\home-banner [466870].png" />
     <Content Include="Content\Images\home-banner.png" />
