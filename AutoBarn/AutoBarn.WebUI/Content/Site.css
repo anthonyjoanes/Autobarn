@@ -15,8 +15,8 @@
 }
 
 * {
-    font-family: 'Crimson Text';
-    -webkit-font-smoothing: antialiased;
+    
+   
 }
 
 img {
@@ -25,40 +25,45 @@ img {
 
 body {
     font-size: 18px;
-    font-family: 'Crimson Text';
     color: #555;
+}
+
+body {
+    font-size: 18px;
+    color: #555;
+    font-family: 'Crimson Text';
+     -webkit-font-smoothing: antialiased;
+}
+
+h1,h2,h3,h4,h5,h6 {
+    font-family: Montserrat;
 }
 
 h1 {
     font-size: 35px;
-    font-family: 'Montserrat';
 }
 
 h2 {
     font-size: 24px;
-    font-family: 'Montserrat';
     
     margin: 0px 0px;
 }
 
 h2 center {
     border: 1px solid red;
-    font-family: 'Montserrat';
 }
 
 h3 {
     font-size: 20px;
-    font-family: 'Montserrat';
 }
 
 h4 {
     font-size: 19px;
-    font-family: 'Montserrat';
+
 }
 
 h5 {
     font-size: 18px;
-    font-family: 'Montserrat';
     color: #F9F9F9;
     text-transform: uppercase;
 }
@@ -83,6 +88,13 @@ p {
 }
   .parallax-container .section {
     width: 100%;
+  }
+
+  .booking {
+      width: 100%;
+      min-height: 380px;
+  line-height: 0;
+  height: 380px;
   }
 
 @media only screen and (max-width : 992px) {
@@ -212,10 +224,10 @@ footer.page-footer {
 }
 
 .box select, button {
-    margin-left: 10px;
+    margin-left: 2%;
 }
 
-input , select {
+.box input , select {
     color: black;
 }
 
@@ -226,11 +238,7 @@ input , select {
     font-size: 14px;
 }
 
-body {
-    font-size: 18px;
-    font-family: 'Crimson Text';
-    color: #555;
-}
+
 
 footer.page-footer .footer-copyright {
     overflow: hidden;
@@ -239,4 +247,26 @@ footer.page-footer .footer-copyright {
     color: rgba(255,255,255,.8);
     background-color: rgba(51,51,51,.08);
     color: #A4B3CD;
+}
+
+#booking-form {
+    font-family: 'Crimson Text';
+}
+
+#booking-form .row {
+
+    margin-top: -20px;
+}
+#booking-form input, select, textarea, option {
+    border: 1px solid white;
+    background-color: white;
+    color: #2b3442;
+   padding: -10px -10px -10px -10px;
+}
+
+#booking-details  {
+    margin-top: -20px;
+}
+#booking-details tr, td {
+    padding-top: 0px;
 }

@@ -25,7 +25,7 @@
                     <div class="box">
                         <h3><i class="material-icons">assignment_turned_in </i>Receive an instant quote</h3>
                         <div class="row">
-                            <form class="col s12" action="@Url.Action("New", "Booking")">
+                            <form class="col s12" action="@Url.Action("New", "Booking")" method="POST">
                                 
                                 <div class="row">
                                     <div class="input-field col 1"></div>
@@ -40,7 +40,7 @@
                                         <label>Images in select</label>*@
 
                                         <label></label>
-                                        <select id="vehicleMakes" class="browser-default" onclick="getModels();">
+                                        <select id="vehicleMakes" name="makeId" class="browser-default" onclick="getModels();">
                                             <option value="" disabled selected>Choose Make</option>
                                         </select>
 
@@ -51,7 +51,7 @@
                                     <div class="input-field col 1"></div>
                                     <div class="input-field col s10">
                                         <label></label>
-                                        <select id="vehicleModels" class="browser-default">
+                                        <select id="vehicleModels" name="modelId" class="browser-default">
                                             <option value="" disabled selected>Choose Model</option>
                                         </select>
                                     </div>
@@ -62,7 +62,7 @@
                                     <div class="input-field col 1"></div>
                                     <div class="input-field col s10">
                                         <label></label>
-                                        <select id="services" class="browser-default">
+                                        <select id="services" name="serviceId" class="browser-default">
                                             <option value="" selected>Choose Service</option>
                                         </select>
                                     </div>

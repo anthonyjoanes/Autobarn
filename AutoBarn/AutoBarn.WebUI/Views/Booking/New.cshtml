@@ -1,54 +1,175 @@
-﻿@model AutoBarn.WebUI.Data.Entities.Booking
+﻿@model AutoBarn.WebUI.Models.BookingViewModel
 
 @{
     ViewBag.Title = "New";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<div id="index-banner" class="parallax-container" style="">
-    <div class="section no-pad-bot">
-        <div class="container">
-         
-            <div class="row">
-                <div class="col s12 m12">
-                    <div class="icon-block" style="text-align: center; color: white; margin-top: auto;">
-                        <h1>Make a booking</h1>
-                    </div>
+<div id="index-banner" class="parallax-container booking  white-text" >
+    
+                        <h1 style="vertical-align: middle; text-align: center;">Make a booking</h1>
+                    
+    <div class="parallax home-banner booking">
+        <img src="~/Content/Images/booking-banner.jpg" alt="Unsplashed background img 1" style="height: 400px;">
+    </div>
+</div>
+
+
+<div style="background-color: #F4F4F4;padding-bottom: 10px;">
+
+<div class="row">
+    </div>
+    <div class="row">
+        <div class="col s12 m2">
+            &nbsp;
+        </div>
+
+        <div class="col s12 m8">
+            <p>We appreciate just how busy your day can be. So, when it's convenient for you to book your next service and/or MOT, you'll be please to know you can do everything online.</p>
+            <p>Fill in all your details on the form on this page and your car will be booked into our system. You will receive an email to confirm that your vehicle has been booked in with us.</p>
+        </div>
+
+        <div class="col s12 m2">
+            &nbsp;
+        </div>
+
+    </div>
+
+    <div class="row">
+
+        <div class="col s12 m2">
+            &nbsp;
+        </div>
+        <div class="col s12 m4" id="booking-form">
+            <form  action="@Url.Action("New", "Booking")" method="POST">
+
+                <div class="row">
+
+                    @*<div class="input-field col s10">*@
+                        <input type="text" id="firstName" name="firstName" class="browser-default" placeholder="First Name">
+                    @*</div>*@
+
                 </div>
 
+                <div class="row">
+
+                    @*<div class="input-field col s10">*@
+                        <input type="text" id="lastName" name="lastName" class="browser-default" placeholder="Surname">
+                    @*</div>*@
+
+                </div>
+
+                <div class="row">
+
+                    @*<div class="input-field col s10">*@
+                        <input type="text" id="email" name="email" class="browser-default" placeholder="Email">
+                    @*</div>*@
+
+                </div>
+
+                <div class="row">
+
+                    @*<div class="input-field col s10">*@
+                        <input type="text" id="telephone" name="telephone" class="browser-default" placeholder="Telephone">
+                    @*</div>*@
+
+                </div>
+
+                <div class="row">
+
+                    @*<div class="input-field col s10">*@
+                        <input type="text" id="registration" name="registration" class="browser-default" placeholder="Registration">
+                    @*</div>*@
+
+                </div>
+
+                <div class="row">
+
+                    @*<div class="input-field col s10">*@
+                        <select id="vehicleMakes" name="makeId"  onclick="getModels();">
+                            <option value="" disabled selected>Choose Make</option>
+                        </select>
+                    @*</div>*@
+                   
+                </div>
+                <div class="row">
+                    @*<div class="input-field col s10">*@
+                        <select id="vehicleModels" name="modelId" >
+                            <option value="" disabled selected>Choose Model</option>
+                        </select>
+                    @*</div>*@
+                </div>
+
+                <div class="row">
+                    @*<div class="input-field col s10">*@
+                        <select id="services" name="serviceId" >
+                            <option value="" disabled selected>Type of service</option>
+                        </select>
+                    @*</div>*@
+                </div>
+
+                <div class="row">
+                    
+                        <textarea id="notes" class="left-align" name="notes"  placeholder="Please enter any notes" style="background-color: white;" rows="200">
+                        </textarea>
+                    
+                </div>
+
+                <div class="row">
+                    <div class="input-field col s10">
+                        <button class="btn" value="submit" type="submit">SUBMIT</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+
+        <div class="col s12 m1">
+            &nbsp;
+        </div>
+
+        <div class="col s12 m4">
+
+            <div class="row">
+
+                <table id="booking-details">
+                    <tr>
+                        <td>Make</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>Model</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>Price</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>Dealer price</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>Saving</td>
+                        <td></td>
+                    </tr>
+                </table>
                
             </div>
 
-        </div>
-    </div>
-    <div class="parallax home-banner">
-        <img src="~/Content/Images/make-a-booking-banner.png" alt="Unsplashed background img 1" style="height: 400px;">
-    </div>
-</div>
-
-@*<h2>New</h2>
-
-
-@using (Html.BeginForm()) 
-{
-    @Html.AntiForgeryToken()
-    
-    <div class="form-horizontal">
-        <h4>Booking</h4>
-        <hr />
-        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
-        <div class="form-group">
-            <div class="col-md-offset-2 col-md-10">
-                <input type="submit" value="Create" class="btn btn-default" />
+            <div class="row">
+                <img src="~/Content/Images/make-booking-image.png" class="center-align"/>
             </div>
+
+            <div class="row">
+                The team at Auto-Barn are, of course, always available on 02392 592010
+            </div>
+
         </div>
+
+        <div class="col s12 m1">
+            &nbsp;
+        </div>
+
     </div>
-}
 
-<div>
-    @Html.ActionLink("Back to List", "Index")
 </div>
-
-@section Scripts {
-    @Scripts.Render("~/bundles/jqueryval")
-}*@

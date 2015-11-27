@@ -8,7 +8,7 @@
 
 
     $(document).ready(function () {
-        $('select').material_select();
+        
 
         $.ajax({
             url: "/Booking/Makes",
@@ -16,6 +16,7 @@
             success: function(data) {
 
                 var $select = $('#vehicleMakes');
+                $select.empty();
 
                 $('<option disabled selected>', {
                     value: ''
@@ -29,13 +30,13 @@
                     }).html(data[i].Name).appendTo($select);
                 }
 
-
+                $('select').material_select();
             },
             error: function() {
                 console.info("There was an error downloading the makes data");
             }
         });
-
+        
     });
 
     $('#vehicleMakes').on('change', function() {
@@ -60,7 +61,7 @@
                     }).html(data[i].Name).appendTo($select);
                 }
 
-
+                $('select').material_select();
             },
             error: function () {
                 console.info("There was an error downloading the makes data");
@@ -90,7 +91,7 @@
                     }).html(data[i].Name).appendTo($select);
                 }
 
-
+                $('select').material_select();
             },
             error: function () {
                 console.info("There was an error downloading the makes data");

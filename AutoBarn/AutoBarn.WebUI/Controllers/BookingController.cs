@@ -1,24 +1,26 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data.Entity;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using AutoBarn.WebUI.Data;
 using AutoBarn.WebUI.Data.Entities;
+using AutoBarn.WebUI.Models;
 
 namespace AutoBarn.WebUI.Controllers
 {
     public class BookingController : Controller
     {
-        private SqlRepository<Make> _makeRepository;
-        private SqlRepository<Model> _modelRepository;
-        private SqlRepository<Service> _serviceRepository;
+        private IRepository<Make> _makeRepository;
+        private IRepository<Model> _modelRepository;
+        private IRepository<Service> _serviceRepository;
 
-        public BookingController()
+        public BookingController(IRepository<Make> makeRepository, IRepository<Model> modelRepository, IRepository<Service> serviceRepository)
         {
-            _makeRepository = new SqlRepository<Make>(new AutobarnContext());
-            _modelRepository = new SqlRepository<Model>(new AutobarnContext());
-            _serviceRepository = new SqlRepository<Service>(new AutobarnContext());
+            _makeRepository = makeRepository;
+            _modelRepository = modelRepository;
+            _serviceRepository = serviceRepository;
         }
 
         public JsonResult Makes()
@@ -40,9 +42,22 @@ namespace AutoBarn.WebUI.Controllers
         }
 
         // GET: Booking
-        public ActionResult New()
+        public ActionResult New(int makeId = 0, int modelId = 0, int serviceId = 0)
         {
-            return View();
+            var model = new BookingViewModel();
+
+            if (makeId > 0)
+            {
+                var vehicleModel = _modelRepository.GetAll()
+                    .Include(x => x.Make)
+                    .Include(m => m.Services)
+                    .First(x => x.Id == modelId);
+
+                model.SelectedModel = vehicleModel;
+                model.SelectedService = vehicleModel.Services.First(x => x.Id == serviceId);
+            }
+
+            return View(model);
         }
     }
 }

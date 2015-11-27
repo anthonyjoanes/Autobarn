@@ -15,7 +15,7 @@
 <nav id="nav-bar" role="navigation">
     <div class="nav-wrapper container">
         @*<a id="logo-container" href="#" class="brand-logo">AUTO-BARN MOTOR SERVICES LTD</a>*@
-        <img src="~/Content/Images/auto-barn-logo.png" class="brand-logo" />
+        <a href="@Url.Action("Index", "Home")"><img src="~/Content/Images/auto-barn-logo.png" class="brand-logo" /></a>
         <ul class="right hide-on-med-and-down">
             <li><a href="@Url.Action("New", "Booking")">Make a booking</a></li>
             <li><a href="@Url.Action("Gallery", "Home")">Service and MOT</a></li>
