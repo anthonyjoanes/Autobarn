@@ -16,6 +16,7 @@
 
 * {
     font-family: 'Crimson Text';
+    -webkit-font-smoothing: antialiased;
 }
 
 img {
@@ -200,7 +201,7 @@ footer.page-footer {
 
   
   .box {border:0px solid #3878e2;background-color: grey; }
-.box h2 {background:#3878e2;color:white;padding:10px;}
+.box h2, h3 {background:#3878e2;color:white;padding:10px;}
 .box p {color:#333;padding:10px;}
 .box {
       background-color: rgba(0, 0, 0, 0.3);
