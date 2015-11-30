@@ -21,14 +21,31 @@
 
 <script>
     function initialize() {
+
+        var location = new google.maps.LatLng(50.9131654, -1.0309247);
         var mapCanvas = document.getElementById('map');
         var mapOptions = {
-            center: new google.maps.LatLng(50.9131654, -1.0309247),
+            center: location,
             zoom: 11,
             mapTypeId: google.maps.MapTypeId.ROADMAP
         }
         var map = new google.maps.Map(mapCanvas, mapOptions);
+
+        var iconBase = 'https://maps.google.com/mapfiles/kml/shapes/';
+        var marker = new google.maps.Marker({
+            position: location,
+            map: map,
+            icon: 'http://www.myiconfinder.com/uploads/iconsets/32-32-a5485b563efc4511e0cd8bd04ad0fe9e.png'
+        });
+
     }
+
+    
+
     google.maps.event.addDomListener(window, 'load', initialize);
+
+    
+
+
 </script>
 }
