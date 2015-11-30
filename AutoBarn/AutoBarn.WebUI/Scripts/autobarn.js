@@ -21,6 +21,10 @@
             type: 'GET',
             success: function(data) {
 
+               
+
+                var selectedMakeId = $('#selectedMakeId').val();
+
                 var $select = $('#vehicleMakes');
                 $select.empty();
 
@@ -29,12 +33,20 @@
                 }).html('Choose Make').appendTo($select);
 
                 for (var i = 0; i < data.length; i++) {
-                    console.info(data[i].Name);
+                    
+                    if (selectedMakeId == data[i].Id) {
+                        var option = $('<option selected>', {
+                            value: data[i].Id
+                        }).html(data[i].Name).appendTo($select);
+                    } else {
+                        var option = $('<option>', {
+                            value: data[i].Id
+                        }).html(data[i].Name).appendTo($select);
+                    }
 
-                    var option = $('<option>', {
-                        value: data[i].Id
-                    }).html(data[i].Name).appendTo($select);
+                    
                 }
+
 
                 $('select').material_select();
             },
@@ -66,6 +78,17 @@
                         value: data[i].Id
                     }).html(data[i].Name).appendTo($select);
                 }
+
+
+                var $services = $('#services');
+
+                $services.empty();
+
+                $('<option disabled selected>', {
+                    value: ''
+                }).html('Choose Model').appendTo($services);
+
+
 
                 $('select').material_select();
             },

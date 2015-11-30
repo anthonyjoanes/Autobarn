@@ -7,6 +7,6 @@ namespace AutoBarn.WebUI.Data.Entities
         public int Id { get; set; }
         public Model Model { get; set; }
         public Service Service { get; set; }
-        public DateTime Date
+        public DateTime Date { get; set; }
     }
 }

@@ -91,15 +91,17 @@
                     @*<div class="input-field col s10">*@
                         <select id="vehicleMakes" name="makeId"  onclick="getModels();">
                             <option value="" disabled selected>Choose Make</option>
+                            <option value="@Model.SelectedModel.Make.Id" selected>@Model.SelectedModel.Make.Name</option>
                         </select>
                     @*</div>*@
                    
                 </div>
                 <div class="row">
                     @*<div class="input-field col s10">*@
-                        <select id="vehicleModels" name="modelId" >
-                            <option value="" disabled selected>Choose Model</option>
-                        </select>
+                    <select id="vehicleModels" name="modelId">
+                        <option value="" disabled selected>Choose Model</option>
+                        <option value="@Model.SelectedModel.Id" selected>@Model.SelectedModel.Name</option>
+                    </select>
                     @*</div>*@
                 </div>
 
@@ -107,6 +109,7 @@
                     @*<div class="input-field col s10">*@
                     <select id="services" name="serviceId">
                         <option value="" disabled selected>Type of service</option>
+                        <option value="@Model.SelectedService.Id" selected>@Model.SelectedService.Name</option>
                     </select>
                     @*</div>*@
                 </div>
@@ -135,9 +138,9 @@
             &nbsp;
         </div>
 
-        <input type="hidden" value="@Model.SelectedModel.Make.Id" />
-        <input type="hidden" value="@Model.SelectedService.Id" />
-        <input type="hidden" value="@Model.SelectedModel.Id" />
+        <input type="hidden" id="selectedMakeId" value="@Model.SelectedModel.Make.Id" />
+        <input type="hidden" id="selectedServiceId" value="@Model.SelectedService.Id" />
+        <input type="hidden" id="selectedModelId" value="@Model.SelectedModel.Id" />
         <input type="hidden" value="@Model.SelectedService.Price" />
         <input type="hidden" value="@Model.SelectedService.DealerPrice" />
 
@@ -165,7 +168,13 @@
                     <tr>
                         <td>Saving</td>
                         <td>@{
-                                  var savings = Model.SelectedService.DealerPrice - Model.SelectedService.Price;
+
+                                decimal savings = 0;
+                            if (Model != null)
+                            {
+                                savings = Model.SelectedService.DealerPrice - Model.SelectedService.Price;
+                            }
+
                             }
                         £@savings
                         </td>
@@ -191,3 +200,18 @@
     </div>
 
 </div>
+
+
+@section scripts{
+    <script>
+        $(document).ready(function () {
+
+           
+            $('#vehicleMakes').val(74);
+        });
+
+     
+
+    </script>
+
+}

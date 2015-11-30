@@ -236,6 +236,10 @@
     <Compile Include="Migrations\201511262246499_bookings3.Designer.cs">
       <DependentUpon>201511262246499_bookings3.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201511302139511_BookingDate.cs" />
+    <Compile Include="Migrations\201511302139511_BookingDate.Designer.cs">
+      <DependentUpon>201511302139511_BookingDate.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\BookingViewModel.cs" />
@@ -392,6 +396,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201511262246499_bookings3.resx">
       <DependentUpon>201511262246499_bookings3.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201511302139511_BookingDate.resx">
+      <DependentUpon>201511302139511_BookingDate.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

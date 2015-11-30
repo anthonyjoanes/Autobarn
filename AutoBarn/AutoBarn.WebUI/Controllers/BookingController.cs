@@ -44,7 +44,11 @@ namespace AutoBarn.WebUI.Controllers
         // GET: Booking
         public ActionResult New(int makeId = 0, int modelId = 0, int serviceId = 0)
         {
-            var model = new BookingViewModel();
+            var model = new BookingViewModel
+            {   
+                SelectedModel = new Model { Id=0, Make = new Make { Id=0} },
+                SelectedService = new Service { Id = 0}
+            };
 
             if (makeId > 0)
             {
