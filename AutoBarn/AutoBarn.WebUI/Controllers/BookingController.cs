@@ -41,6 +41,12 @@ namespace AutoBarn.WebUI.Controllers
             return Json(services, JsonRequestBehavior.AllowGet);
         }
 
+        public JsonResult Service(int id)
+        {
+            var services = _serviceRepository.GetAll().First(x => x.Id == id);
+            return Json(services, JsonRequestBehavior.AllowGet);
+        }
+
         // GET: Booking
         public ActionResult New(int makeId = 0, int modelId = 0, int serviceId = 0)
         {

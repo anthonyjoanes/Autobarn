@@ -161,32 +161,34 @@
                 <table id="booking-details">
                     <tr>
                         <td>Make</td>
-                        <td>@Model.SelectedModel.Make.Name</td>
+                        <td><span id="makesummary">@Model.SelectedModel.Make.Name</span></td>
                     </tr>
                     <tr>
                         <td>Model</td>
-                        <td>@Model.SelectedModel.Name</td>
+                        <td><span id="modelsummary">@Model.SelectedModel.Name</span></td>
                     </tr>
                     <tr>
                         <td>Price</td>
-                        <td>@Model.SelectedService.Price</td>
+                        <td>£<span id="pricesummary">@Model.SelectedService.Price</span></td>
                     </tr>
                     <tr>
                         <td>Dealer price</td>
-                        <td>@Model.SelectedService.DealerPrice</td>
+                        <td>£<span id="dealersummary">@Model.SelectedService.DealerPrice</span></td>
                     </tr>
                     <tr>
                         <td>Saving</td>
-                        <td>@{
-
-                                decimal savings = 0;
+                        <td>£<span id="savingsummary">
+                            @{
+                            decimal savings = 0;
                             if (Model != null)
                             {
                                 savings = Model.SelectedService.DealerPrice - Model.SelectedService.Price;
                             }
 
-                            }
-                        £@savings
+                        }
+                        @savings
+                    </span>
+
                         </td>
                     </tr>
                 </table>
@@ -194,6 +196,8 @@
             </div>
 
             <div class="row">
+                <input type="text" id="serviceobjects"/>
+
                 <img src="~/Content/Images/make-booking-image.png" class="center-align"/>
             </div>
 
@@ -214,7 +218,8 @@
 
 @section scripts{
     <script>
-    
+
+
         $('.button-collapse').sideNav();
         $('.parallax').parallax();
         $('.slider').slider({ full_width: true });
@@ -225,13 +230,20 @@
         });
         $('select').material_select();
 
-        $('#vehicleMakes').on('change', function () {
+        $('#vehicleMakes').on('change', function() {
+
+            $('#makesummary').html($('#vehicleMakes :selected').text());
+            $('#modelsummary').html('');
+            $('#pricesummary').html('');
+            $('#dealersummary').html('');
+            $('#savingsummary').html('');
 
 
             $.ajax({
                 url: "/Booking/Models/" + this.value,
                 type: 'GET',
-                success: function (data) {
+                success: function(data) {
+
 
                     var $select = $('#vehicleModels');
                     $select.empty();
@@ -258,21 +270,28 @@
                     }).html('Choose Model').appendTo($services);
 
 
-
                     $('select').material_select();
                 },
-                error: function () {
+                error: function() {
                     console.info("There was an error downloading the makes data");
                 }
             });
         });
 
-        $('#vehicleModels').on('change', function () {
+        $('#vehicleModels').on('change', function() {
+
+            $('#modelsummary').html($('#vehicleModels :selected').text());
+
+            $('#pricesummary').html('');
+            $('#dealersummary').html('');
+            $('#savingsummary').html('');
 
             $.ajax({
                 url: "/Booking/Services/" + this.value,
                 type: 'GET',
-                success: function (data) {
+                success: function(data) {
+
+                    $('#serviceobjects').val(data);
 
                     var $select = $('#services');
                     $select.empty();
@@ -291,13 +310,32 @@
 
                     $('select').material_select();
                 },
-                error: function () {
+                error: function() {
                     console.info("There was an error downloading the makes data");
                 }
             });
         });
 
+        $('#services').on('change', function() {
 
+            var serviceId = this.value;
+
+            $.ajax({
+                url: "/Booking/Service/" + this.value,
+                type: 'GET',
+                success: function(data) {
+                    
+                    $('#pricesummary').html(data.Price);
+                    $('#dealersummary').html(data.DealerPrice);
+                    $('#savingsummary').html(data.DealerPrice - data.Price);
+
+                },
+                error: function() {
+                   
+                }
+            });
+
+        });
     </script>
 
 }
