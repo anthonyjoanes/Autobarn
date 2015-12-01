@@ -104,7 +104,10 @@
                     @*<div class="input-field col s10">*@
                     <select id="vehicleModels" name="modelId">
                         <option value="" disabled selected>Choose Model</option>
-                        <option value="@Model.SelectedModel.Id" selected>@Model.SelectedModel.Name</option>
+                        @foreach (var carModel in Model.Models)
+                        {
+                            <option value="@carModel.Id" selected="@(Model.SelectedModel.Id == carModel.Id)">@carModel.Name</option>
+                        }
                     </select>
                     @*</div>*@
                 </div>
@@ -113,7 +116,10 @@
                     @*<div class="input-field col s10">*@
                     <select id="services" name="serviceId">
                         <option value="" disabled selected>Type of service</option>
-                        <option value="@Model.SelectedService.Id" selected>@Model.SelectedService.Name</option>
+                        @foreach (var service in Model.Services)
+                        {
+                            <option value="@service.Id" selected="@(Model.SelectedService.Id == service.Id)">@service.Name</option>
+                        }
                     </select>
                     @*</div>*@
                 </div>
@@ -218,6 +224,79 @@
             selectYears: 15 // Creates a dropdown of 15 years to control year
         });
         $('select').material_select();
+
+        $('#vehicleMakes').on('change', function () {
+
+
+            $.ajax({
+                url: "/Booking/Models/" + this.value,
+                type: 'GET',
+                success: function (data) {
+
+                    var $select = $('#vehicleModels');
+                    $select.empty();
+
+                    $('<option disabled selected>', {
+                        value: ''
+                    }).html('Choose Model').appendTo($select);
+
+                    for (var i = 0; i < data.length; i++) {
+                        console.info(data[i].Name);
+
+                        var option = $('<option>', {
+                            value: data[i].Id
+                        }).html(data[i].Name).appendTo($select);
+                    }
+
+
+                    var $services = $('#services');
+
+                    $services.empty();
+
+                    $('<option disabled selected>', {
+                        value: ''
+                    }).html('Choose Model').appendTo($services);
+
+
+
+                    $('select').material_select();
+                },
+                error: function () {
+                    console.info("There was an error downloading the makes data");
+                }
+            });
+        });
+
+        $('#vehicleModels').on('change', function () {
+
+            $.ajax({
+                url: "/Booking/Services/" + this.value,
+                type: 'GET',
+                success: function (data) {
+
+                    var $select = $('#services');
+                    $select.empty();
+
+                    $('<option disabled selected>', {
+                        value: ''
+                    }).html('Choose Model').appendTo($select);
+
+                    for (var i = 0; i < data.length; i++) {
+                        console.info(data[i].Name);
+
+                        var option = $('<option>', {
+                            value: data[i].Id
+                        }).html(data[i].Name).appendTo($select);
+                    }
+
+                    $('select').material_select();
+                },
+                error: function () {
+                    console.info("There was an error downloading the makes data");
+                }
+            });
+        });
+
 
     </script>
 

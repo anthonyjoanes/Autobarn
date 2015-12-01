@@ -62,7 +62,6 @@
 
     $('#vehicleMakes').on('change', function() {
 
-        alert(this.value);
 
         $.ajax({
             url: "/Booking/Models/"+this.value,

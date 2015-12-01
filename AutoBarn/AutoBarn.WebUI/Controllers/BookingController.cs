@@ -49,8 +49,8 @@ namespace AutoBarn.WebUI.Controllers
                 SelectedModel = new Model { Id=0, Make = new Make { Id=0} },
                 SelectedService = new Service { Id = 0},
                 Makes = _makeRepository.GetAll().ToList(),
-                Models = _modelRepository.GetAll().ToList(),
-                Services = _serviceRepository.GetAll().ToList()
+                Models = _modelRepository.GetAll().Where(x=>x.Make.Id== makeId).ToList(),
+                Services = _serviceRepository.GetAll().Where(x=>x.Model.Id== modelId).ToList()
             };
 
             if (makeId > 0)
