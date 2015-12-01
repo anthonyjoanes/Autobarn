@@ -288,6 +288,7 @@
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
     <Content Include="Scripts\autobarn.js" />
+    <Content Include="Scripts\booking.js" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="Content\materialize-v0.97.1\font\roboto\Roboto-Thin.woff2" />

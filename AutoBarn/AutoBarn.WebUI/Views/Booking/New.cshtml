@@ -5,10 +5,10 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<div id="index-banner" class="parallax-container booking  white-text" >
-    
-                        <h1 style="vertical-align: middle; text-align: center;">Make a booking</h1>
-                    
+<div id="index-banner" class="parallax-container booking  white-text">
+
+    <h1 style="vertical-align: middle; text-align: center;">Make a booking</h1>
+
     <div class="parallax home-banner booking">
         <img src="~/Content/Images/booking-banner.jpg" alt="Unsplashed background img 1" style="height: 400px;">
     </div>
@@ -17,7 +17,7 @@
 
 <div style="background-color: #F4F4F4;padding-bottom: 10px;">
 
-<div class="row">
+    <div class="row">
     </div>
     <div class="row">
         <div class="col s12 m2">
@@ -36,7 +36,7 @@
     </div>
 
 
-   
+
 
     <div class="row">
 
@@ -44,12 +44,12 @@
             &nbsp;
         </div>
         <div class="col s12 m4" id="booking-form">
-            <form  action="@Url.Action("New", "Booking")" method="POST">
+            <form action="@Url.Action("New", "Booking")" method="POST">
 
                 <div class="row">
 
                     @*<div class="input-field col s10">*@
-                        <input type="text" id="firstName" name="firstName" class="browser-default" placeholder="First Name">
+                    <input type="text" id="firstName" name="firstName" class="browser-default" placeholder="First Name">
                     @*</div>*@
 
                 </div>
@@ -57,7 +57,7 @@
                 <div class="row">
 
                     @*<div class="input-field col s10">*@
-                        <input type="text" id="lastName" name="lastName" class="browser-default" placeholder="Surname">
+                    <input type="text" id="lastName" name="lastName" class="browser-default" placeholder="Surname">
                     @*</div>*@
 
                 </div>
@@ -65,7 +65,7 @@
                 <div class="row">
 
                     @*<div class="input-field col s10">*@
-                        <input type="text" id="email" name="email" class="browser-default" placeholder="Email">
+                    <input type="text" id="email" name="email" class="browser-default" placeholder="Email">
                     @*</div>*@
 
                 </div>
@@ -73,7 +73,7 @@
                 <div class="row">
 
                     @*<div class="input-field col s10">*@
-                        <input type="text" id="telephone" name="telephone" class="browser-default" placeholder="Telephone">
+                    <input type="text" id="telephone" name="telephone" class="browser-default" placeholder="Telephone">
                     @*</div>*@
 
                 </div>
@@ -81,7 +81,7 @@
                 <div class="row">
 
                     @*<div class="input-field col s10">*@
-                        <input type="text" id="registration" name="registration" class="browser-default" placeholder="Registration">
+                    <input type="text" id="registration" name="registration" class="browser-default" placeholder="Registration">
                     @*</div>*@
 
                 </div>
@@ -89,16 +89,16 @@
                 <div class="row">
 
                     @*<div class="input-field col s10">*@
-                        <select id="vehicleMakes" name="makeId" >
-                            <option value="" disabled selected>Choose Make</option>
-                            @*<option value="@Model.SelectedModel.Make.Id" selected>@Model.SelectedModel.Make.Name</option>*@
-                            @foreach (var make in Model.Makes)
-                            {
-                                <option value="@make.Id" selected="@(Model.SelectedModel.Make.Id == make.Id)">@make.Name</option>
-                            }
-                        </select>
+                    <select id="vehicleMakes" name="makeId">
+                        <option value="" disabled selected>Choose Make</option>
+                        @*<option value="@Model.SelectedModel.Make.Id" selected>@Model.SelectedModel.Make.Name</option>*@
+                        @foreach (var make in Model.Makes)
+                        {
+                            <option value="@make.Id" selected="@(Model.SelectedModel.Make.Id == make.Id)">@make.Name</option>
+                        }
+                    </select>
                     @*</div>*@
-                   
+
                 </div>
                 <div class="row">
                     @*<div class="input-field col s10">*@
@@ -126,14 +126,13 @@
 
                 <div class="row">
                     @*<div class="input-field col s10">*@
-                    <input type="date" id="date" name="date" class="browser-default"/>
+                    <input type="date" id="date" name="date" class="browser-default" />
                     @*</div>*@
                 </div>
 
                 <div class="row">
                     <textarea id="notes" class="materialize-textarea" name="notes" placeholder="Please enter any notes"
-                              style="background-color: white;" rows="200">
-                        </textarea>
+                              style="background-color: white;" rows="200"></textarea>
                 </div>
 
                 <div class="row">
@@ -177,28 +176,26 @@
                     </tr>
                     <tr>
                         <td>Saving</td>
-                        <td>£<span id="savingsummary">
-                            @{
-                            decimal savings = 0;
-                            if (Model != null)
-                            {
-                                savings = Model.SelectedService.DealerPrice - Model.SelectedService.Price;
-                            }
-
-                        }
-                        @savings
-                    </span>
+                        <td>
+                            £<span id="savingsummary">
+                                @{
+                                    decimal savings = 0;
+                                    if (Model != null)
+                                    {
+                                        savings = Model.SelectedService.DealerPrice - Model.SelectedService.Price;
+                                    }
+                                }
+                                @savings
+                            </span>
 
                         </td>
                     </tr>
                 </table>
-               
+
             </div>
 
             <div class="row">
-                <input type="text" id="serviceobjects"/>
-
-                <img src="~/Content/Images/make-booking-image.png" class="center-align"/>
+                <img src="~/Content/Images/make-booking-image.png" class="center-align" />
             </div>
 
             <div class="row">
@@ -217,125 +214,6 @@
 
 
 @section scripts{
-    <script>
-
-
-        $('.button-collapse').sideNav();
-        $('.parallax').parallax();
-        $('.slider').slider({ full_width: true });
-
-        $('.datepicker').pickadate({
-            selectMonths: true, // Creates a dropdown to control month
-            selectYears: 15 // Creates a dropdown of 15 years to control year
-        });
-        $('select').material_select();
-
-        $('#vehicleMakes').on('change', function() {
-
-            $('#makesummary').html($('#vehicleMakes :selected').text());
-            $('#modelsummary').html('');
-            $('#pricesummary').html('');
-            $('#dealersummary').html('');
-            $('#savingsummary').html('');
-
-
-            $.ajax({
-                url: "/Booking/Models/" + this.value,
-                type: 'GET',
-                success: function(data) {
-
-
-                    var $select = $('#vehicleModels');
-                    $select.empty();
-
-                    $('<option disabled selected>', {
-                        value: ''
-                    }).html('Choose Model').appendTo($select);
-
-                    for (var i = 0; i < data.length; i++) {
-                        console.info(data[i].Name);
-
-                        var option = $('<option>', {
-                            value: data[i].Id
-                        }).html(data[i].Name).appendTo($select);
-                    }
-
-
-                    var $services = $('#services');
-
-                    $services.empty();
-
-                    $('<option disabled selected>', {
-                        value: ''
-                    }).html('Choose Model').appendTo($services);
-
-
-                    $('select').material_select();
-                },
-                error: function() {
-                    console.info("There was an error downloading the makes data");
-                }
-            });
-        });
-
-        $('#vehicleModels').on('change', function() {
-
-            $('#modelsummary').html($('#vehicleModels :selected').text());
-
-            $('#pricesummary').html('');
-            $('#dealersummary').html('');
-            $('#savingsummary').html('');
-
-            $.ajax({
-                url: "/Booking/Services/" + this.value,
-                type: 'GET',
-                success: function(data) {
-
-                    $('#serviceobjects').val(data);
-
-                    var $select = $('#services');
-                    $select.empty();
-
-                    $('<option disabled selected>', {
-                        value: ''
-                    }).html('Choose Model').appendTo($select);
-
-                    for (var i = 0; i < data.length; i++) {
-                        console.info(data[i].Name);
-
-                        var option = $('<option>', {
-                            value: data[i].Id
-                        }).html(data[i].Name).appendTo($select);
-                    }
-
-                    $('select').material_select();
-                },
-                error: function() {
-                    console.info("There was an error downloading the makes data");
-                }
-            });
-        });
-
-        $('#services').on('change', function() {
-
-            var serviceId = this.value;
-
-            $.ajax({
-                url: "/Booking/Service/" + this.value,
-                type: 'GET',
-                success: function(data) {
-                    
-                    $('#pricesummary').html(data.Price);
-                    $('#dealersummary').html(data.DealerPrice);
-                    $('#savingsummary').html(data.DealerPrice - data.Price);
-
-                },
-                error: function() {
-                   
-                }
-            });
-
-        });
-    </script>
+    <script src="../../Scripts/booking.js"></script>
 
 }
