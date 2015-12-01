@@ -12,5 +12,8 @@ namespace AutoBarn.WebUI.Models
         public Booking Booking { get; set; }
         public Model SelectedModel { get; set; }
         public Service SelectedService { get; set; }
+        public IList<Model> Models { get; set; }
+        public IList<Make> Makes { get; set; }
+        public IList<Service> Services { get; set; }
     }
 }

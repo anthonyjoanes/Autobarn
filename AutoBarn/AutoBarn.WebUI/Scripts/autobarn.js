@@ -33,16 +33,19 @@
                 }).html('Choose Make').appendTo($select);
 
                 for (var i = 0; i < data.length; i++) {
-                    
-                    if (selectedMakeId == data[i].Id) {
-                        var option = $('<option selected>', {
-                            value: data[i].Id
-                        }).html(data[i].Name).appendTo($select);
-                    } else {
-                        var option = $('<option>', {
-                            value: data[i].Id
-                        }).html(data[i].Name).appendTo($select);
-                    }
+
+                    var id = data[i].Id;
+                    var make = data[i].Name;
+
+                   // if (selectedMakeId == id) {
+                    //    $('<option selected>', {
+                    //        value: id
+                    //    }).html(make).appendTo($select);
+                   // } else {
+                        $('<option>', {
+                            value: id
+                        }).html(make).appendTo($select);
+                    //}
 
                     
                 }
@@ -58,6 +61,8 @@
     });
 
     $('#vehicleMakes').on('change', function() {
+
+        alert(this.value);
 
         $.ajax({
             url: "/Booking/Models/"+this.value,

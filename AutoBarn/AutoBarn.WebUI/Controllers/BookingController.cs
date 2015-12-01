@@ -12,9 +12,9 @@ namespace AutoBarn.WebUI.Controllers
 {
     public class BookingController : Controller
     {
-        private IRepository<Make> _makeRepository;
-        private IRepository<Model> _modelRepository;
-        private IRepository<Service> _serviceRepository;
+        private readonly IRepository<Make> _makeRepository;
+        private readonly IRepository<Model> _modelRepository;
+        private readonly IRepository<Service> _serviceRepository;
 
         public BookingController(IRepository<Make> makeRepository, IRepository<Model> modelRepository, IRepository<Service> serviceRepository)
         {
@@ -47,7 +47,10 @@ namespace AutoBarn.WebUI.Controllers
             var model = new BookingViewModel
             {   
                 SelectedModel = new Model { Id=0, Make = new Make { Id=0} },
-                SelectedService = new Service { Id = 0}
+                SelectedService = new Service { Id = 0},
+                Makes = _makeRepository.GetAll().ToList(),
+                Models = _modelRepository.GetAll().ToList(),
+                Services = _serviceRepository.GetAll().ToList()
             };
 
             if (makeId > 0)
