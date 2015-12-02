@@ -15,7 +15,7 @@
 </div>
 
 
-<div style="background-color: #F4F4F4;padding-bottom: 10px;">
+<div style="background-color: #F4F4F4; padding-bottom: 10px;">
 
     <div class="row">
     </div>
@@ -126,7 +126,7 @@
 
                 <div class="row">
                     @*<div class="input-field col s10">*@
-                    <input type="date" id="date" name="date" class="browser-default" />
+                    <input id="date" name="date" style="width: 100%; margin-bottom: 15px;"/>
                     @*</div>*@
                 </div>
 
@@ -147,11 +147,11 @@
             &nbsp;
         </div>
 
-        <input type="hidden" id="selectedMakeId" value="@Model.SelectedModel.Make.Id" />
-        <input type="hidden" id="selectedServiceId" value="@Model.SelectedService.Id" />
-        <input type="hidden" id="selectedModelId" value="@Model.SelectedModel.Id" />
-        <input type="hidden" value="@Model.SelectedService.Price" />
-        <input type="hidden" value="@Model.SelectedService.DealerPrice" />
+        <input type="hidden" id="selectedMakeId" value="@Model.SelectedModel.Make.Id"/>
+        <input type="hidden" id="selectedServiceId" value="@Model.SelectedService.Id"/>
+        <input type="hidden" id="selectedModelId" value="@Model.SelectedModel.Id"/>
+        <input type="hidden" value="@Model.SelectedService.Price"/>
+        <input type="hidden" value="@Model.SelectedService.DealerPrice"/>
 
         <div class="col s12 m4">
 
@@ -195,7 +195,7 @@
             </div>
 
             <div class="row">
-                <img src="~/Content/Images/make-booking-image.png" class="center-align" />
+                <img src="~/Content/Images/make-booking-image.png" class="center-align"/>
             </div>
 
             <div class="row">
@@ -212,8 +212,39 @@
 
 </div>
 
+@section style {
+    <link href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.9.2/themes/redmond/jquery-ui.css" rel="stylesheet"/>
+}
+
 
 @section scripts{
     <script src="../../Scripts/booking.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.9.2/jquery-ui.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.10.6/moment.min.js"></script>
 
+    <script>
+        var array = ["2013-03-14", "2013-03-15", "2013-03-16"];
+
+        //var today = moment();
+        //var tomorrow jQuery.datepicker.formatDate('yy-mm-dd', today);
+        var today = moment().format('YYYY-MM-DD');
+        var tomorrow = moment().add(1, 'd').format('YYYY-MM-DD');
+
+        console.info(today);
+        console.info(tomorrow);
+        //console.info(today);
+
+        array.push(today);
+        array.push(tomorrow);
+
+
+        $('#date').datepicker({
+            beforeShowDay: function (date) {
+                console.info(date);
+                var string = jQuery.datepicker.formatDate('yy-mm-dd', date);
+                return [array.indexOf(string) == -1];
+            }
+        });
+
+    </script>
 }
