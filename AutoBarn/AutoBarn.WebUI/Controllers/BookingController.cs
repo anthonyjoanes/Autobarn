@@ -72,5 +72,11 @@ namespace AutoBarn.WebUI.Controllers
 
             return View(model);
         }
+
+        public ActionResult Save(BookingViewModel model)
+        {
+            
+            return RedirectToAction("New");
+        }
     }
 }
