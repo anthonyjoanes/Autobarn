@@ -230,8 +230,8 @@
         var today = moment().format('YYYY-MM-DD');
         var tomorrow = moment().add(1, 'd').format('YYYY-MM-DD');
 
-        console.info(today);
-        console.info(tomorrow);
+        //console.info(today);
+        //console.info(tomorrow);
         //console.info(today);
 
         array.push(today);
@@ -240,9 +240,15 @@
 
         $('#date').datepicker({
             beforeShowDay: function (date) {
-                console.info(date);
+                
                 var string = jQuery.datepicker.formatDate('yy-mm-dd', date);
-                return [array.indexOf(string) == -1];
+                
+                var day = moment(date).format('dddd');
+                
+
+                var display = array.indexOf(string) == -1 && day != 'Sunday';
+                console.info(display);
+                return [display];
             },
             dateFormat: 'dd-mm-yy'
         });
