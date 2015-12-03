@@ -6,6 +6,7 @@ using System.Web;
 using System.Web.Mvc;
 using AutoBarn.WebUI.Data;
 using AutoBarn.WebUI.Data.Entities;
+using AutoBarn.WebUI.Infrastructure;
 using AutoBarn.WebUI.Models;
 
 namespace AutoBarn.WebUI.Controllers
@@ -15,12 +16,20 @@ namespace AutoBarn.WebUI.Controllers
         private readonly IRepository<Make> _makeRepository;
         private readonly IRepository<Model> _modelRepository;
         private readonly IRepository<Service> _serviceRepository;
+        private readonly IRepository<Contact> _contactRepository;
+        private IRepository<Booking> _bookingRepository;
 
-        public BookingController(IRepository<Make> makeRepository, IRepository<Model> modelRepository, IRepository<Service> serviceRepository)
+        public BookingController(IRepository<Make> makeRepository, 
+            IRepository<Model> modelRepository, 
+            IRepository<Service> serviceRepository
+            ,IRepository<Contact> contactRepository,
+            IRepository<Booking> bookingRepository )
         {
+            _bookingRepository = bookingRepository;
             _makeRepository = makeRepository;
             _modelRepository = modelRepository;
             _serviceRepository = serviceRepository;
+            _contactRepository = contactRepository;
         }
 
         public JsonResult Makes()
@@ -73,10 +82,64 @@ namespace AutoBarn.WebUI.Controllers
             return View(model);
         }
 
-        public ActionResult Save(BookingViewModel model)
+        public ActionResult Save(NewBookingViewModel model)
         {
-            
-            return RedirectToAction("New");
+
+            // See if its existing Contact
+
+            var contact =
+                _contactRepository
+                    .GetAll().FirstOrDefault(c => c.Email == model.Contact.Email && c.Registration == model.Contact.Registration);
+
+            if (contact == null)
+            {
+                contact = new Contact
+                {
+                    Firstname = model.Contact.Firstname,
+                    Lastname = model.Contact.Lastname,
+                    Email = model.Contact.Email,
+                    Telephone = model.Contact.Telephone,
+                    ModelId = model.SelectedModel.Id,
+                    Registration = model.Contact.Registration
+                };
+
+                _contactRepository.Add(contact);
+                _contactRepository.Commit();
+            }
+
+            var booking = new Booking
+            {
+                ModelId = model.SelectedModel.Id,
+                ServiceId = model.SelectedService.Id,
+                Date = model.BookingDate,
+                Contact = contact,
+                Notes = model.Notes
+            };
+
+            _bookingRepository.Add(booking);
+
+            _bookingRepository.Commit();
+
+            var emailer = new AutoBarn.WebUI.Infrastructure.EmailService(new Emailer());
+
+            emailer.SetHtmlString(Server.MapPath("~/App_Data/bookingconfirmation.html"));
+            emailer.SetPlaceholders(contact.Firstname, contact.Registration, booking.Date.ToShortDateString(), booking.Notes);
+            emailer.CreateMessage(contact.Email);
+            emailer.SendEmail();
+
+            return RedirectToAction("ThankYou", new { id = booking.Id});
+        }
+
+        public ActionResult ThankYou(int id = 0)
+        {
+            var booking = _bookingRepository.GetAll()
+                .Include(x => x.Model)
+                .Include(x => x.Model.Make)
+                .Include(x => x.Service)
+                .Include(x => x.Contact).FirstOrDefault(x => x.Id == id);
+
+
+            return View(booking);
         }
     }
 }

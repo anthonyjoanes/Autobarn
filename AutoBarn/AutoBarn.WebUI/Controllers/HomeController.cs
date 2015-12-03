@@ -24,7 +24,7 @@ namespace AutoBarn.WebUI.Controllers
 
         public ActionResult Contact()
         {
-            ViewBag.Message = "Your contact page.";
+            ViewBag.Message = "Your Contact page.";
 
             return View();
         }

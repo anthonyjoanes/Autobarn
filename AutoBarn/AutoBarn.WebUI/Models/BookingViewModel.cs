@@ -16,4 +16,13 @@ namespace AutoBarn.WebUI.Models
         public IList<Make> Makes { get; set; }
         public IList<Service> Services { get; set; }
     }
+
+    public class NewBookingViewModel
+    {
+        public Contact Contact { get; set; }
+        public Model SelectedModel { get; set; }
+        public Service SelectedService { get; set; }
+        public DateTime BookingDate { get; set; }
+        public string Notes { get; set; }
+    }
 }

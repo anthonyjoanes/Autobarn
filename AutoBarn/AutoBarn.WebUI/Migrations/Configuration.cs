@@ -31,8 +31,8 @@ namespace AutoBarn.WebUI.Migrations
             //    );
             //
 
-            context.Contacts.AddOrUpdate(c => c.Id,
-                new Contact { Firstname = "Tony" });
+            //context.Contacts.AddOrUpdate(c => c.Id,
+            //    new Contact { Firstname = "Tony", ModelId = 1});
 
             context.Makes.AddOrUpdate(m => m.Id,
                 new Make

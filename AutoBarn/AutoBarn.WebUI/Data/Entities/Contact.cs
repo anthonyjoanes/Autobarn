@@ -11,10 +11,10 @@ namespace AutoBarn.WebUI.Data.Entities
         public int Id { get; set; }
         public string Firstname { get; set; }
         public string Lastname { get; set; }
-        [Required]
         public string Email { get; set; }
         public string Telephone { get; set; }
         public string Registration { get; set; }
+        public int ModelId { get; set; }
         public Model Model { get; set; }
         public Service Service { get; set; }
     }
