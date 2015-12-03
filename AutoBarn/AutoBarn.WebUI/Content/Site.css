@@ -270,3 +270,14 @@ footer.page-footer .footer-copyright {
 #booking-details tr, td {
     padding-top: 0px;
 }
+.top-line {
+    background-color: #2b3442;
+    color: white;
+    text-align: right;
+    border: 1px solid #2b3442;
+    margin-bottom: -15px;
+}
+
+.top-line .row {
+    margin-top: 5px;
+}

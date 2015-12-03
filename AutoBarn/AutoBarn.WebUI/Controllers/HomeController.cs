@@ -9,6 +9,7 @@ namespace AutoBarn.WebUI.Controllers
     {
         public ActionResult Index()
         {
+            ViewBag.CustomerReviews = "99.9% rated check a trade reviews!";
             ViewBag.Title = "Home";
            
             return View();
