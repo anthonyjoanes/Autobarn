@@ -6,10 +6,11 @@
     <title>@ViewBag.Title - Auto-Barn Motor Services</title>
     @Styles.Render("~/Content/materialize")
     @Scripts.Render("~/bundles/modernizr")
+    @RenderSection("style", required: false)
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link href='http://fonts.googleapis.com/css?family=Montserrat:400' rel='stylesheet' type='text/css'/>
     <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Crimson+Text"/>
-    @RenderSection("style", required: false)
+    
 </head>
 <body style="">
 <div class="top-line">
@@ -25,13 +26,13 @@
         <a href="@Url.Action("Index", "Home")"><img src="~/Content/Images/auto-barn-logo.png" class="brand-logo" /></a>
         <ul class="right hide-on-med-and-down">
             <li><a href="@Url.Action("New", "Booking")">Make a booking</a></li>
-            <li><a href="@Url.Action("Index", "Gallery")">Service and MOT</a></li>
+            <li><a href="@Url.Action("ServiceMot", "Home")">Service and MOT</a></li>
             <li><a href="@Url.Action("Index", "Gallery")">Gallery</a></li>
             <li><a href="@Url.Action("Contact", "Home")">Contact us</a></li>
         </ul>
         <ul id="nav-mobile" class="side-nav">
             <li><a href="@Url.Action("New", "Booking")">Make a booking</a></li>
-            <li><a href="@Url.Action("Index", "Gallery")">Service and MOT</a></li>
+            <li><a href="@Url.Action("ServiceMot", "Home")">Service and MOT</a></li>
             <li><a href="@Url.Action("Index", "Gallery")">Gallery</a></li>
             <li><a href="@Url.Action("Contact", "Home")">Contact us</a></li>
         </ul>

@@ -391,6 +391,7 @@
     <Content Include="Views\Gallery\Index.cshtml" />
     <Content Include="Views\Booking\ThankYou.cshtml" />
     <Content Include="Views\German\Brands.cshtml" />
+    <Content Include="Views\Home\ServiceMot.cshtml" />
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>

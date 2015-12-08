@@ -17,14 +17,19 @@ namespace AutoBarn.WebUI.Controllers
 
         public ActionResult About()
         {
-            ViewBag.Message = "Your application description page.";
+            ViewBag.Message = "About Auto-Barn Motor Services";
 
+            return View();
+        }
+
+        public ActionResult ServiceMot()
+        {
             return View();
         }
 
         public ActionResult Contact()
         {
-            ViewBag.Message = "Your Contact page.";
+            ViewBag.Message = "Contact page.";
 
             return View();
         }
