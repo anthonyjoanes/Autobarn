@@ -281,3 +281,8 @@ footer.page-footer .footer-copyright {
 .top-line .row {
     margin-top: 5px;
 }
+
+.manufacturer {
+    font-family: 'Pontano Sans', sans-serif;
+    font-size: xx-large;
+}

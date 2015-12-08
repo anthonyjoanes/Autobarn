@@ -11,7 +11,7 @@ namespace AutoBarn.WebUI.Controllers
         {
             ViewBag.CustomerReviews = "99.9% rated check a trade reviews!";
             ViewBag.Title = "Home";
-           
+
             return View();
         }
 
