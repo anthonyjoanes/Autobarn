@@ -1,19 +1,18 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Net.Mail;
-using System.Web;
 using AutoBarn.WebUI.Models;
 
 namespace AutoBarn.WebUI.Infrastructure
 {
-    public class ContactEmailService
+    public class ContactEmailService : IContactEmailService
     {
-        private Emailer _emailer;
+        private readonly IEmailer _emailer;
         private MailMessage _message;
+        private readonly string _notificationEmail;
 
-        public ContactEmailService(Emailer emailer)
+        public ContactEmailService(IEmailer emailer, string notificationEmail)
         {
+            _notificationEmail = notificationEmail;
             _emailer = emailer;
         }
 
@@ -21,7 +20,7 @@ namespace AutoBarn.WebUI.Infrastructure
         {
             _message = new MailMessageBuilder()
                 .WithFromAddress("contact@autobarnmotorservices.co.uk")
-                .WithToAddress("anthonyjoanes@gmail.com")
+                .WithToAddress(_notificationEmail)
                 .WithSubject("Contact form enquiry")
                 .WithMessageBody(CreateEmailBody(contact))
                 .Build();

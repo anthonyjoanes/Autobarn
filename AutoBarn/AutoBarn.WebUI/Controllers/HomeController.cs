@@ -9,6 +9,13 @@ namespace AutoBarn.WebUI.Controllers
 {
     public class HomeController : Controller
     {
+        private readonly IContactEmailService _contactEmailService;
+
+        public HomeController(IContactEmailService contactEmailService)
+        {
+            _contactEmailService = contactEmailService;
+        }
+
         public ActionResult Index()
         {
             ViewBag.CustomerReviews = "99.9% rated check a trade reviews!";
@@ -39,9 +46,8 @@ namespace AutoBarn.WebUI.Controllers
         [HttpPost]
         public ActionResult Contact(ContactViewModel contact)
         {
-            var emailService = new ContactEmailService(new Emailer());
-            emailService.CreateMessage(contact);
-            emailService.SendEmail();
+            _contactEmailService.CreateMessage(contact);
+            _contactEmailService.SendEmail();
 
             return View(contact);
         }

@@ -6,7 +6,7 @@ using System.Web;
 
 namespace AutoBarn.WebUI.Infrastructure
 {
-    public class Emailer
+    public class Emailer : IEmailer
     {
         private readonly SmtpClient _client;
 

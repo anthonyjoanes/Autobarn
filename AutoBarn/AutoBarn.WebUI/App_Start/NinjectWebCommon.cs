@@ -1,5 +1,7 @@
 using System.Data.Entity;
+using System.Web.Configuration;
 using AutoBarn.WebUI.Data;
+using AutoBarn.WebUI.Infrastructure;
 
 [assembly: WebActivatorEx.PreApplicationStartMethod(typeof(AutoBarn.WebUI.App_Start.NinjectWebCommon), "Start")]
 [assembly: WebActivatorEx.ApplicationShutdownMethodAttribute(typeof(AutoBarn.WebUI.App_Start.NinjectWebCommon), "Stop")]
@@ -64,8 +66,16 @@ namespace AutoBarn.WebUI.App_Start
         /// <param name="kernel">The kernel.</param>
         private static void RegisterServices(IKernel kernel)
         {
+            var notificationEmail = WebConfigurationManager.AppSettings["NotificationEmail"];
+
             kernel.Bind<DbContext>().To<AutobarnContext>().InRequestScope();
             kernel.Bind(typeof (IRepository<>)).To(typeof (SqlRepository<>));
+            kernel.Bind<IEmailer>().To<Emailer>().InRequestScope();
+            kernel.Bind<IContactEmailService>().To<ContactEmailService>()
+                .InRequestScope()
+                .WithConstructorArgument("notificationEmail", notificationEmail);
+
+            kernel.Bind<IBookingEmailService>().To<BookingEmailService>().InRequestScope();
         }        
     }
 }

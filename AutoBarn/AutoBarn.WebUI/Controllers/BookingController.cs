@@ -18,13 +18,16 @@ namespace AutoBarn.WebUI.Controllers
         private readonly IRepository<Service> _serviceRepository;
         private readonly IRepository<Contact> _contactRepository;
         private IRepository<Booking> _bookingRepository;
+        private IBookingEmailService _bookingEmailService;
 
         public BookingController(IRepository<Make> makeRepository, 
             IRepository<Model> modelRepository, 
             IRepository<Service> serviceRepository
             ,IRepository<Contact> contactRepository,
-            IRepository<Booking> bookingRepository )
+            IRepository<Booking> bookingRepository,
+            IBookingEmailService bookingEmailService)
         {
+            _bookingEmailService = bookingEmailService;
             _bookingRepository = bookingRepository;
             _makeRepository = makeRepository;
             _modelRepository = modelRepository;
@@ -120,12 +123,12 @@ namespace AutoBarn.WebUI.Controllers
 
             _bookingRepository.Commit();
 
-            var emailer = new BookingEmailService(new Emailer());
+            
 
-            emailer.SetHtmlString(Server.MapPath("~/App_Data/bookingconfirmation.html"));
-            emailer.SetPlaceholders(contact.Firstname, contact.Registration, booking.Date.ToShortDateString(), booking.Notes);
-            emailer.CreateMessage(contact.Email);
-            emailer.SendEmail();
+            _bookingEmailService.SetHtmlString(Server.MapPath("~/App_Data/bookingconfirmation.html"));
+            _bookingEmailService.SetPlaceholders(contact.Firstname, contact.Registration, booking.Date.ToShortDateString(), booking.Notes);
+            _bookingEmailService.CreateMessage(contact.Email);
+            _bookingEmailService.SendEmail();
 
             return RedirectToAction("ThankYou", new { id = booking.Id});
         }
