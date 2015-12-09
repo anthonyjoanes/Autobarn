@@ -209,8 +209,9 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Infrastructure\ContactEmailService.cs" />
     <Compile Include="Infrastructure\Emailer.cs" />
-    <Compile Include="Infrastructure\EmailService.cs" />
+    <Compile Include="Infrastructure\BookingEmailService.cs" />
     <Compile Include="Infrastructure\MailMessageBuilder.cs" />
     <Compile Include="Migrations\201511122207104_initial.cs" />
     <Compile Include="Migrations\201511122207104_initial.Designer.cs">
@@ -271,6 +272,7 @@
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\BookingViewModel.cs" />
+    <Compile Include="Models\ContactViewModel.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -390,8 +392,8 @@
     <Content Include="Views\Booking\New.cshtml" />
     <Content Include="Views\Gallery\Index.cshtml" />
     <Content Include="Views\Booking\ThankYou.cshtml" />
-    <Content Include="Views\German\Brands.cshtml" />
     <Content Include="Views\Home\ServiceMot.cshtml" />
+    <Content Include="Views\German\Brands.cshtml" />
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>

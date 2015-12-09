@@ -120,7 +120,7 @@ namespace AutoBarn.WebUI.Controllers
 
             _bookingRepository.Commit();
 
-            var emailer = new AutoBarn.WebUI.Infrastructure.EmailService(new Emailer());
+            var emailer = new BookingEmailService(new Emailer());
 
             emailer.SetHtmlString(Server.MapPath("~/App_Data/bookingconfirmation.html"));
             emailer.SetPlaceholders(contact.Firstname, contact.Registration, booking.Date.ToShortDateString(), booking.Notes);

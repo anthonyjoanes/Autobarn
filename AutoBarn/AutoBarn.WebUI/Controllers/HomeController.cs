@@ -2,6 +2,8 @@
 using System.Web.Mvc;
 using AutoBarn.WebUI.Data;
 using AutoBarn.WebUI.Data.Entities;
+using AutoBarn.WebUI.Infrastructure;
+using AutoBarn.WebUI.Models;
 
 namespace AutoBarn.WebUI.Controllers
 {
@@ -32,6 +34,16 @@ namespace AutoBarn.WebUI.Controllers
             ViewBag.Message = "Contact page.";
 
             return View();
+        }
+
+        [HttpPost]
+        public ActionResult Contact(ContactViewModel contact)
+        {
+            var emailService = new ContactEmailService(new Emailer());
+            emailService.CreateMessage(contact);
+            emailService.SendEmail();
+
+            return View(contact);
         }
     }
 }

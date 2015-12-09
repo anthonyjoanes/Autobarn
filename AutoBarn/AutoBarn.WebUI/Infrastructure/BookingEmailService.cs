@@ -4,13 +4,13 @@ using System.Net.Mail;
 
 namespace AutoBarn.WebUI.Infrastructure
 {
-    public class EmailService
+    public class BookingEmailService
     {
         private string _html;
         private readonly Emailer _emailer;
         private MailMessage _message;
 
-        public EmailService(Emailer emailer)
+        public BookingEmailService(Emailer emailer)
         {
             _emailer = emailer;
         }
