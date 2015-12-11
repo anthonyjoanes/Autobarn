@@ -43,6 +43,12 @@ namespace AutoBarn.WebUI.Controllers
             return View();
         }
 
+        public ActionResult Team()
+        {
+            ViewBag.Message = "Meet the team.";
+            return View();
+        }
+
         [HttpPost]
         public ActionResult Contact(ContactViewModel contact)
         {

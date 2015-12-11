@@ -310,6 +310,7 @@
     <Content Include="Content\Images\home-banner.png" />
     <Content Include="Content\Images\home-image1.png" />
     <Content Include="Content\Images\home-image2.png" />
+    <Content Include="Content\Images\ian picture.JPG" />
     <Content Include="Content\Images\make-a-booking-banner.png" />
     <Content Include="Content\Images\make-booking-image.png" />
     <Content Include="Content\materialize-v0.97.1\css\materialize.css" />
@@ -397,6 +398,7 @@
     <Content Include="Views\Booking\ThankYou.cshtml" />
     <Content Include="Views\Home\ServiceMot.cshtml" />
     <Content Include="Views\German\Brands.cshtml" />
+    <Content Include="Views\Home\Team.cshtml" />
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>
