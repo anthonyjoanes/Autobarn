@@ -1,4 +1,5 @@
 ﻿using System.Linq;
+using System.Runtime.Caching;
 using System.Web.Mvc;
 using AutoBarn.WebUI.Data;
 using AutoBarn.WebUI.Data.Entities;
@@ -18,7 +19,16 @@ namespace AutoBarn.WebUI.Controllers
 
         public ActionResult Index()
         {
-            ViewBag.CustomerReviews = "99.9% rated check a trade reviews!";
+
+            var cache = MemoryCache.Default;
+
+            cache["Reviews"] = "99.9% rated check a trade reviews!";
+
+
+            ViewBag.CustomerReviews = cache["Reviews"];
+
+
+
             ViewBag.Title = "Home";
 
             return View();

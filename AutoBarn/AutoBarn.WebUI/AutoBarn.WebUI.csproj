@@ -72,6 +72,7 @@
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Drawing" />
+    <Reference Include="System.Runtime.Caching" />
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
     <Reference Include="System.Web.ApplicationServices" />
@@ -292,6 +293,7 @@
     <Content Include="Content\Images\background3.jpg" />
     <Content Include="Content\Images\booking-banner.jpg" />
     <Content Include="Content\Images\checkatrade-logo.png" />
+    <Content Include="Content\Images\dummy-person.jpg" />
     <Content Include="Content\Images\Gallery\003fb05e-db6f-4cca-a1b3-e68195068095.jpg" />
     <Content Include="Content\Images\Gallery\19a8e3e5-9e0e-49ea-9124-54b10a8f6d4f.jpg" />
     <Content Include="Content\Images\Gallery\3a289501-e424-4781-9f3b-8574c8d3432f.jpg" />
