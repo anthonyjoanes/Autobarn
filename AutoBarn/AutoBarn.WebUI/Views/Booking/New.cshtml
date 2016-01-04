@@ -126,7 +126,7 @@
 
                 <div class="row">
                     @*<div class="input-field col s10">*@
-                    <input id="date" name="bookingdate" style="width: 100%; margin-bottom: 15px;" required/>
+                    <input id="date" name="bookingdate" style="width: 100%; margin-bottom: 15px;" required placeholder="Select date for service" />
                     @*</div>*@
                 </div>
 
@@ -223,35 +223,53 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.10.6/moment.min.js"></script>
 
     <script>
-        var array = ["2013-03-14", "2013-03-15", "2013-03-16"];
+        var array = [];
 
-        //var today = moment();
-        //var tomorrow jQuery.datepicker.formatDate('yy-mm-dd', today);
-        var today = moment().format('YYYY-MM-DD');
-        var tomorrow = moment().add(1, 'd').format('YYYY-MM-DD');
+        $.ajax({
+            url: "BlockDates",
+            type: 'GET',
+            success: function(data) {
 
-        //console.info(today);
-        //console.info(tomorrow);
-        //console.info(today);
+                array = data;
 
-        array.push(today);
-        array.push(tomorrow);
+              
 
 
-        $('#date').datepicker({
-            beforeShowDay: function (date) {
-                
-                var string = jQuery.datepicker.formatDate('yy-mm-dd', date);
-                
-                var day = moment(date).format('dddd');
+                //var today = moment();
+                //var tomorrow jQuery.datepicker.formatDate('yy-mm-dd', today);
+                var today = moment().format('YYYY-MM-DD');
+                var tomorrow = moment().add(1, 'd').format('YYYY-MM-DD');
+
                 
 
-                var display = array.indexOf(string) == -1 && day != 'Sunday';
-                console.info(display);
-                return [display];
-            },
-            dateFormat: 'dd-mm-yy'
+                array.push(today);
+                array.push(tomorrow);
+
+
+                console.info("Date Array");
+                console.info(array);
+
+
+                $('#date').datepicker({
+                    beforeShowDay: function (date) {
+
+                        var string = jQuery.datepicker.formatDate('yy-mm-dd', date);
+
+                        var day = moment(date).format('dddd');
+
+
+                        var display = array.indexOf(string) == -1 && day != 'Sunday';
+                        console.info(display);
+                        return [display];
+                    },
+                    dateFormat: 'dd-mm-yy'
+                });
+
+            }
         });
+
+
+       
 
     </script>
 }

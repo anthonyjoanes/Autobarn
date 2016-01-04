@@ -137,6 +137,18 @@ namespace AutoBarn.WebUI.Migrations
                     Id = 1,
                     Text = "99.9% rated check-a-trade reviews!"
                 });
+
+            context.BlockDates.AddOrUpdate(m => m.Id,
+                new BlockDate
+                {
+                    Id = 1,
+                    Date = DateTime.Now.AddDays(5)
+                },
+                new BlockDate
+                {
+                    Id = 2,
+                    Date = DateTime.Now.AddDays(6)
+                });
         }
     }
 }

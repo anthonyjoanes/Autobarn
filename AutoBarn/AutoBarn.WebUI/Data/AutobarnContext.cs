@@ -14,6 +14,7 @@ namespace AutoBarn.WebUI.Data
         public virtual DbSet<Contact> Contacts { get; set; }
         public virtual DbSet<Booking> Bookings { get; set; }
         public virtual DbSet<Review> Reviews { get; set; }
+        public virtual DbSet<BlockDate> BlockDates { get; set; }
 
         public static AutobarnContext Create()
         {

@@ -21,7 +21,7 @@ namespace AutoBarn.WebUI.Controllers
 
         public ActionResult Index()
         {
-            ViewBag.CustomerReviews = MemoryCache.Default.Get("Review") as string;
+            ViewBag.CustomerReviews = "99.9% rated check a trade reviews!";
             ViewBag.Title = "Home";
 
             return View();
@@ -46,6 +46,12 @@ namespace AutoBarn.WebUI.Controllers
             ViewBag.CustomerReviews = MemoryCache.Default.Get("Review") as string;
             ViewBag.Message = "Contact page.";
 
+            return View();
+        }
+
+        public ActionResult Team()
+        {
+            ViewBag.Message = "Meet the team.";
             return View();
         }
 

@@ -10,6 +10,7 @@ using AutoBarn.WebUI.Data.Entities;
 using AutoBarn.WebUI.Infrastructure;
 using AutoBarn.WebUI.Infrastructure.Filters;
 using AutoBarn.WebUI.Models;
+using WebGrease.Css.Extensions;
 
 namespace AutoBarn.WebUI.Controllers
 {
@@ -22,14 +23,17 @@ namespace AutoBarn.WebUI.Controllers
         private readonly IRepository<Contact> _contactRepository;
         private readonly IRepository<Booking> _bookingRepository;
         private readonly IBookingEmailService _bookingEmailService;
+        private readonly IRepository<BlockDate> _blockDateRepository;
 
-        public BookingController(IRepository<Make> makeRepository, 
-            IRepository<Model> modelRepository, 
-            IRepository<Service> serviceRepository
-            ,IRepository<Contact> contactRepository,
-            IRepository<Booking> bookingRepository,
-            IBookingEmailService bookingEmailService)
+        public BookingController(IRepository<Make> makeRepository
+            , IRepository<Model> modelRepository
+            , IRepository<Service> serviceRepository
+            , IRepository<Contact> contactRepository
+            , IRepository<Booking> bookingRepository
+            , IRepository<BlockDate> blockDateRepository
+            , IBookingEmailService bookingEmailService)
         {
+            _blockDateRepository = blockDateRepository;
             _bookingEmailService = bookingEmailService;
             _bookingRepository = bookingRepository;
             _makeRepository = makeRepository;
@@ -87,6 +91,19 @@ namespace AutoBarn.WebUI.Controllers
             }
 
             return View(model);
+        }
+
+        public JsonResult BlockDates()
+        {
+            var queryDate = DateTime.Now.AddDays(-1);
+            var format = "yyyy-MM-dd";
+            var dates = _blockDateRepository.GetAll().ToList().Select(x => x.Date.ToString(format));
+
+            
+            
+            //var dates = new string[] { DateTime.Now.ToString(format), DateTime.Now.AddDays(5).ToString(format), DateTime.Now.AddDays(3).ToString(format) };
+
+            return Json(dates, JsonRequestBehavior.AllowGet);
         }
 
         public ActionResult Save(NewBookingViewModel model)

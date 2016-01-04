@@ -299,6 +299,7 @@
     <Content Include="Content\Images\background3.jpg" />
     <Content Include="Content\Images\booking-banner.jpg" />
     <Content Include="Content\Images\checkatrade-logo.png" />
+    <Content Include="Content\Images\dummy-person.jpg" />
     <Content Include="Content\Images\Gallery\003fb05e-db6f-4cca-a1b3-e68195068095.jpg" />
     <Content Include="Content\Images\Gallery\19a8e3e5-9e0e-49ea-9124-54b10a8f6d4f.jpg" />
     <Content Include="Content\Images\Gallery\3a289501-e424-4781-9f3b-8574c8d3432f.jpg" />
@@ -317,6 +318,7 @@
     <Content Include="Content\Images\home-banner.png" />
     <Content Include="Content\Images\home-image1.png" />
     <Content Include="Content\Images\home-image2.png" />
+    <Content Include="Content\Images\ian picture.JPG" />
     <Content Include="Content\Images\make-a-booking-banner.png" />
     <Content Include="Content\Images\make-booking-image.png" />
     <Content Include="Content\materialize-v0.97.1\css\materialize.css" />
@@ -404,6 +406,7 @@
     <Content Include="Views\Booking\ThankYou.cshtml" />
     <Content Include="Views\Home\ServiceMot.cshtml" />
     <Content Include="Views\German\Brands.cshtml" />
+    <Content Include="Views\Home\Team.cshtml" />
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>
