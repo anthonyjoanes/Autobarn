@@ -130,6 +130,13 @@ namespace AutoBarn.WebUI.Migrations
                     new Model { Name ="Touran" , Services = new List<Service> { new Service { Name = "Oil Service", Price = 99, DealerPrice = 225}, new Service {Name = "Annual Service", Price = 129, DealerPrice = 295}, new Service { Name = "Major Service", Price = 199, DealerPrice = 460} } }
                 }
                 });
+
+            context.Reviews.AddOrUpdate(m => m.Id,
+                new Review
+                {
+                    Id = 1,
+                    Text = "99.9% rated check-a-trade reviews!"
+                });
         }
     }
 }

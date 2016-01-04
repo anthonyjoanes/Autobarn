@@ -1,12 +1,15 @@
 ﻿using System.Linq;
+using System.Runtime.Caching;
 using System.Web.Mvc;
 using AutoBarn.WebUI.Data;
 using AutoBarn.WebUI.Data.Entities;
 using AutoBarn.WebUI.Infrastructure;
+using AutoBarn.WebUI.Infrastructure.Filters;
 using AutoBarn.WebUI.Models;
 
 namespace AutoBarn.WebUI.Controllers
 {
+    [ReviewInfoFilter]
     public class HomeController : Controller
     {
         private readonly IContactEmailService _contactEmailService;
@@ -18,7 +21,7 @@ namespace AutoBarn.WebUI.Controllers
 
         public ActionResult Index()
         {
-            ViewBag.CustomerReviews = "99.9% rated check a trade reviews!";
+            ViewBag.CustomerReviews = MemoryCache.Default.Get("Review") as string;
             ViewBag.Title = "Home";
 
             return View();
@@ -26,6 +29,7 @@ namespace AutoBarn.WebUI.Controllers
 
         public ActionResult About()
         {
+            ViewBag.CustomerReviews = MemoryCache.Default.Get("Review") as string;
             ViewBag.Message = "About Auto-Barn Motor Services";
 
             return View();
@@ -33,11 +37,13 @@ namespace AutoBarn.WebUI.Controllers
 
         public ActionResult ServiceMot()
         {
+            ViewBag.CustomerReviews = MemoryCache.Default.Get("Review") as string;
             return View();
         }
 
         public ActionResult Contact()
         {
+            ViewBag.CustomerReviews = MemoryCache.Default.Get("Review") as string;
             ViewBag.Message = "Contact page.";
 
             return View();
@@ -46,6 +52,7 @@ namespace AutoBarn.WebUI.Controllers
         [HttpPost]
         public ActionResult Contact(ContactViewModel contact)
         {
+
             _contactEmailService.CreateMessage(contact);
             _contactEmailService.SendEmail();
 

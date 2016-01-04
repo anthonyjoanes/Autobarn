@@ -2,23 +2,26 @@
 using System.Collections.Generic;
 using System.Data.Entity;
 using System.Linq;
+using System.Runtime.Caching;
 using System.Web;
 using System.Web.Mvc;
 using AutoBarn.WebUI.Data;
 using AutoBarn.WebUI.Data.Entities;
 using AutoBarn.WebUI.Infrastructure;
+using AutoBarn.WebUI.Infrastructure.Filters;
 using AutoBarn.WebUI.Models;
 
 namespace AutoBarn.WebUI.Controllers
 {
+    [ReviewInfoFilter]
     public class BookingController : Controller
     {
         private readonly IRepository<Make> _makeRepository;
         private readonly IRepository<Model> _modelRepository;
         private readonly IRepository<Service> _serviceRepository;
         private readonly IRepository<Contact> _contactRepository;
-        private IRepository<Booking> _bookingRepository;
-        private IBookingEmailService _bookingEmailService;
+        private readonly IRepository<Booking> _bookingRepository;
+        private readonly IBookingEmailService _bookingEmailService;
 
         public BookingController(IRepository<Make> makeRepository, 
             IRepository<Model> modelRepository, 
@@ -62,6 +65,7 @@ namespace AutoBarn.WebUI.Controllers
         // GET: Booking
         public ActionResult New(int makeId = 0, int modelId = 0, int serviceId = 0)
         {
+            ViewBag.CustomerReviews = MemoryCache.Default.Get("Review") as string;
             var model = new BookingViewModel
             {   
                 SelectedModel = new Model { Id=0, Make = new Make { Id=0} },
@@ -87,7 +91,7 @@ namespace AutoBarn.WebUI.Controllers
 
         public ActionResult Save(NewBookingViewModel model)
         {
-
+            ViewBag.CustomerReviews = MemoryCache.Default.Get("Review") as string;
             // See if its existing Contact
 
             var contact =
@@ -135,6 +139,7 @@ namespace AutoBarn.WebUI.Controllers
 
         public ActionResult ThankYou(int id = 0)
         {
+            ViewBag.CustomerReviews = MemoryCache.Default.Get("Review") as string;
             var booking = _bookingRepository.GetAll()
                 .Include(x => x.Model)
                 .Include(x => x.Model.Make)

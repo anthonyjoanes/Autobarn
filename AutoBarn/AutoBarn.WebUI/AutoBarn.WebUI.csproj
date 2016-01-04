@@ -72,6 +72,7 @@
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Drawing" />
+    <Reference Include="System.Runtime.Caching" />
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
     <Reference Include="System.Web.ApplicationServices" />
@@ -203,6 +204,7 @@
     <Compile Include="Data\Entities\Contact.cs" />
     <Compile Include="Data\Entities\Make.cs" />
     <Compile Include="Data\Entities\Model.cs" />
+    <Compile Include="Data\Entities\Review.cs" />
     <Compile Include="Data\Entities\Service.cs" />
     <Compile Include="Data\IRepository.cs" />
     <Compile Include="Data\SqlRepository.cs" />
@@ -212,6 +214,7 @@
     <Compile Include="Infrastructure\ContactEmailService.cs" />
     <Compile Include="Infrastructure\Emailer.cs" />
     <Compile Include="Infrastructure\BookingEmailService.cs" />
+    <Compile Include="Infrastructure\Filters\ReviewFilter.cs" />
     <Compile Include="Infrastructure\IBookingEmailService.cs" />
     <Compile Include="Infrastructure\IContactEmailService.cs" />
     <Compile Include="Infrastructure\IEmailer.cs" />
@@ -271,6 +274,10 @@
     <Compile Include="Migrations\201512032236392_BookingNotes.cs" />
     <Compile Include="Migrations\201512032236392_BookingNotes.Designer.cs">
       <DependentUpon>201512032236392_BookingNotes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201601042054252_Reviews.cs" />
+    <Compile Include="Migrations\201601042054252_Reviews.Designer.cs">
+      <DependentUpon>201601042054252_Reviews.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
@@ -449,6 +456,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201512032236392_BookingNotes.resx">
       <DependentUpon>201512032236392_BookingNotes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201601042054252_Reviews.resx">
+      <DependentUpon>201601042054252_Reviews.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
