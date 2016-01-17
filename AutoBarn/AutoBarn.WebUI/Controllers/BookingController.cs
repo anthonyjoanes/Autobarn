@@ -147,7 +147,7 @@ namespace AutoBarn.WebUI.Controllers
             
 
             _bookingEmailService.SetHtmlString(Server.MapPath("~/App_Data/bookingconfirmation.html"));
-            _bookingEmailService.SetPlaceholders(contact.Firstname, contact.Registration, booking.Date.ToShortDateString(), booking.Notes);
+            _bookingEmailService.SetPlaceholders(booking.Id, contact.Firstname, contact.Registration, booking.Date.ToShortDateString(), booking.Notes);
             _bookingEmailService.CreateMessage(contact.Email);
             _bookingEmailService.SendEmail();
 

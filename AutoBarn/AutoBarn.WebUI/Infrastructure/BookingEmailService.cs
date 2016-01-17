@@ -22,8 +22,9 @@ namespace AutoBarn.WebUI.Infrastructure
             _html = File.ReadAllText(htmlPath);
         }
 
-        public void SetPlaceholders(string name, string registrationm, string date, string notes)
+        public void SetPlaceholders(int bookingId, string name, string registrationm, string date, string notes)
         {
+            _html = _html.Replace("%BOOKINGREF%", bookingId.ToString());
             _html = _html.Replace("%FIRSTNAME%", name);
             _html = _html.Replace("%REGISTRATION%", registrationm);
             _html = _html.Replace("%BOOKINGDATE%", date);
