@@ -200,6 +200,7 @@
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
     <Compile Include="Data\AutobarnContext.cs" />
+    <Compile Include="Data\Entities\BlockDate.cs" />
     <Compile Include="Data\Entities\Booking.cs" />
     <Compile Include="Data\Entities\Contact.cs" />
     <Compile Include="Data\Entities\Make.cs" />
