@@ -327,6 +327,13 @@
     <Content Include="Content\Images\ian picture.JPG" />
     <Content Include="Content\Images\make-a-booking-banner.png" />
     <Content Include="Content\Images\make-booking-image.png" />
+    <Content Include="Content\Images\Social\FB-FindUsonFacebook-online-100.png" />
+    <Content Include="Content\Images\Social\FB-FindUsonFacebook-online-1024.png" />
+    <Content Include="Content\Images\Social\FB-FindUsonFacebook-online-114.png" />
+    <Content Include="Content\Images\Social\FB-FindUsonFacebook-online-144.png" />
+    <Content Include="Content\Images\Social\FB-FindUsonFacebook-online-512.png" />
+    <Content Include="Content\Images\Social\FB-FindUsonFacebook-online-58.png" />
+    <Content Include="Content\Images\Social\FB-FindUsonFacebook-online-72.png" />
     <Content Include="Content\Images\Steve Kite.PNG" />
     <Content Include="Content\materialize-v0.97.1\css\materialize.css" />
     <Content Include="Content\materialize-v0.97.1\css\materialize.min.css" />
