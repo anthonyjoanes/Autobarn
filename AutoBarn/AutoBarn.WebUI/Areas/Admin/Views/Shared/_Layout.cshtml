@@ -1,0 +1,45 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title | Service & MOT | Car service | Engine Remapping Waterlooville | Car MOT | Hampshire car service | Waterlooville car MOT | Waterloovile MOT and servicing |</title>
+    <meta name="description" content="Auto-Barn are a family owned garage able repair, MOT and service all motor vehicles upto and including 3.5tonne commercial vehicles. Based in Waterlooville, Hampshire" />
+    <meta name="keywords" content="Car service , Engine Remapping Waterlooville , Car MOT , Hampshire car service , Waterlooville car MOT , Waterloovile MOT and servicing, Auto-Barn Motor Services, Autobarn, Auto-Barn, autobahn, MOT, Service, Waterlooville Garages, Hampshire garages, Car Service, Car Repair, Car MOT" />
+
+    @Styles.Render("~/Content/materialize")
+    @Scripts.Render("~/bundles/modernizr")
+    @RenderSection("style", required: false)
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href='http://fonts.googleapis.com/css?family=Montserrat:400' rel='stylesheet' type='text/css' />
+    <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Crimson+Text" />
+
+</head>
+<body style="">
+   
+    <nav id="nav-bar" role="navigation">
+        <div class="nav-wrapper container">
+            @*<a id="logo-container" href="#" class="brand-logo">AUTO-BARN MOTOR SERVICES LTD</a>*@
+            <a href="@Url.Action("Index", "Home")"><img src="~/Content/Images/auto-barn-logo.png" class="brand-logo" /></a>
+           
+        </div>
+    </nav>
+
+<div class="row">
+    <div class="col md 6 offset-l2">
+
+        <h1>Website Admin</h1>
+        
+
+    </div>
+</div>
+
+@RenderBody()
+
+
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/materialize")
+    @RenderSection("scripts", required: false)
+</body>
+</html>
+
