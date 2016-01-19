@@ -98,11 +98,7 @@ namespace AutoBarn.WebUI.Controllers
             var queryDate = DateTime.Now.AddDays(-1);
             var format = "yyyy-MM-dd";
             var dates = _blockDateRepository.GetAll().ToList().Select(x => x.Date.ToString(format));
-
             
-            
-            //var dates = new string[] { DateTime.Now.ToString(format), DateTime.Now.AddDays(5).ToString(format), DateTime.Now.AddDays(3).ToString(format) };
-
             return Json(dates, JsonRequestBehavior.AllowGet);
         }
 

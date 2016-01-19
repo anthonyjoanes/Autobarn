@@ -193,8 +193,11 @@
     <Compile Include="App_Start\NinjectWebCommon.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\Startup.Auth.cs" />
+    <Compile Include="Areas\Admin\AdminAreaRegistration.cs" />
+    <Compile Include="Areas\Admin\Controllers\BlockDateController.cs" />
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\BookingController.cs" />
+    <Compile Include="Controllers\ErrorController.cs" />
     <Compile Include="Controllers\GalleryController.cs" />
     <Compile Include="Controllers\GermanController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
@@ -369,6 +372,8 @@
     <Content Include="Content\materialize-v0.97.1\font\material-design-icons\Material-Design-Icons.woff" />
     <Content Include="Content\materialize-v0.97.1\font\material-design-icons\Material-Design-Icons.ttf" />
     <Content Include="Content\materialize-v0.97.1\font\material-design-icons\Material-Design-Icons.eot" />
+    <Content Include="Areas\Admin\Views\web.config" />
+    <Content Include="Areas\Admin\Views\BlockDate\Index.cshtml" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />
@@ -421,8 +426,12 @@
     <Content Include="Views\Home\ServiceMot.cshtml" />
     <Content Include="Views\German\Brands.cshtml" />
     <Content Include="Views\Home\Team.cshtml" />
+    <Content Include="Views\Error\Index.cshtml" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="Areas\Admin\Models\" />
+    <Folder Include="Areas\Admin\Views\Shared\" />
+  </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
     <Content Include="fonts\glyphicons-halflings-regular.ttf" />
