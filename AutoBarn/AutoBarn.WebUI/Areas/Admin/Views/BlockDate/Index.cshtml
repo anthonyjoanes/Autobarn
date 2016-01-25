@@ -1,0 +1,53 @@
+﻿@model IEnumerable<AutoBarn.WebUI.Data.Entities.BlockDate>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
+}
+
+<div class="row">
+    <div class="col"></div>
+</div>
+
+<div class="row">
+    <div class="col s2 m2">&nbsp;</div>
+    <div class="col s8 m8">
+
+        <h2>Block Dates From Booking Form</h2>
+        <p>These dates will appear block out on the booking form calendar.</p>
+
+        
+        <table class="table">
+            <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.Date)
+                </th>
+                <th></th>
+            </tr>
+
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>
+                        @item.Date.ToShortDateString()
+                    </td>
+                    <td>
+                        @Html.ActionLink("Delete", "Delete", new {id = item.Id})
+                    </td>
+                </tr>
+            }
+
+            @using (Html.BeginForm("Add", "BlockDate", FormMethod.Post))
+            {
+                <tr>
+                    <td><input type="date" name="NewBlockDate" /></td>
+                    <td><input type="submit" value="Add"/></td>
+                </tr>
+            }
+           
+
+        </table>
+
+
+    </div>
+</div>
