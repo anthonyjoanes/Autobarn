@@ -9,9 +9,12 @@ namespace AutoBarn.WebUI.Infrastructure
         private string _html;
         private readonly IEmailer _emailer;
         private MailMessage _message;
+        private MailMessage _autobarnMessage;
+        private string _autobarnEmail;
 
-        public BookingEmailService(IEmailer emailer)
+        public BookingEmailService(IEmailer emailer, string autobarnEmail)
         {
+            _autobarnEmail = autobarnEmail;
             _emailer = emailer;
         }
 
@@ -39,6 +42,13 @@ namespace AutoBarn.WebUI.Infrastructure
                 .WithSubject("AUTO-BARN Booking Confirmation")
                 .WithMessageBody(_html)
                 .Build();
+
+            _autobarnMessage = new MailMessageBuilder()
+                .WithFromAddress("booking@autobarnmotorservices.co.uk")
+                .WithToAddress(_autobarnEmail)
+                .WithSubject("NEW BOOKING MADE")
+                .WithMessageBody(string.Format("<h4>The following request has just been submitted</h4><hr /><br />{0}", _html))
+                .Build();
         }
 
         public void SendEmail()
@@ -46,6 +56,7 @@ namespace AutoBarn.WebUI.Infrastructure
             try
             {
                 _emailer.Send(_message);
+                _emailer.Send(_autobarnMessage);
             }
             catch (Exception)
             {

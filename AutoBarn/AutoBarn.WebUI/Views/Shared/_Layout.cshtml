@@ -13,13 +13,14 @@
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link href='http://fonts.googleapis.com/css?family=Montserrat:400' rel='stylesheet' type='text/css'/>
     <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Crimson+Text"/>
+    <link rel="stylesheet" href="~/Content/bootstrap-image-gallery.min.css">
     
 </head>
 <body style="">
 <div class="top-line">
     <div class="row">
         <div class="col s3">&nbsp;</div>
-        <div class="col s7">Call us on 02392 592010 | @ViewBag.CustomerReviews</div>
+        <div class="col s7"><span class="glyphicon glyphicon-phone" aria-hidden="true"></span>Call us on 02392 592010 | @ViewBag.CustomerReviews</div>
         <div class="col s2">&nbsp;</div>
     </div>
 </div>
@@ -28,11 +29,11 @@
         @*<a id="logo-container" href="#" class="brand-logo">AUTO-BARN MOTOR SERVICES LTD</a>*@
         <a href="@Url.Action("Index", "Home")"><img src="~/Content/Images/auto-barn-logo.png" class="brand-logo" /></a>
         <ul class="right hide-on-med-and-down">
-            <li><a href="@Url.Action("New", "Booking")">Make a booking</a></li>
-            <li><a href="@Url.Action("ServiceMot", "Home")">Service and MOT</a></li>
-            <li><a href="@Url.Action("Index", "Gallery")">Gallery</a></li>
-            <li><a href="@Url.Action("Contact", "Home")">Contact us</a></li>
-            <li><a href="@Url.Action("Team", "Home")">Meet the team</a></li>
+            <li><a href="@Url.Action("New", "Booking")">MAKE A BOOKING</a></li>
+            <li><a href="@Url.Action("ServiceMot", "Home")">SERVICE & MOT</a></li>
+            <li><a href="@Url.Action("Index", "Gallery")">GALLERY</a></li>
+            <li><a href="@Url.Action("Contact", "Home")">CONTACT US</a></li>
+            <li><a href="@Url.Action("Team", "Home")">MEET THE TEAM</a></li>
         </ul>
         <ul id="nav-mobile" class="side-nav">
             <li><a href="@Url.Action("New", "Booking")">Make a booking</a></li>

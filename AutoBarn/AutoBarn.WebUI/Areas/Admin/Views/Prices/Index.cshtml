@@ -1,0 +1,24 @@
+﻿@model IEnumerable<AutoBarn.WebUI.Data.Entities.Model>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
+}
+
+
+<div class="row">
+    <div class="col s2 m2">&nbsp;</div>
+    <div class="col s8 m8">
+
+      
+       @foreach (var vehicle in Model)
+       {
+        <div class="row">
+            <div class="col s2">@vehicle.Make.Name</div>
+            <div class="col s2">@vehicle.Name</div>
+            <div class="col s2">@Html.ActionLink("Edit", "Edit", new { id = @vehicle.Id})</div>
+        </div>
+       }
+
+    </div>
+</div>

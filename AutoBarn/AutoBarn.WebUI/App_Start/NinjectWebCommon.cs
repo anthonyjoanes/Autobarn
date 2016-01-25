@@ -75,7 +75,10 @@ namespace AutoBarn.WebUI.App_Start
                 .InRequestScope()
                 .WithConstructorArgument("notificationEmail", notificationEmail);
 
-            kernel.Bind<IBookingEmailService>().To<BookingEmailService>().InRequestScope();
+            kernel.Bind<IBookingEmailService>()
+                .To<BookingEmailService>()
+                .InRequestScope()
+                .WithConstructorArgument("autobarnEmail", notificationEmail);
         }        
     }
 }

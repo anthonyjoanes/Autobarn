@@ -195,6 +195,8 @@
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="Areas\Admin\AdminAreaRegistration.cs" />
     <Compile Include="Areas\Admin\Controllers\BlockDateController.cs" />
+    <Compile Include="Areas\Admin\Controllers\MainController.cs" />
+    <Compile Include="Areas\Admin\Controllers\PricesController.cs" />
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\BookingController.cs" />
     <Compile Include="Controllers\ErrorController.cs" />
@@ -211,6 +213,7 @@
     <Compile Include="Data\Entities\Review.cs" />
     <Compile Include="Data\Entities\Service.cs" />
     <Compile Include="Data\IRepository.cs" />
+    <Compile Include="Data\RepositoryExtensions.cs" />
     <Compile Include="Data\SqlRepository.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -375,6 +378,10 @@
     <Content Include="Areas\Admin\Views\web.config" />
     <Content Include="Areas\Admin\Views\BlockDate\Index.cshtml" />
     <Content Include="Areas\Admin\Views\Shared\_Layout.cshtml" />
+    <Content Include="Areas\Admin\Views\Main\Index.cshtml" />
+    <Content Include="Areas\Admin\Views\Prices\Index.cshtml" />
+    <Content Include="Areas\Admin\Views\Prices\Edit.cshtml" />
+    <Content Include="Areas\Admin\Views\Prices\_Service.cshtml" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />

@@ -6,13 +6,13 @@
  * Made By MaterializeCSS.com
  */
 
-@font-face {
+/*@font-face {
   font-family: 'Montserrat';
   font-style: normal;
   font-weight: 400;
   src: url(http://themes.googleusercontent.com/static/fonts/montserrat/v4/zhcz-_WihjSQC0oHJ9TCYFQlYEbsez9cZjKsNMjLOwM.eot);
   src: local('Montserrat-Regular'), url(http://themes.googleusercontent.com/static/fonts/montserrat/v4/zhcz-_WihjSQC0oHJ9TCYFQlYEbsez9cZjKsNMjLOwM.eot) format('embedded-opentype'), url(http://themes.googleusercontent.com/static/fonts/montserrat/v4/zhcz-_WihjSQC0oHJ9TCYBsxEYwM7FgeyaSgU71cLG0.woff) format('woff');
-}
+}*/
 
 * {
     
@@ -31,12 +31,12 @@ body {
 body {
     font-size: 18px;
     color: #555;
-    font-family: 'Crimson Text';
+    font-family: 'Crimson Text', serif;
      -webkit-font-smoothing: antialiased;
 }
 
 h1,h2,h3,h4,h5,h6 {
-    font-family: Montserrat;
+    font-family: 'Crimson Text', serif;
 }
 
 h1 {
@@ -250,7 +250,7 @@ footer.page-footer .footer-copyright {
 }
 
 #booking-form {
-    font-family: 'Crimson Text';
+    font-family: 'Crimson Text', serif;
 }
 
 #booking-form .row {
@@ -283,6 +283,6 @@ footer.page-footer .footer-copyright {
 }
 
 .manufacturer {
-    font-family: 'Pontano Sans', sans-serif;
+    font-family: 'Crimson Text', serif;
     font-size: xx-large;
 }
