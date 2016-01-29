@@ -286,9 +286,9 @@
     <Compile Include="Migrations\201601042054252_Reviews.Designer.cs">
       <DependentUpon>201601042054252_Reviews.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201601172106344_blockdates.cs" />
-    <Compile Include="Migrations\201601172106344_blockdates.Designer.cs">
-      <DependentUpon>201601172106344_blockdates.cs</DependentUpon>
+    <Compile Include="Migrations\201601042159353_BlockDates.cs" />
+    <Compile Include="Migrations\201601042159353_BlockDates.Designer.cs">
+      <DependentUpon>201601042159353_BlockDates.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
@@ -493,8 +493,8 @@
     <EmbeddedResource Include="Migrations\201601042054252_Reviews.resx">
       <DependentUpon>201601042054252_Reviews.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201601172106344_blockdates.resx">
-      <DependentUpon>201601172106344_blockdates.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201601042159353_BlockDates.resx">
+      <DependentUpon>201601042159353_BlockDates.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
