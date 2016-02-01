@@ -4,7 +4,7 @@
 }
 
 @section style {
-
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
     <style>
         
     </style>
@@ -16,39 +16,41 @@
             <li>
 
                 <img src="~/Content/Images/German/IMG_2946.JPG" />
-                <div class="caption center-align">
-                    @*<h3>This is our big Tagline!</h3>
-                        <h5 class="light grey-text text-lighten-3">Here's our small slogan.</h5>*@
+                <div class="caption left-align">
+                    <h1>Up to 60% Off Dealer Prices</h1>
+    @*<h5 class="light grey-text text-lighten-3">Here's our small slogan.</h5>*@
                 </div>
             </li>
             <li>
                 <img src="~/Content/Images/German/IMG_2979.JPG" /> <!-- random image -->
-                <div class="caption right-align">
-                    @*<h3>Right Aligned Caption</h3>
-                        <h5 class="light grey-text text-lighten-3">Here's our small slogan.</h5>*@
+                <div class="caption left-align">
+                    <h1>Servicing from just £49</h1>
+    @*<h5 class="light grey-text text-lighten-3">Here's our small slogan.</h5>*@
                 </div>
             </li>
             <li>
 
                 <img src="~/Content/Images/German/IMG_2977.JPG" />
-                <div class="caption center-align">
-                    @*<h3>This is our big Tagline!</h3>
-                        <h5 class="light grey-text text-lighten-3">Here's our small slogan.</h5>*@
-                </div>
-            </li>
-            <li>
-
-                <img src="~/Content/Images/German/IMG_2966.JPG" />
-                <div class="caption left-align">
-                    @*<h3>Left Aligned Caption</h3>
-                        <h5 class="light grey-text text-lighten-3">Here's our small slogan.</h5>*@
-                </div>
-            </li>
-            <li>
-                <img src="~/Content/Images/German/top-banner.JPG" /> <!-- random image -->
                 <div class="caption right-align">
-                    @*<h3>Right Aligned Caption</h3>
-                        <h5 class="light grey-text text-lighten-3">Here's our small slogan.</h5>*@
+                    <h1>Free Collection & Delivery service</h1>
+                    
+                    @*
+    <h5 class="light grey-text text-lighten-3">Here's our small slogan.</h5>*@
+                </div>
+            </li>
+            <li>
+                    <img src="~/Content/Images/German/IMG_2966.JPG" />
+                    <div class="caption left-align">
+                        <h1>Book Your Service Online <a href="@Url.Action("New", "Booking")" class="btn btn-default">Book Now</a></h1>
+                        @*
+                <h5 class="light grey-text text-lighten-3">Here's our small slogan.</h5>*@
+                    </div>
+</li>
+            <li>
+                <img src="~/Content/Images/German/IMG_2968.JPG" /> <!-- random image -->
+                <div class="caption right-align">
+                    <h1>Main dealer standards at a fraction of the price</h1>
+    @*<h5 class="light grey-text text-lighten-3">Here's our small slogan.</h5>*@
                 </div>
             </li>
 
@@ -61,7 +63,34 @@
 
 
 
-<div style="background-color: #F4F4F4; margin-bottom: -20px; ">
+<div style="background-color: #F4F4F4; margin-bottom: -20px;">
+    <div class="row"></div>
+    @*tooltipped data-position="bottom" data-delay="50" data-tooltip="I am tooltip"*@
+    <div class="row">
+        <div class="col m2 offset-m2 center-align">
+            <i class="fa fa-line-chart large"></i> <br/>Up to 60% Off Dealer Prices
+        </div>
+        <div class="col m2 center-align">
+            <i class="fa fa-tachometer large"></i><br/>
+            Servicing from just £49
+        </div>
+        <div class="col m2 center-align">
+            <i class="fa fa-car large"></i><br/>
+            Free Collection & Delivery service
+        </div>
+        <div class="col m2 center-align">
+            <i class="fa fa-check-circle large"></i> <br/>Main dealer standards at a fraction of the price
+        </div>
+
+    </div>
+
+
+    <div class="row">
+        <div class="col m8 offset-m2 center-align">
+            <a href="@Url.Action("New", "Booking")" class="btn btn-default">Book Now</a>
+        </div>
+    </div>
+
     <div class="row">
         <div id="map"></div>
         <div class="col s2 m2">&nbsp;</div>
@@ -116,13 +145,13 @@
 </div>*@
 
 
-<div class="parallax-container">
+<div >
     <img src="~/Content/Images/German/banner.png" alt="Unsplashed background img 1">
 </div>
 
 
 
-<div style="background-color: #F4F4F4; margin-bottom: -10px; margin-top: -120px; ">
+<div style="background-color: #F4F4F4; margin-bottom: -0px; margin-top: -120px; ">
     <div class="row">
         <div id="map"></div>
         <div class="col s2 m2">&nbsp;</div>
@@ -148,6 +177,81 @@
 
 </div>
 
+<div class="">
+    
+    <div class="section" style="align-content: center; text-align: center;">
+        <!-- Icon Section -->
+
+        <div class="row">
+            <div class="col s12 m1">
+                &nbsp;
+            </div>
+            <div class="col s12 m2">
+                <i class="material-icons md-ab tooltipped" data-position="bottom" data-delay="50" data-tooltip="Servicing and MOT's">local_car_wash</i> 
+            </div>
+
+            <div class="col s12 m2">
+                <i class="material-icons md-ab tooltipped" data-position="bottom" data-delay="50" data-tooltip="Brake fluid servicing">invert_colors_off</i>
+            </div>
+            <div class="col s12 m2">
+                <i class="material-icons md-ab tooltipped" data-position="bottom" data-delay="50" data-tooltip="Pre-holiday inspections">card_travel</i>
+            </div>
+            <div class="col s12 m2">
+                <i class="material-icons md-ab tooltipped" data-position="bottom" data-delay="50" data-tooltip="Air conditioning repairs">toys</i>
+            </div>
+            <div class="col s12 m2">
+                <i class="material-icons md-ab tooltipped" data-position="bottom" data-delay="50" data-tooltip="Windscreen replacement">stay_primary_landscape</i>
+            </div>
+            <div class="col s12 m1">
+                &nbsp;
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col s12 m1">
+                &nbsp;
+            </div>
+            <div class="col s12 m2">
+                <i class="material-icons md-ab tooltipped" data-position="bottom" data-delay="50" data-tooltip="Free road tests with technicians">assignment</i>
+            </div>
+            <div class="col s12 m2">
+                <i class="material-icons md-ab tooltipped" data-position="bottom" data-delay="50" data-tooltip="Engine rebuilds or replacements">build</i>
+            </div>
+
+            <div class="col s12 m2">
+                <i class="material-icons md-ab tooltipped" data-position="bottom" data-delay="50" data-tooltip="Racing car preparation">timer</i>
+            </div>
+            <div class="col s12 m2">
+                <i class="material-icons md-ab tooltipped" data-position="bottom" data-delay="50" data-tooltip="Free fit bulbs and wipers">wb_incandescent</i>
+            </div>
+            <div class="col s12 m2">
+                <i class="material-icons md-ab tooltipped" data-position="bottom" data-delay="50" data-tooltip="Tyre repair / replacements">group_work</i>
+            </div>
+            <div class="col s12 m1">
+                &nbsp;
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col s12 m1">
+                &nbsp;
+            </div>
+            <div class="col s12 m2">
+                &nbsp;
+            </div>
+            <div class="col s12 m2">
+                <i class="material-icons md-ab tooltipped" data-position="bottom" data-delay="50" data-tooltip="Diagnostic checks and fault finding">network_check</i>
+            </div>
+            <div class="col s12 m2">
+                <i class="material-icons md-ab tooltipped" data-position="bottom" data-delay="50" data-tooltip="Wheel alignment">album</i>
+            </div>
+            <div class="col s12 m2">
+                <i class="material-icons md-ab tooltipped" data-position="bottom" data-delay="50" data-tooltip="Emissions inspections">cloud_circle</i>
+            </div>
+
+        </div>
+    </div>
+</div>
 
 
 
