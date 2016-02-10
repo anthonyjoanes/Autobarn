@@ -9,7 +9,6 @@ using AutoBarn.WebUI.Models;
 
 namespace AutoBarn.WebUI.Controllers
 {
-    [ReviewInfoFilter]
     public class HomeController : Controller
     {
         private readonly IContactEmailService _contactEmailService;

@@ -13,19 +13,19 @@ namespace AutoBarn.WebUI.Infrastructure.Filters
         public override void OnActionExecuting(ActionExecutingContext filterContext)
         {
 
-            var reviewText = MemoryCache.Default.Get("Review") as string;
+            //var reviewText = MemoryCache.Default.Get("Review") as string;
 
-            if (string.IsNullOrEmpty(reviewText))
-            {
-                var repository = (IRepository<Review>)DependencyResolver.Current.GetService(typeof(IRepository<Review>));
+            //if (string.IsNullOrEmpty(reviewText))
+            //{
+            //    var repository = (IRepository<Review>)DependencyResolver.Current.GetService(typeof(IRepository<Review>));
 
-                var review = repository.GetAll().FirstOrDefault();
+            //    var review = repository.GetAll().FirstOrDefault();
 
-                if (review != null)
-                    MemoryCache.Default.Add("Review", review.Text, DateTimeOffset.MaxValue);
+            //    if (review != null)
+            //        MemoryCache.Default.Add("Review", review.Text, DateTimeOffset.MaxValue);
 
-                base.OnActionExecuting(filterContext);
-            }
+            //    base.OnActionExecuting(filterContext);
+            //}
 
 
 

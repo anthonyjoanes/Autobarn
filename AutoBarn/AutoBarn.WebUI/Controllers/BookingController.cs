@@ -14,7 +14,6 @@ using WebGrease.Css.Extensions;
 
 namespace AutoBarn.WebUI.Controllers
 {
-    [ReviewInfoFilter]
     public class BookingController : Controller
     {
         private readonly IRepository<Make> _makeRepository;

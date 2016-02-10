@@ -168,16 +168,16 @@
                     </tr>
                     <tr>
                         <td>Price</td>
-                        <td>£<span id="pricesummary">@Model.SelectedService.Price</span></td>
+                        <td>From £<span id="pricesummary">@Model.SelectedService.Price</span></td>
                     </tr>
                     <tr>
                         <td>Dealer price</td>
-                        <td>£<span id="dealersummary">@Model.SelectedService.DealerPrice</span></td>
+                        <td>From £<span id="dealersummary">@Model.SelectedService.DealerPrice</span></td>
                     </tr>
                     <tr>
                         <td>Saving</td>
                         <td>
-                            £<span id="savingsummary">
+                            From £<span id="savingsummary">
                                 @{
                                     decimal savings = 0;
                                     if (Model != null)

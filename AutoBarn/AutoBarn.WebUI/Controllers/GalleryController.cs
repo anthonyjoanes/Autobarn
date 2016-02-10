@@ -8,7 +8,6 @@ using AutoBarn.WebUI.Infrastructure.Filters;
 
 namespace AutoBarn.WebUI.Controllers
 {
-    [ReviewInfoFilter]
     public class GalleryController : Controller
     {
         // GET: Gallery
