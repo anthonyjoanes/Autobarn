@@ -282,6 +282,13 @@ footer.page-footer .footer-copyright {
     margin-top: 5px;
 }
 
+.top-line a {
+    color: white;
+}
+.top-line a:hover {
+    color: #3878e2;
+}
+
 .manufacturer {
     font-family: 'Crimson Text', serif;
     font-size: xx-large;
@@ -424,4 +431,20 @@ body {
   .featurette-heading {
     margin-top: 120px;
   }
+}
+
+#instant-quote a {
+    color: white;
+}
+
+.blue-icon {
+    color: #3878E2;
+}
+
+.brand-cta ,a {
+    color: #3878E2;
+}
+
+.brand-cta a:hover {
+    color: #3878E2;
 }

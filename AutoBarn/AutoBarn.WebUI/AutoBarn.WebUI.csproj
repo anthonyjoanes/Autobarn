@@ -455,6 +455,7 @@
     <Content Include="Views\German\Brands.cshtml" />
     <Content Include="Views\Home\Team.cshtml" />
     <Content Include="Views\Error\Index.cshtml" />
+    <Content Include="Views\Shared\_Services.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Areas\Admin\Models\" />

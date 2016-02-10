@@ -1,93 +1,59 @@
-﻿<div id="index-banner" class="parallax-container" style="">
-    <div class="section no-pad-bot">
-        <div class="container">
-            @*<br><br>
-                <h1 class="header center teal-text text-lighten-2"> </h1>
-                <div class="row center">
-                    <h5 class="header col s12 light"></h5>
-                </div>
-                <div class="row center">
-                    <a href="http://materializecss.com/getting-started.html" id="download-button" class="btn-large waves-effect waves-light teal lighten-1"></a>
-                </div>
-                <br><br>*@
+﻿@section style {
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+    <style>
 
-            <div class="row">
-                <div class="col s6 m8">
-                    <div class="icon-block">
-                        <h1 class="white-text">We offer main dealer standards at a fraction of the price</h1>
-                        <h2 class="white-text">Services and repairs of all makes of vehicles, prices starting from just £49.</h2>
-                        <a class="btn" href="~/Booking/New">MAKE A BOOKING</a> <span class="white-text">or call us on 02392 592010*</span>
-                        <p class="small white-text">*Free quotation on all repair work.</p>
-                    </div>
-                </div>
+    </style>
+}
 
-                <div class="col s6 m4">
-                    <div class="box">
-                        <h3><i class="material-icons">assignment_turned_in </i>Receive an instant quote</h3>
-                        <div class="row">
-                            <form class="col s12" action="@Url.Action("New", "Booking")" method="POST">
-                                
-                                <div class="row">
-                                    <div class="input-field col 1"></div>
-                                    <div class="input-field col s10">
 
-                                        @*<select class="icons">
-                                            <option value="" disabled selected>Choose your option</option>
-                                            <option value="" data-icon="images/sample-1.jpg" class="left circle">example 1</option>
-                                            <option value="" data-icon="images/office.jpg" class="left circle">example 2</option>
-                                            <option value="" data-icon="images/yuna.jpg" class="left circle">example 3</option>
-                                        </select>
-                                        <label>Images in select</label>*@
 
-                                        <label></label>
-                                        <select id="vehicleMakes" name="makeId" class="browser-default" onclick="getModels();">
-                                            <option value="" disabled selected>Choose Make</option>
-                                        </select>
+<div class="slider">
+    <ul class="slides" style="height: 250px;">
+        <li>
 
-                                    </div>
-                                    <div class="input-field col 1"></div>
-                                </div>
-                                <div class="row">
-                                    <div class="input-field col 1"></div>
-                                    <div class="input-field col s10">
-                                        <label></label>
-                                        <select id="vehicleModels" name="modelId" class="browser-default">
-                                            <option value="" disabled selected>Choose Model</option>
-                                        </select>
-                                    </div>
-                                    <div class="input-field col 1"></div>
-                                </div>
+            <img src="~/Content/Images/German/IMG_2946.JPG"/>
+            <div class="caption left-align">
+                <h1>Up to 60% Off Dealer Prices</h1>
+                @*<h5 class="light grey-text text-lighten-3">Here's our small slogan.</h5>*@
 
-                                <div class="row">
-                                    <div class="input-field col 1"></div>
-                                    <div class="input-field col s10">
-                                        <label></label>
-                                        <select id="services" name="serviceId" class="browser-default">
-                                            <option value="" selected>Choose Service</option>
-                                        </select>
-                                    </div>
-                                    <div class="input-field col 1"></div>
-                                </div>
-
-                                <div class="row">
-                                    <div class="input-field col 1"></div>
-                                    <div class="input-field col s10">
-                                        <button class="btn" value="submit" type="submit">GET PRICE</button>
-                                    </div>
-                                    <div class="input-field col 1"></div>
-                                </div>
-                            </form>
-                        </div>
-
-                    </div>
-                </div>
             </div>
+            <img src="http://www.checkatrade.com/Images/ProudMembersOfCAT-230x60.jpg" alt="http://www.checkatrade.com/" />
+        </li>
+        <li>
+            <img src="~/Content/Images/German/IMG_2979.JPG"/> <!-- random image -->
+            <div class="caption left-align">
+                <h1>Servicing from just £49</h1>
+                @*<h5 class="light grey-text text-lighten-3">Here's our small slogan.</h5>*@
+            </div>
+        </li>
+        <li>
 
-        </div>
-    </div>
-    <div class="parallax home-banner">
-        <img src="~/Content/Images/home-banner.png" alt="Unsplashed background img 1">
-    </div>
+            <img src="~/Content/Images/German/IMG_2977.JPG"/>
+            <div class="caption right-align">
+                <h1>Free Collection & Delivery service</h1>
+
+                @*
+                    <h5 class="light grey-text text-lighten-3">Here's our small slogan.</h5>*@
+            </div>
+        </li>
+        <li>
+            <img src="~/Content/Images/German/IMG_2966.JPG"/>
+            <div class="caption left-align">
+                <h1>Book Your Service Online</h1> <a href="@Url.Action("New", "Booking")" class="btn btn-default">Book Now</a>
+                @*
+                    <h5 class="light grey-text text-lighten-3">Here's our small slogan.</h5>*@
+            </div>
+        </li>
+        <li>
+            <img src="~/Content/Images/German/IMG_2968.JPG"/> <!-- random image -->
+            <div class="caption right-align">
+                <h1>Main dealer standards at a fraction of the price</h1>
+                @*<h5 class="light grey-text text-lighten-3">Here's our small slogan.</h5>*@
+            </div>
+        </li>
+
+        
+    </ul>
 </div>
 
 <div class="wrapper" style="background-color: #F4F4F4;">
@@ -143,7 +109,12 @@
     <div class="section" style="align-content: center; text-align: center;">
         <!-- Icon Section -->
 
-        <div class="row">
+        <div class="section" style="align-content: center; text-align: center;">
+            <!-- Icon Section -->
+
+            
+            @Html.Partial("_Services")
+        @*<div class="row">
             <div class="col s12 m1">
                 &nbsp;
             </div>
@@ -161,7 +132,7 @@
                 <i class="material-icons md-ab">toys</i><br />Air conditioning repairs
             </div>
             <div class="col s12 m2">
-                <i class="material-icons md-ab" style="margin-left: 10px;">flip_black</i><br/>Windscreen replacement
+                <i class="material-icons md-ab" style="margin-left: 10px;">stay_primary_landscape</i><br/>Windscreen replacement
             </div>
             <div class="col s12 m1">
                 &nbsp;
@@ -210,10 +181,10 @@
                 <i class="material-icons md-ab">cloud_circle</i><br />Emissions inspections
             </div>
             
-        </div>
+        </div>*@
     </div>
 </div>
-
+    </div>
 
 <div class="wrapper">
     <div class="" style="font-size: 0px; ">
@@ -257,26 +228,47 @@
 </div>
 @*<div class="">*@
 
-    <div class="section" style="align-content: center; text-align: center;">
-        <!-- Icon Section -->
+<div class="section" style="align-content: center; text-align: center;">
+    <!-- Icon Section -->
 
-        <div class="row">
-            <div class="col s12 m1">
-                &nbsp;
-            </div>
-            <div class="col s12 m10">
-                <i>"Very good and professional services from Ian and his team. Excellent company. Very trustworthy."</i>
-                <hr class="small-hr"/>
-                <br/>Customer in Waterlooville
-                <br/><strong>26 August 2015</strong>
-            </div>
-
-            <div class="col s12 m1">
-                &nbsp;
-            </div>
+    <div class="row">
+        <div class="col s12 m1">
+            &nbsp;
+        </div>
+        <div class="col s12 m10">
+            <i>"Very good and professional services from Ian and his team. Excellent company. Very trustworthy."</i>
+            <hr class="small-hr"/>
+            <br/>Customer in Waterlooville
+            <br/><strong>26 August 2015</strong>
         </div>
 
+        <div class="col s12 m1">
+            &nbsp;
+        </div>
     </div>
+
+</div>
+
+
+<div class="row">
+    <div class="col m2 offset-m2 center-align">
+        <i class="fa fa-line-chart large"></i> <br/>Up to 60% Off Dealer Prices
+    </div>
+    <div class="col m2 center-align">
+        <i class="fa fa-tachometer large"></i><br/>
+        Servicing from just £49
+    </div>
+    <div class="col m2 center-align">
+        <i class="fa fa-car large"></i><br/>
+        Free Collection & Delivery service
+    </div>
+    <div class="col m2 center-align">
+        <i class="fa fa-check-circle large"></i> <br/>Main dealer standards at a fraction of the price
+    </div>
+
+</div>
+
+    
 @*</div>*@
 
 @*<div class="parallax-container valign-wrapper">
@@ -313,5 +305,12 @@
     </div>*@
 
 @section scripts {
+
     <script src="../../Scripts/autobarn.js"></script>
+  @*<script>
+        $(document).ready(function () {
+            $('.slider').slider({ full_width: true, height: 500, indicators: false });
+        });
+</script>*@
+
 }

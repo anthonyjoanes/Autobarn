@@ -3,7 +3,7 @@
 
         $('.button-collapse').sideNav();
         $('.parallax').parallax();
-        $('.slider').slider({ full_width: true });
+        $('.slider').slider({ full_width: true, indicators: false });
 
         $('.datepicker').pickadate({
             selectMonths: true, // Creates a dropdown to control month
@@ -14,6 +14,7 @@
 
 
     $(document).ready(function () {
+        
         
 
         $.ajax({
