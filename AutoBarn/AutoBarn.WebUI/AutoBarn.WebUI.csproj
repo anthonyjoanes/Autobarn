@@ -403,6 +403,7 @@
     <Content Include="Areas\Admin\Views\Prices\Index.cshtml" />
     <Content Include="Areas\Admin\Views\Prices\Edit.cshtml" />
     <Content Include="Areas\Admin\Views\Prices\_Service.cshtml" />
+    <None Include="Properties\PublishProfiles\ReleaseFileSystem.pubxml" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />

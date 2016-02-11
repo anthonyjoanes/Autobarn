@@ -91,7 +91,7 @@
 
                 $('<option disabled selected>', {
                     value: ''
-                }).html('Choose Model').appendTo($services);
+                }).html('Choose Service').appendTo($services);
 
 
 

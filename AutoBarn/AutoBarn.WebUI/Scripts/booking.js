@@ -45,7 +45,7 @@ $('#vehicleMakes').on('change', function () {
 
             $('<option disabled selected>', {
                 value: ''
-            }).html('Choose Model').appendTo($services);
+            }).html('Choose Service').appendTo($services);
 
 
             $('select').material_select();
@@ -76,7 +76,7 @@ $('#vehicleModels').on('change', function () {
 
             $('<option disabled selected>', {
                 value: ''
-            }).html('Choose Model').appendTo($select);
+            }).html('Choose Service').appendTo($select);
 
             for (var i = 0; i < data.length; i++) {
                 console.info(data[i].Name);

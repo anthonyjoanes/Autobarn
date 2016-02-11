@@ -9,6 +9,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AutoBarn.WebUI.Tests", "Aut
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{21BDD025-3650-4D8C-A77C-574B8FBAD87D}"
 	ProjectSection(SolutionItems) = preProject
+		DeploymentDataScript.sql = DeploymentDataScript.sql
 		OldDbSql.sql = OldDbSql.sql
 	EndProjectSection
 EndProject
