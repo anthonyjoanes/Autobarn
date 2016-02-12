@@ -11,22 +11,16 @@
 }
 @Html.Partial("_Slider")
 
-<div style="background-color: #F4F4F4; margin-bottom: -20px;">
+<div style="background-color: #F4F4F4; margin-bottom: -20px; margin-top: -30px;">
     
     <div class="col s2 m2">&nbsp;</div>
     <div class="col s8 m8 center-align">
         <h1>Audi, VW, SEAT, BMW, MINI and Mercedes-Benz & Skoda Servicing</h1>
+        <a href="@Url.Action("New", "Booking")" class="btn btn-default">Book Now</a>
     </div>
     <div class="col s2 m2">&nbsp;</div>
-
-    <div class="row"></div>
-    @*tooltipped data-position="bottom" data-delay="50" data-tooltip="I am tooltip"*@
-
-    <div class="row">
-        <div class="col m8 offset-m2 center-align">
-            <a href="@Url.Action("New", "Booking")" class="btn btn-default">Book Now</a>
-        </div>
-    </div>
+   
+  
 
     <div class="row">
         <div class="col m2 offset-m2 center-align">
@@ -203,7 +197,7 @@
         <div class="col s2 m2">&nbsp;</div>
         <div class="col s12 m8 center-align">
 
-            <span class="glyphicon glyphicon-phone" aria-hidden="true"></span><h1>Call us now on 02392 592010 | <a href="@Url.Action("New", "Booking")" id="instant-quote">INSTANT ONLINE QUOTE</a></h1>
+            <span class="glyphicon glyphicon-phone" aria-hidden="true"></span><h1>Call us now on 02392 592010 <br/> <a href="@Url.Action("New", "Booking")" id="instant-quote" class="btn btn-default">INSTANT ONLINE QUOTE</a></h1>
         
         </div>
         
