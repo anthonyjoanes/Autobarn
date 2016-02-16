@@ -5,9 +5,10 @@
 }
 
 @section style{
-    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css">
-    <link rel="stylesheet" href="//blueimp.github.io/Gallery/css/blueimp-gallery.min.css">
-    <link rel="stylesheet" href="~/Content/bootstrap-image-gallery.min.css">
+    @*<link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css">*@
+    @*<link rel="stylesheet" href="//blueimp.github.io/Gallery/css/blueimp-gallery.min.css">*@
+    @*<link rel="stylesheet" href="~/Content/bootstrap-image-gallery.min.css">*@
+    <link href="~/Content/blueimp-gallery.min.css" rel="stylesheet" />
 }
 
 
@@ -19,7 +20,7 @@
     <h3 class="title"></h3>
     <a class="prev">‹</a>
     <a class="next">›</a>
-    <a class="close">×</a>
+    <a class="btn btn-default">×</a>
     <a class="play-pause"></a>
     <ol class="indicator"></ol>
     <!-- The modal dialog, which will be used to wrap the lightbox content -->
@@ -27,12 +28,14 @@
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-header">
-                    <button type="button" class="close" aria-hidden="true">&times;</button>
+                    <button type="button" class="btn btn-default close" aria-hidden="true">Close</button>
                     <h4 class="modal-title"></h4>
                 </div>
                 <div class="modal-body next"></div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-default pull-left prev">
+                <div class="">
+
+
+                    <button type="button" class="btn btn-default">
                         <i class="glyphicon glyphicon-chevron-left"></i>
                         Previous
                     </button>
@@ -40,6 +43,7 @@
                         Next
                         <i class="glyphicon glyphicon-chevron-right"></i>
                     </button>
+
                 </div>
             </div>
         </div>
@@ -57,27 +61,27 @@
             <div class="col m1 s1">&nbsp;</div>
 
             <div class="col m2 s2">
-                <a href="~/Content/Images/Gallery/Auto-Barn-Waiting-Area.jpg" title="Banana" data-gallery>
+                <a href="~/Content/Images/Gallery/Auto-Barn-Waiting-Area.jpg"  data-gallery>
                     <img src="~/Content/Images/Gallery/Auto-Barn-Waiting-Area.jpg" alt="Banana">
                 </a>
             </div>
             <div class="col m2 s2">
-                <a href="~/Content/Images/Gallery/003fb05e-db6f-4cca-a1b3-e68195068095.jpg" title="Apple" data-gallery>
+                <a href="~/Content/Images/Gallery/003fb05e-db6f-4cca-a1b3-e68195068095.jpg" data-gallery>
                     <img src="~/Content/Images/Gallery/003fb05e-db6f-4cca-a1b3-e68195068095.jpg" alt="Apple">
                 </a>
             </div>
             <div class="col m2 s2">
-                <a href="~/Content/Images/Gallery/19a8e3e5-9e0e-49ea-9124-54b10a8f6d4f.jpg" title="Apple" data-gallery>
+                <a href="~/Content/Images/Gallery/19a8e3e5-9e0e-49ea-9124-54b10a8f6d4f.jpg"  data-gallery>
                     <img src="~/Content/Images/Gallery/19a8e3e5-9e0e-49ea-9124-54b10a8f6d4f.jpg" alt="Apple">
                 </a>
             </div>
             <div class="col m2 s2">
-                <a href="~/Content/Images/Gallery/3a289501-e424-4781-9f3b-8574c8d3432f.jpg" title="Apple" data-gallery>
+                <a href="~/Content/Images/Gallery/3a289501-e424-4781-9f3b-8574c8d3432f.jpg"  data-gallery>
                     <img src="~/Content/Images/Gallery/3a289501-e424-4781-9f3b-8574c8d3432f.jpg" alt="Apple">
                 </a>
             </div>
             <div class="col m2 s2">
-                <a href="~/Content/Images/Gallery/45e07c66-2827-46d5-b595-5ad50ecd8206.jpg" title="Apple" data-gallery>
+                <a href="~/Content/Images/Gallery/45e07c66-2827-46d5-b595-5ad50ecd8206.jpg"  data-gallery>
                     <img src="~/Content/Images/Gallery/45e07c66-2827-46d5-b595-5ad50ecd8206.jpg" alt="Apple">
                 </a>
             </div>
@@ -91,27 +95,27 @@
             <div class="col m1 s1">&nbsp;</div>
 
             <div class="col m2 s2">
-                <a href="~/Content/Images/Gallery/fefea745-f13f-47eb-8555-68f9a6154816.jpg" title="Banana" data-gallery>
+                <a href="~/Content/Images/Gallery/fefea745-f13f-47eb-8555-68f9a6154816.jpg" data-gallery>
                     <img src="~/Content/Images/Gallery/fefea745-f13f-47eb-8555-68f9a6154816.jpg" alt="Banana">
                 </a>
             </div>
             <div class="col m2 s2">
-                <a href="~/Content/Images/Gallery/IMG_2027.JPG" title="Apple" data-gallery>
+                <a href="~/Content/Images/Gallery/IMG_2027.JPG"  data-gallery>
                     <img src="~/Content/Images/Gallery/IMG_2027.JPG" alt="Apple">
                 </a>
             </div>
             <div class="col m2 s2">
-                <a href="~/Content/Images/Gallery/IMG_2034.JPG" title="Apple" data-gallery>
+                <a href="~/Content/Images/Gallery/IMG_2034.JPG"  data-gallery>
                     <img src="~/Content/Images/Gallery/IMG_2034.JPG" alt="Apple">
                 </a>
             </div>
             <div class="col m2 s2">
-                <a href="~/Content/Images/Gallery/IMG_2036.JPG" title="Apple" data-gallery>
+                <a href="~/Content/Images/Gallery/IMG_2036.JPG"  data-gallery>
                     <img src="~/Content/Images/Gallery/IMG_2036.JPG" alt="Apple">
                 </a>
             </div>
             <div class="col m2 s2">
-                <a href="~/Content/Images/Gallery/IMG_2043.JPG" title="Apple" data-gallery>
+                <a href="~/Content/Images/Gallery/IMG_2043.JPG"  data-gallery>
                     <img src="~/Content/Images/Gallery/IMG_2043.JPG" alt="Apple">
                 </a>
             </div>
