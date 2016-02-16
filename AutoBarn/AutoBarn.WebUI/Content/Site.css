@@ -282,12 +282,6 @@ footer.page-footer .footer-copyright {
     margin-top: 5px;
 }
 
-.top-line a {
-    color: white;
-}
-.top-line a:hover {
-    color: #3878e2;
-}
 
 .manufacturer {
     font-family: 'Crimson Text', serif;
@@ -435,6 +429,13 @@ body {
 
 #instant-quote a {
     color: white;
+    background-color: #3878e2; 
+    padding: 2px;
+}
+
+#instant-quote a:hover {
+    color: white;
+    background-color: #26a69a;
 }
 
 .blue-icon {
