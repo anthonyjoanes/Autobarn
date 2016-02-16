@@ -327,6 +327,10 @@
     <Content Include="Content\Images\Gallery\IMG_2164.JPG" />
     <Content Include="Content\Images\Gallery\IMG_2575.JPG" />
     <Content Include="Content\Images\German\banner.png" />
+    <Content Include="Content\Images\German\banner1.png" />
+    <Content Include="Content\Images\German\banner2.png" />
+    <Content Include="Content\Images\German\banner3.png" />
+    <Content Include="Content\Images\German\banner4.png" />
     <Content Include="Content\Images\German\BMW Diagnostics.JPG" />
     <Content Include="Content\Images\German\CheckaTrade.png" />
     <Content Include="Content\Images\German\IMG_2946.JPG" />
