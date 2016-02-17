@@ -92,10 +92,12 @@ p {
 
   .booking {
       width: 100%;
-      min-height: 380px;
+      min-height: 280px;
   line-height: 0;
-  height: 380px;
+  height: 280px;
   }
+
+  
 
 @media only screen and (max-width : 992px) {
   .parallax-container .section {
@@ -171,6 +173,7 @@ footer.page-footer {
 .brand-logo {
     margin-top: 8px;
 }
+
 
 
 .material-icons.md-18 { font-size: 18px; }
