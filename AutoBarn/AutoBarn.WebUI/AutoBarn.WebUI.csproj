@@ -329,11 +329,16 @@
     <Content Include="Content\Images\Gallery\IMG_2575.JPG" />
     <Content Include="Content\Images\German\banner.png" />
     <Content Include="Content\Images\German\banner1.png" />
+    <Content Include="Content\Images\German\banner1motorhome.png" />
     <Content Include="Content\Images\German\banner2.png" />
+    <Content Include="Content\Images\German\banner2motorhome.png" />
     <Content Include="Content\Images\German\banner3.png" />
+    <Content Include="Content\Images\German\banner3motorhome.png" />
     <Content Include="Content\Images\German\banner4.png" />
+    <Content Include="Content\Images\German\banner4motorhome.png" />
     <Content Include="Content\Images\German\BMW Diagnostics.JPG" />
     <Content Include="Content\Images\German\CheckaTrade.png" />
+    <Content Include="Content\Images\German\checkatradetransparent.png" />
     <Content Include="Content\Images\German\IMG_2946.JPG" />
     <Content Include="Content\Images\German\IMG_2947.JPG" />
     <Content Include="Content\Images\German\IMG_2948.JPG" />
@@ -345,11 +350,13 @@
     <Content Include="Content\Images\German\IMG_2956.JPG" />
     <Content Include="Content\Images\German\IMG_2964.JPG" />
     <Content Include="Content\Images\German\IMG_2966.JPG" />
+    <Content Include="Content\Images\German\IMG_2968 - Copy.JPG" />
     <Content Include="Content\Images\German\IMG_2968.JPG" />
     <Content Include="Content\Images\German\IMG_2971.JPG" />
     <Content Include="Content\Images\German\IMG_2976.JPG" />
     <Content Include="Content\Images\German\IMG_2977.JPG" />
     <Content Include="Content\Images\German\IMG_2979.JPG" />
+    <Content Include="Content\Images\German\ProudMembersOfCAT-230x60.jpg" />
     <Content Include="Content\Images\German\top-banner.JPG" />
     <Content Include="Content\Images\home-banner [466870].png" />
     <Content Include="Content\Images\home-banner.png" />
@@ -408,6 +415,7 @@
     <Content Include="Areas\Admin\Views\Prices\Index.cshtml" />
     <Content Include="Areas\Admin\Views\Prices\Edit.cshtml" />
     <Content Include="Areas\Admin\Views\Prices\_Service.cshtml" />
+    <Content Include="Content\Images\German\CheckaTrade.xcf" />
     <None Include="Properties\PublishProfiles\ReleaseFileSystem.pubxml" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\calltracking.js" />
@@ -423,6 +431,7 @@
     <Content Include="Scripts\respond.js" />
     <Content Include="Scripts\respond.min.js" />
     <Content Include="Scripts\_references.js" />
+    <None Include="Views\German\_OtherMakes.cshtml" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
