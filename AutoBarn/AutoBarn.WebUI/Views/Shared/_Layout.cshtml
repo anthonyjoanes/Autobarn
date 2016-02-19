@@ -1,11 +1,11 @@
 ﻿<!DOCTYPE html>
 <html>
 <head>
-    <meta charset="utf-8" />
+    <meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>@ViewBag.Title | Service & MOT | Car service | Engine Remapping Waterlooville | Car MOT | Hampshire car service | Waterlooville car MOT | Waterloovile MOT and servicing |</title>
-    <meta name="description" content="Auto-Barn are a family owned garage able repair, MOT and service all motor vehicles upto and including 3.5tonne commercial vehicles. Based in Waterlooville, Hampshire" />
-    <meta name="keywords" content="Car service , Engine Remapping Waterlooville , Car MOT , Hampshire car service , Waterlooville car MOT , Waterloovile MOT and servicing, Auto-Barn Motor Services, Autobarn, Auto-Barn, autobahn, MOT, Service, Waterlooville Garages, Hampshire garages, Car Service, Car Repair, Car MOT" />
+    <meta name="description" content="Auto-Barn are a family owned garage able repair, MOT and service all motor vehicles upto and including 3.5tonne commercial vehicles. Based in Waterlooville, Hampshire"/>
+    <meta name="keywords" content="Car service , Engine Remapping Waterlooville , Car MOT , Hampshire car service , Waterlooville car MOT , Waterloovile MOT and servicing, Auto-Barn Motor Services, Autobarn, Auto-Barn, autobahn, MOT, Service, Waterlooville Garages, Hampshire garages, Car Service, Car Repair, Car MOT"/>
 
     @Styles.Render("~/Content/materialize")
     @Scripts.Render("~/bundles/modernizr")
@@ -15,11 +15,14 @@
     <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Crimson+Text"/>
     @*<link rel="stylesheet" href="~/Content/bootstrap-image-gallery.min.css">*@
 
-    @Scripts.Render("~/bundles/calltracking")
+    
     @Scripts.Render("~/bundles/googleanalytics")
 </head>
+
+
+
 <body style="">
-   
+
 
 <div class="top-line">
     <div class="row">
@@ -95,13 +98,13 @@
             <div class="col l3 s12">
                 <h5 class="autobarn">Contact Us</h5>
                 <ul>
-                    <li><a href="#!">Auto-Barn Motor Services Ltd</a></li>
-                    <li><a href="#!">The Barn</a></li>
-                    <li><a href="#!">259 Lovedean Lane</a></li>
-                    <li><a href="#!">Waterlooville</a></li>
-                    <li><a href="#!">Hampeshire</a></li>
-                    <li><a href="#!">PO8 9RX</a></li>
-                    <li><a href="#!">02393 592010 9RX</a></li>
+                    <li>Auto-Barn Motor Services Ltd</li>
+                    <li>The Barn</li>
+                    <li>259 Lovedean Lane</li>
+                    <li>Waterlooville</li>
+                    <li>Hampeshire</li>
+                    <li>PO8 9RX</li>
+                    <li><span class="mediahawkNumber1263">02392 592010</span></li>
                 </ul>
             </div>
             <div class="col l3 s12">
@@ -131,5 +134,38 @@
 @Scripts.Render("~/bundles/jquery")
 @Scripts.Render("~/bundles/materialize")
 @RenderSection("scripts", required: false)
+
+    <script type="text/javascript">
+
+ var mhProtocol = ((document.location.protocol == "https:") ? "https://" : "http://");
+
+ var mhRand = new Date().getTime();
+
+ document.write(unescape("%3Cscript"
+
+ + " src='"+mhProtocol+"www.dynamicnumbers.mediahawk.co.uk/getVisitorParams.js?mhRand="+mhRand+"'"
+
+ + " type='text/javascript'%3E%3C/script%3E"));
+
+    </script>
+
+<script type="text/javascript">
+
+    var mhAccountRef = "VA-12684";
+
+    document.write(unescape("%3Cscript"
+        + " src='" + mhProtocol + "www.dynamicnumbers.mediahawk.co.uk/getVisitorNumber.php"
+        + "?mhAccountRef=" + mhAccountRef + mhUrlParamString + "&mhRand=" + mhRand + "'"
+        + "type='text/javascript'%3E%3C/script%3E"));
+
+</script>
+
+<script type="text/javascript">
+
+ try {mhChangeTelNumber();}
+
+ catch (err){}
+
+    </script>
 </body>
 </html>
