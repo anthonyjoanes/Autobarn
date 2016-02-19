@@ -467,6 +467,10 @@
     <Content Include="Views\Shared\_Services.cshtml" />
     <Content Include="Views\Shared\_Slider.cshtml" />
     <Content Include="Views\Shared\_Layout.Mobile.cshtml" />
+    <Content Include="Views\German\BMW_Servicing_specialists.cshtml" />
+    <Content Include="Views\German\Mercedes_Servicing_specialists.cshtml" />
+    <Content Include="Views\German\Motorhome_Servicing_And_Class_7_MOTs.cshtml" />
+    <Content Include="Views\German\VW_Audi_Seat_And_Skoda_Servicing.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Areas\Admin\Models\" />

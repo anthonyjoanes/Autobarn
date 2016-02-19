@@ -28,5 +28,29 @@ namespace AutoBarn.WebUI.Controllers
             ViewBag.BrandHeading = dictionary.ContainsKey(heading) ? dictionary[heading] : string.Empty;
             return View();
         }
+
+        [ActionName("VW_Audi_Seat_And_Skoda_Servicing")]
+        public ActionResult VwAudiSeatSkoda()
+        {
+            return View();
+        }
+
+        [ActionName("BMW_Servicing_specialists")]
+        public ActionResult Bmw()
+        {
+            return View();
+        }
+
+        [ActionName("Mercedes_Servicing_specialists")]
+        public ActionResult Mercedes()
+        {
+            return View();
+        }
+
+        [ActionName("Motorhome_Servicing_And_Class_7_MOTs")]
+        public ActionResult MotorHome()
+        {
+            return View();
+        }
     }
 }

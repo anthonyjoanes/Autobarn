@@ -1,0 +1,225 @@
+﻿@{
+    ViewBag.Title = "Brands";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@section style {
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+    <style>
+
+    </style>
+}
+@Html.Partial("_Slider")
+
+<div style="background-color: #F4F4F4; margin-bottom: -20px; margin-top: -30px;">
+
+    <div class="col s2 m2">&nbsp;</div>
+    <div class="col s8 m8 center-align">
+        <h1>BMW</h1>
+        <a href="@Url.Action("New", "Booking")" class="btn btn-default">Book Now</a>
+    </div>
+    <div class="col s2 m2">&nbsp;</div>
+
+
+    <div class="">
+        <div class="section" style="align-content: center; text-align: center;">
+            <!-- Icon Section -->
+
+            <div class="section" style="align-content: center; text-align: center;">
+                <!-- Icon Section -->
+
+                <div class="row">
+                    <div class="col s12 m1">
+                        &nbsp;
+                    </div>
+                    <div class="col s12 m1">
+                        &nbsp;
+                    </div>
+                    <div class="col s12 m2">
+                        <i class="fa fa-line-chart large" style="color: #3878E2;"></i> <br />Up to 60% Off Dealer Prices
+                    </div>
+
+                    <div class="col s12 m2">
+                        <i class="fa fa-tachometer large" style="color: #3878E2;"></i><br />
+                        Servicing from just £49
+                    </div>
+                    <div class="col s12 m2">
+                        <i class="fa fa-car large" style="color: #3878E2;"></i><br />
+                        Free Collection & Delivery service
+                    </div>
+                    <div class="col s12 m2">
+                        <i class="fa fa-check-circle large" style="color: #3878E2;"></i> <br />Main dealer standards at a fraction of the price
+                    </div>
+
+                    <div class="col s12 m1">
+                        &nbsp;
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <div class="row">
+        <div class="col s2 m2">&nbsp;</div>
+        <div class="col s12 m4">
+            <p>Here at Autobarn all our technicians are BMW trained and have many years experience
+
+working on BMW cars. We have the latest up to date diagnostic equipment and special tools where
+
+required to ensure we can carry out any repairs on your car. We have access to all the latest service
+
+schedule information and can be sure we carry out the correct service on your BMW at the correct
+
+time. BMW service schedules are very unique, in that there is no set interval or mileage for certain
+
+items. All this information is stored in the cars on board computer as the car decides when and what
+
+is due for change dependent on many variables. To be sure what service is due we can talk you
+
+through how to find the information if you are not aware, and we can then quote accordingly. This
+
+also means you may have to visit us more than once a year, but with free collection and delivery or a
+
+free loan car we aim to make sure it doesn’t interfere with your plans to much. Some of the services
+
+such as micro filter changes can also be carried out while you wait as they only take around 15
+
+minutes. We will also make sure that all the parts and lubricants meet the BMW standard, and if you
+
+prefer we can give you prices to use genuine parts and oil if you would prefer. Whether you have a
+
+Mini or a BMW M6 we can give you main dealer service at a fraction of the price !
+            </p>
+
+
+        </div>
+        <div class="col s12 m4">
+            <p>
+                We have the latest
+
+                diagnostic equipment which is updated every 3 months to ensure we always have the correct software to be
+
+                able to carry out full diagnostic checks and even the simple task of resetting the service light. We have a large
+
+                spacious workshop and car park to ensure your vehicle is in safe hands. We have all the usual services, such as
+
+                collection and delivery, Loan cars and these are completely FREE. You will see from our checkatrade page that
+
+                we 100% believe in honesty and integrity and if on the rare occasion we do get a problem we are unable to
+
+                repair we will be honest and simply advise you of the next step and help you to get your vehicle repaired as
+
+                quickly and cheaply as possible. Main dealer standards at a fraction of the price.
+            </p>
+        </div>
+        <div class="col s2 m2">&nbsp;</div>
+    </div>
+
+</div>
+
+
+<div class="row center-image" style="background-color: #F4F4F4;">
+    @*<div>
+            <img src="~/Content/Images/German/banner.png" alt="Unsplashed background img 1">
+        </div>*@
+
+    <div class="col m3"><img src="~/Content/Images/German/banner1.png" alt="Unsplashed background img 1"></div>
+    <div class="col m3"><img src="~/Content/Images/German/banner2.png" alt="Unsplashed background img 1"></div>
+    <div class="col m3"><img src="~/Content/Images/German/banner3.png" alt="Unsplashed background img 1"></div>
+    <div class="col m3"><img src="~/Content/Images/German/banner4.png" alt="Unsplashed background img 1"></div>
+
+</div>
+
+
+<div style="background-color: #F4F4F4; margin-bottom: -0px; margin-top: -120px;">
+    <div class="row"></div>
+    <div class="row">
+        <div id="map"></div>
+        <div class="col s2 m2">&nbsp;</div>
+        <div class="col s8 m8 center-align">
+            <h1>What happens if your VW, AUDI or Skoda has been recalled for emoissions scandal</h1>
+        </div>
+        <div class="col s2 m2">&nbsp;</div>
+    </div>
+
+    <div class="row">
+        <div class="col s2 m2">&nbsp;</div>
+        <div class="col s12 m4">
+            @*<h2>VAG Cambelt replacement</h2>
+                <p>
+                    90% of all the VAG vehicles still use a cambelt rather than a chain to drive the camshaft. The interval for these
+
+                    is generally every 4 years or 60,000 miles up to 2009, and 5 years 100,000 there after. This is a basic guide and
+
+                    if you require clarifiaction please contact us where we can confirm this using your registration number. We
+
+                    also recommend that the water pump is replaced at the same time, as this is usually driven from the cambelt
+
+                    and can also cause major engine damage if it fails. For a competitive price please call us on 02392 592010 or
+
+                    email us at <a href="mailto:info@autobarnmotorservices.co.uk">info@autobarnmotorservices.co.uk</a>.
+                </p>*@
+
+
+        </div>
+        <div class="col s12 m4">
+            @*<h2>VW / Audi emission scandal</h2>
+                <p>
+                    Whilst all the recalls have to be carried out by a main dealer we are happy to advise you and can answer your
+
+                    questions and quieries. We have lots of information regarding this issue and are happy to advise. We have
+
+                    found that some vehicles when visiting the dealer are subject to a free health check where work required is
+
+                    reported, we can again quote for any repairs advised and are happy to recheck for a second opinion if
+
+                    required.
+                </p>*@
+            <h2>Other makes</h2>
+            <p>
+                Although we are the German auto specialists, we can of course work on any make and model of car and vans
+
+                up to 3.5 tonne. We also have a large ramp that enables us to work on large motorhomes. If you have any
+
+                questions relating to any other models or would like an estimate for any repairs please call us on <strong><span class="mediahawkNumber1263">02392 592010</span></strong>
+                or send an email to <a href="mailto:info@autobarnmotorservices.co.uk">info@autobarnmotorservices.co.uk</a>
+            </p>
+        </div>
+        <div class="col s2 m2">&nbsp;</div>
+    </div>
+
+</div>
+
+<div class="">
+
+    <div class="section" style="align-content: center; text-align: center;">
+        <!-- Icon Section -->
+
+        @Html.Partial("_Services")
+    </div>
+
+    <div class="row brand-cta">
+        <div class="col s2 m2">&nbsp;</div>
+        <div class="col s12 m8 center-align">
+
+            <span class="glyphicon glyphicon-phone" aria-hidden="true"></span><h1>Call us now on <span class="mediahawkNumber1263">02392 592010</span> <br /> <a href="@Url.Action("New", "Booking")" id="instant-quote" class="btn btn-default">INSTANT ONLINE QUOTE</a></h1>
+
+        </div>
+
+    </div>
+</div>
+
+
+
+@section scripts {
+
+    <script>
+        $(document).ready(function () {
+            $('.slider').slider({ full_width: true, height: 500, indicators: false });
+        });
+    </script>
+}

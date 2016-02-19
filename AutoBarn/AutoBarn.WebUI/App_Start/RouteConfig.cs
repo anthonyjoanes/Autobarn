@@ -13,11 +13,7 @@ namespace AutoBarn.WebUI
         {
             routes.IgnoreRoute("{resource}.axd/{*pathInfo}");
 
-            routes.MapRoute(
-                name: "Brands",
-                url: "{controller}/Brands/{heading}",
-                defaults: new { controller = "German", action = "Brands", heading = UrlParameter.Optional});
-
+          
             routes.MapRoute(
                 name: "Default",
                 url: "{controller}/{action}/{id}",
