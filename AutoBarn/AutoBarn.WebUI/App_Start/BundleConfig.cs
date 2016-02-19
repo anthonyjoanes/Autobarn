@@ -38,6 +38,12 @@ namespace AutoBarn.WebUI
 
             bundles.Add(new ScriptBundle("~/bundles/bootstrap").Include(
                 "~/Scripts/bootstrap.js"));
+
+            bundles.Add(new ScriptBundle("~/bundles/calltracking").Include(
+                "~/Scripts/calltracking.js"));
+
+            bundles.Add(new ScriptBundle("~/bundles/googleanalytics").Include(
+                "~/Scripts/googleanalytics.js"));
         }
     }
 }
