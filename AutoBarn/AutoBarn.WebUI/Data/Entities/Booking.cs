@@ -13,4 +13,4 @@ namespace AutoBarn.WebUI.Data.Entities
         public DateTime Date { get; set; }
         public string Notes { get; set; }
     }
-}s
+}
