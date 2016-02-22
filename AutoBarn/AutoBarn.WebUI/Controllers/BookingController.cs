@@ -103,7 +103,13 @@ namespace AutoBarn.WebUI.Controllers
 
         public ActionResult Save(NewBookingViewModel model)
         {
-            
+
+            if (model.BookingDate == null)
+            {
+                throw new Exception("The booking date was null");
+            }
+
+
             var contact =
                 _contactRepository
                     .GetAll().FirstOrDefault(c => c.Email == model.Contact.Email && c.Registration == model.Contact.Registration);
