@@ -103,9 +103,7 @@ namespace AutoBarn.WebUI.Controllers
 
         public ActionResult Save(NewBookingViewModel model)
         {
-            ViewBag.CustomerReviews = MemoryCache.Default.Get("Review") as string;
-            // See if its existing Contact
-
+            
             var contact =
                 _contactRepository
                     .GetAll().FirstOrDefault(c => c.Email == model.Contact.Email && c.Registration == model.Contact.Registration);
@@ -132,7 +130,7 @@ namespace AutoBarn.WebUI.Controllers
                 ServiceId = model.SelectedService.Id,
                 Date = model.BookingDate,
                 Contact = contact,
-                Notes = model.Notes
+                Notes = string.IsNullOrEmpty(model.Notes) ? string.Empty : model.Notes
             };
 
             _bookingRepository.Add(booking);
