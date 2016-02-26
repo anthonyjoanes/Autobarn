@@ -134,7 +134,7 @@ namespace AutoBarn.WebUI.Controllers
             {
                 ModelId = model.SelectedModel.Id,
                 ServiceId = model.SelectedService.Id,
-                Date = model.BookingDate.ToShortDateString(),
+                Date = model.BookingDate,
                 Contact = contact,
                 Notes = string.IsNullOrEmpty(model.Notes) ? string.Empty : model.Notes
             };

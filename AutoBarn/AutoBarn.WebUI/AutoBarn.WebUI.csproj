@@ -294,6 +294,10 @@
     <Compile Include="Migrations\201602262018458_BookingDateStoredAsString.Designer.cs">
       <DependentUpon>201602262018458_BookingDateStoredAsString.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201602262048249_BookingDateAsString.cs" />
+    <Compile Include="Migrations\201602262048249_BookingDateAsString.Designer.cs">
+      <DependentUpon>201602262048249_BookingDateAsString.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\BookingViewModel.cs" />
@@ -547,6 +551,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201602262018458_BookingDateStoredAsString.resx">
       <DependentUpon>201602262018458_BookingDateStoredAsString.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201602262048249_BookingDateAsString.resx">
+      <DependentUpon>201602262048249_BookingDateAsString.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
