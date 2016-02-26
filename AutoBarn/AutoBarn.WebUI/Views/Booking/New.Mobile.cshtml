@@ -1,0 +1,285 @@
+﻿@model AutoBarn.WebUI.Models.BookingViewModel
+
+@{
+    ViewBag.Title = "New";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="slider">
+    <ul class="slides" style="height: 250px;">
+        <li>
+            <img src="~/Content/Images/booking-banner.jpg" />
+            <div class="caption center-align">
+                <h1>Make a booking</h1>
+            </div>
+        </li>
+    </ul>
+</div>
+
+
+<div style="background-color: #F4F4F4; padding-bottom: 10px; margin-top: -40px;">
+
+    <div class="row">
+    </div>
+    <div class="row">
+        <div class="col s12 m2">
+            &nbsp;
+        </div>
+
+        <div class="col s12 m8">
+            <p>We appreciate just how busy your day can be. So, when it's convenient for you to book your next service and/or MOT, you'll be please to know you can do everything online.</p>
+            <p>Fill in all your details on the form on this page and your car will be booked into our system. You will receive an email to confirm that your vehicle has been booked in with us.</p>
+        </div>
+
+        <div class="col s12 m2">
+            &nbsp;
+        </div>
+
+    </div>
+
+
+
+
+    <div class="row">
+
+        <div class="col s12 m2">
+            &nbsp;
+        </div>
+        <div class="col s12 m4" id="booking-form">
+            <form action="@Url.Action("Save", "Booking")" method="POST">
+
+                <div class="row">
+
+                    @*<div class="input-field col s10">*@
+                    <input type="text" id="firstName" name="Contact.firstName" class="browser-default" placeholder="First Name" required>
+                    @*</div>*@
+
+                </div>
+
+                <div class="row">
+
+                    @*<div class="input-field col s10">*@
+                    <input type="text" id="lastName" name="Contact.lastName" class="browser-default" placeholder="Surname" required>
+                    @*</div>*@
+
+                </div>
+
+                <div class="row">
+
+                    @*<div class="input-field col s10">*@
+                    <input type="email" id="email" name="Contact.email" class="browser-default" placeholder="Email" required>
+                    @*</div>*@
+
+                </div>
+
+                <div class="row">
+
+                    @*<div class="input-field col s10">*@
+                    <input type="text" id="telephone" name="Contact.telephone" class="browser-default" placeholder="Telephone" required>
+                    @*</div>*@
+
+                </div>
+
+                <div class="row">
+
+                    @*<div class="input-field col s10">*@
+                    <input type="text" id="registration" name="Contact.registration" class="browser-default" placeholder="Registration" required>
+                    @*</div>*@
+
+                </div>
+
+                <div class="row">
+
+                    @*<div class="input-field col s10">*@
+                    <select id="vehicleMakes" name="SelectedModel.make.id">
+                        <option value="" disabled selected>Choose Make</option>
+                        @*<option value="@Model.SelectedModel.Make.Id" selected>@Model.SelectedModel.Make.Name</option>*@
+                        @foreach (var make in Model.Makes)
+                        {
+                            <option value="@make.Id" selected="@(Model.SelectedModel.Make.Id == make.Id)">@make.Name</option>
+                        }
+                    </select>
+                    @*</div>*@
+
+                </div>
+                <div class="row">
+                    @*<div class="input-field col s10">*@
+                    <select id="vehicleModels" name="SelectedModel.id">
+                        <option value="" disabled selected>Choose Model</option>
+                        @foreach (var carModel in Model.Models)
+                        {
+                            <option value="@carModel.Id" selected="@(Model.SelectedModel.Id == carModel.Id)">@carModel.Name</option>
+                        }
+                    </select>
+                    @*</div>*@
+                </div>
+
+                <div class="row">
+                    @*<div class="input-field col s10">*@
+                    <select id="services" name="selectedservice.id">
+                        <option value="" disabled selected>Type of service</option>
+                        @foreach (var service in Model.Services)
+                        {
+                            <option value="@service.Id" selected="@(Model.SelectedService.Id == service.Id)">@service.Name</option>
+                        }
+                    </select>
+                    @*</div>*@
+                </div>
+
+                <div class="row">
+                    @*<div class="input-field col s10">*@
+                    <input id="date" name="bookingdate" style="width: 100%; margin-bottom: 15px;" required placeholder="Select date for service" class="datepicker" />
+                    @*</div>*@
+                </div>
+
+                <div class="row">
+                    <textarea id="notes" class="materialize-textarea" name="notes" placeholder="Please enter any notes"
+                              style="background-color: white;" rows="200"></textarea>
+                </div>
+
+                <div class="row">
+                    <div class="input-field col s10">
+                        <button class="btn" value="submit" type="submit">SUBMIT</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+
+        <div class="col s12 m1">
+            &nbsp;
+        </div>
+
+        <input type="hidden" id="selectedMakeId" value="@Model.SelectedModel.Make.Id"/>
+        <input type="hidden" id="selectedServiceId" value="@Model.SelectedService.Id"/>
+        <input type="hidden" id="selectedModelId" value="@Model.SelectedModel.Id"/>
+        <input type="hidden" value="@Model.SelectedService.Price"/>
+        <input type="hidden" value="@Model.SelectedService.DealerPrice"/>
+
+        <div class="col s12 m4">
+
+            <div class="row">
+
+                <table id="booking-details">
+                    <tr>
+                        <td>Make</td>
+                        <td><span id="makesummary">@Model.SelectedModel.Make.Name</span></td>
+                    </tr>
+                    <tr>
+                        <td>Model</td>
+                        <td><span id="modelsummary">@Model.SelectedModel.Name</span></td>
+                    </tr>
+                    <tr>
+                        <td>Price</td>
+                        <td>From £<span id="pricesummary">@Model.SelectedService.Price</span></td>
+                    </tr>
+                    <tr>
+                        <td>Dealer price</td>
+                        <td>From £<span id="dealersummary">@Model.SelectedService.DealerPrice</span></td>
+                    </tr>
+                    <tr>
+                        <td>Saving</td>
+                        <td>
+                            From £<span id="savingsummary">
+                                @{
+                                    decimal savings = 0;
+                                    if (Model != null)
+                                    {
+                                        savings = Model.SelectedService.DealerPrice - Model.SelectedService.Price;
+                                    }
+                                }
+                                @savings
+                            </span>
+
+                        </td>
+                    </tr>
+                </table>
+
+            </div>
+
+            <div class="row">
+                <img src="~/Content/Images/make-booking-image.png" class="center-align"/>
+            </div>
+
+            <div class="row">
+                The team at Auto-Barn are, of course, always available on <span class="mediahawkNumber1263">02392 592010</span>
+</div>
+
+        </div>
+
+        <div class="col s12 m1">
+            &nbsp;
+        </div>
+
+    </div>
+
+</div>
+
+@section style {
+    <link href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.9.2/themes/redmond/jquery-ui.css" rel="stylesheet"/>
+
+    <style>
+        .indicators {
+            display: none;
+        }
+    </style>
+}
+
+
+@section scripts{
+    <script src="../../Scripts/booking.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.9.2/jquery-ui.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.10.6/moment.min.js"></script>
+
+    <script>
+        
+        $('.datepicker').pickadate({
+            selectMonths: true, // Creates a dropdown to control month
+            selectYears: 15 // Creates a dropdown of 15 years to control year
+        });
+
+        var array = [];
+
+        $.ajax({
+            url: "BlockDates",
+            type: 'GET',
+            success: function(data) {
+
+                array = data;
+
+
+//var today = moment();
+                //var tomorrow jQuery.datepicker.formatDate('yy-mm-dd', today);
+                var today = moment().format('YYYY-MM-DD');
+                var tomorrow = moment().add(1, 'd').format('YYYY-MM-DD');
+
+
+                array.push(today);
+                array.push(tomorrow);
+
+
+                console.info("Date Array");
+                console.info(array);
+
+
+                $('#date').datepicker({
+                    beforeShowDay: function(date) {
+
+                        var string = jQuery.datepicker.formatDate('yy-mm-dd', date);
+
+                        var day = moment(date).format('dddd');
+
+
+                        var display = array.indexOf(string) == -1 && day != 'Sunday';
+                        console.info(display);
+                        return [display];
+                    },
+                    dateFormat: 'dd-mm-yy'
+                });
+
+            }
+        });
+
+
+    </script>
+
+}
