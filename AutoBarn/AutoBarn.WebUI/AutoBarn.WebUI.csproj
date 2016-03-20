@@ -196,7 +196,7 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="Controllers\BlockDateController.cs" />
-    <Compile Include="Controllers\AdminController.cs" />
+    <Compile Include="Controllers\ManagementAdminController.cs" />
     <Compile Include="Controllers\PricesController.cs" />
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\BookingController.cs" />
@@ -415,7 +415,7 @@
     <Content Include="Content\materialize-v0.97.1\font\material-design-icons\Material-Design-Icons.eot" />
     <Content Include="Views\BlockDate\Index.cshtml" />
     <Content Include="Views\Shared\_LayoutAdmin.cshtml" />
-    <Content Include="Views\Admin\Index.cshtml" />
+    <Content Include="Views\ManagementAdmin\Index.cshtml" />
     <Content Include="Views\Prices\Index.cshtml" />
     <Content Include="Views\Prices\Edit.cshtml" />
     <Content Include="Views\Prices\_Service.cshtml" />
