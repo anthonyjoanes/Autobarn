@@ -195,10 +195,9 @@
     <Compile Include="App_Start\NinjectWebCommon.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\Startup.Auth.cs" />
-    <Compile Include="Areas\Admin\AdminAreaRegistration.cs" />
-    <Compile Include="Areas\Admin\Controllers\BlockDateController.cs" />
-    <Compile Include="Areas\Admin\Controllers\MainController.cs" />
-    <Compile Include="Areas\Admin\Controllers\PricesController.cs" />
+    <Compile Include="Controllers\BlockDateController.cs" />
+    <Compile Include="Controllers\AdminController.cs" />
+    <Compile Include="Controllers\PricesController.cs" />
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\BookingController.cs" />
     <Compile Include="Controllers\ErrorController.cs" />
@@ -291,6 +290,10 @@
     <Compile Include="Migrations\201601042159353_BlockDates.cs" />
     <Compile Include="Migrations\201601042159353_BlockDates.Designer.cs">
       <DependentUpon>201601042159353_BlockDates.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201603202132015_UnknownButDoAnyway.cs" />
+    <Compile Include="Migrations\201603202132015_UnknownButDoAnyway.Designer.cs">
+      <DependentUpon>201603202132015_UnknownButDoAnyway.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
@@ -410,13 +413,12 @@
     <Content Include="Content\materialize-v0.97.1\font\material-design-icons\Material-Design-Icons.woff" />
     <Content Include="Content\materialize-v0.97.1\font\material-design-icons\Material-Design-Icons.ttf" />
     <Content Include="Content\materialize-v0.97.1\font\material-design-icons\Material-Design-Icons.eot" />
-    <Content Include="Areas\Admin\Views\web.config" />
-    <Content Include="Areas\Admin\Views\BlockDate\Index.cshtml" />
-    <Content Include="Areas\Admin\Views\Shared\_Layout.cshtml" />
-    <Content Include="Areas\Admin\Views\Main\Index.cshtml" />
-    <Content Include="Areas\Admin\Views\Prices\Index.cshtml" />
-    <Content Include="Areas\Admin\Views\Prices\Edit.cshtml" />
-    <Content Include="Areas\Admin\Views\Prices\_Service.cshtml" />
+    <Content Include="Views\BlockDate\Index.cshtml" />
+    <Content Include="Views\Shared\_LayoutAdmin.cshtml" />
+    <Content Include="Views\Admin\Index.cshtml" />
+    <Content Include="Views\Prices\Index.cshtml" />
+    <Content Include="Views\Prices\Edit.cshtml" />
+    <Content Include="Views\Prices\_Service.cshtml" />
     <Content Include="Content\Images\German\CheckaTrade.xcf" />
     <None Include="Properties\PublishProfiles\ReleaseFileSystem.pubxml" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
@@ -485,9 +487,7 @@
     <Content Include="Views\German\Motorhome_Servicing_And_Class_7_MOTs.cshtml" />
     <Content Include="Views\German\VW_Audi_Seat_And_Skoda_Servicing.cshtml" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Areas\Admin\Models\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
     <Content Include="fonts\glyphicons-halflings-regular.ttf" />
@@ -544,6 +544,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201601042159353_BlockDates.resx">
       <DependentUpon>201601042159353_BlockDates.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201603202132015_UnknownButDoAnyway.resx">
+      <DependentUpon>201603202132015_UnknownButDoAnyway.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
