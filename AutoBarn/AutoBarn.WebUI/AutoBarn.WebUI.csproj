@@ -486,6 +486,7 @@
     <Content Include="Views\German\Mercedes_Servicing_specialists.cshtml" />
     <Content Include="Views\German\Motorhome_Servicing_And_Class_7_MOTs.cshtml" />
     <Content Include="Views\German\VW_Audi_Seat_And_Skoda_Servicing.cshtml" />
+    <None Include="Web.LIVE.config" />
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>
