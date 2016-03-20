@@ -1,13 +1,12 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Linq;
-using System.Web;
 using System.Web.Mvc;
 using AutoBarn.WebUI.Data;
 using AutoBarn.WebUI.Data.Entities;
 
-namespace AutoBarn.WebUI.Areas.Admin.Controllers
+namespace AutoBarn.WebUI.Controllers
 {
+    [Authorize]
     public class BlockDateController : Controller
     {
         private readonly IRepository<BlockDate> _blockDateRepository;
@@ -24,11 +23,11 @@ namespace AutoBarn.WebUI.Areas.Admin.Controllers
             return View(blockDates);
         }
 
-        public ActionResult Add(DateTime? NewBlockDate)
+        public ActionResult Add(DateTime? newBlockDate)
         {
-            if (NewBlockDate != null)
+            if (newBlockDate != null)
             {
-                var newDate = new BlockDate {Date = NewBlockDate.Value};
+                var newDate = new BlockDate {Date = newBlockDate.Value};
                 _blockDateRepository.Add(newDate);
                 _blockDateRepository.Commit();
             }
