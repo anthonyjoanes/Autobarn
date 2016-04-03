@@ -7,13 +7,13 @@ namespace AutoBarn.WebUI.Migrations
     using System.Resources;
     
     [GeneratedCode("EntityFramework.Migrations", "6.1.3-40302")]
-    public sealed partial class BookingDateStoredAsString : IMigrationMetadata
+    public sealed partial class Rebuild : IMigrationMetadata
     {
-        private readonly ResourceManager Resources = new ResourceManager(typeof(BookingDateStoredAsString));
+        private readonly ResourceManager Resources = new ResourceManager(typeof(Rebuild));
         
         string IMigrationMetadata.Id
         {
-            get { return "201602262018458_BookingDateStoredAsString"; }
+            get { return "201604032047379_Rebuild"; }
         }
         
         string IMigrationMetadata.Source

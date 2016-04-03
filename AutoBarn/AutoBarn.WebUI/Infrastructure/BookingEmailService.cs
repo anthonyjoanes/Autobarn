@@ -1,6 +1,7 @@
 using System;
 using System.IO;
 using System.Net.Mail;
+using System.Text;
 
 namespace AutoBarn.WebUI.Infrastructure
 {
@@ -10,7 +11,7 @@ namespace AutoBarn.WebUI.Infrastructure
         private readonly IEmailer _emailer;
         private MailMessage _message;
         private MailMessage _autobarnMessage;
-        private string _autobarnEmail;
+        private readonly string _autobarnEmail;
 
         public BookingEmailService(IEmailer emailer, string autobarnEmail)
         {
@@ -42,13 +43,24 @@ namespace AutoBarn.WebUI.Infrastructure
                 .WithSubject("AUTO-BARN Booking Confirmation")
                 .WithMessageBody(_html)
                 .Build();
+        }
+
+        public void CreateAutoBarnMessage(string firstname, string lastname, string email, string telehpone)
+        {
+            var autoBarnMessage = new StringBuilder();
+            autoBarnMessage.Append(string.Format("<p>Name: {0} {1}</p>", firstname, lastname));
+            autoBarnMessage.Append(string.Format("<p>Email: {0}</p>", email));
+            autoBarnMessage.Append(string.Format("<p>Telephone: {0}</p>", telehpone));
+            autoBarnMessage.Append("<hr/>");
+
 
             _autobarnMessage = new MailMessageBuilder()
-                .WithFromAddress("booking@autobarnmotorservices.co.uk")
-                .WithToAddress(_autobarnEmail)
-                .WithSubject("NEW BOOKING MADE")
-                .WithMessageBody(string.Format("<h4>The following request has just been submitted</h4><hr /><br />{0}", _html))
-                .Build();
+               .WithFromAddress("booking@autobarnmotorservices.co.uk")
+               .WithToAddress(_autobarnEmail)
+               .WithSubject("NEW BOOKING MADE")
+               .WithMessageBody(string.Format("<h4>The following request has just been submitted</h4><hr /><br />{0}{1}"
+               , autoBarnMessage, _html))
+               .Build();
         }
 
         public void SendEmail()
