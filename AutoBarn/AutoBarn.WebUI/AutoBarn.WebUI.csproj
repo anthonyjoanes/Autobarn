@@ -291,9 +291,9 @@
     <Compile Include="Migrations\201601042159353_BlockDates.Designer.cs">
       <DependentUpon>201601042159353_BlockDates.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201603202132015_UnknownButDoAnyway.cs" />
-    <Compile Include="Migrations\201603202132015_UnknownButDoAnyway.Designer.cs">
-      <DependentUpon>201603202132015_UnknownButDoAnyway.cs</DependentUpon>
+    <Compile Include="Migrations\201604032047379_Rebuild.cs" />
+    <Compile Include="Migrations\201604032047379_Rebuild.Designer.cs">
+      <DependentUpon>201604032047379_Rebuild.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
@@ -546,8 +546,8 @@
     <EmbeddedResource Include="Migrations\201601042159353_BlockDates.resx">
       <DependentUpon>201601042159353_BlockDates.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201603202132015_UnknownButDoAnyway.resx">
-      <DependentUpon>201603202132015_UnknownButDoAnyway.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201604032047379_Rebuild.resx">
+      <DependentUpon>201604032047379_Rebuild.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
