@@ -1,0 +1,8 @@
+AutoBarn/AutoBarn.WebUI.Tests/bin/
+AutoBarn/AutoBarn.WebUI.Tests/obj/
+*.mdf
+AutoBarn/AutoBarn.WebUI/obj/
+AutoBarn/AutoBarn.WebUI/bin/
+AutoBarn/AutoBarn.WebUI/App_Data/
+AutoBarn/.vs/
+AutoBarn/packages/
