@@ -43,13 +43,6 @@ namespace AutoBarn.WebUI.Infrastructure
                 .WithSubject("AUTO-BARN Booking Confirmation")
                 .WithMessageBody(_html)
                 .Build();
-
-            _autobarnMessage = new MailMessageBuilder()
-                .WithFromAddress("booking@autobarnmotorservices.co.uk")
-                .WithToAddress(_autobarnEmail)
-                .WithSubject("NEW BOOKING MADE")
-                .WithMessageBody(string.Format("<h4>The following request has just been submitted</h4><hr /><br />{0}", _html))
-                .Build();
         }
 
         public void CreateAutoBarnMessage(string firstname, string lastname, string email, string telehpone)
