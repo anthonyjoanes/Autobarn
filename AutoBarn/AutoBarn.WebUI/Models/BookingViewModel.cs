@@ -22,7 +22,7 @@ namespace AutoBarn.WebUI.Models
         public Contact Contact { get; set; }
         public Model SelectedModel { get; set; }
         public Service SelectedService { get; set; }
-        public DateTime BookingDate { get; set; }
+        public string BookingDate { get; set; }
         public string Notes { get; set; }
     }
 }

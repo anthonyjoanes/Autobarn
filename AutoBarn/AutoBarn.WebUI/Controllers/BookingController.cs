@@ -103,7 +103,13 @@ namespace AutoBarn.WebUI.Controllers
 
         public ActionResult Save(NewBookingViewModel model)
         {
-            
+
+            if (model.BookingDate == null)
+            {
+                throw new Exception("The booking date was null");
+            }
+
+
             var contact =
                 _contactRepository
                     .GetAll().FirstOrDefault(c => c.Email == model.Contact.Email && c.Registration == model.Contact.Registration);
@@ -128,7 +134,7 @@ namespace AutoBarn.WebUI.Controllers
             {
                 ModelId = model.SelectedModel.Id,
                 ServiceId = model.SelectedService.Id,
-                Date = model.BookingDate.ToShortDateString(),
+                Date = model.BookingDate,
                 Contact = contact,
                 Notes = string.IsNullOrEmpty(model.Notes) ? string.Empty : model.Notes
             };
@@ -142,6 +148,7 @@ namespace AutoBarn.WebUI.Controllers
             _bookingEmailService.SetHtmlString(Server.MapPath("~/App_Data/bookingconfirmation.html"));
             _bookingEmailService.SetPlaceholders(booking.Id, contact.Firstname, contact.Registration, booking.Date, booking.Notes);
             _bookingEmailService.CreateMessage(contact.Email);
+            _bookingEmailService.CreateAutoBarnMessage(contact.Firstname, contact.Lastname, contact.Email, contact.Telephone);
             _bookingEmailService.SendEmail();
 
             return RedirectToAction("ThankYou", new { id = booking.Id});

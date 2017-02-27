@@ -12,7 +12,7 @@ namespace AutoBarn.WebUI.Infrastructure
 
         public Emailer(string host = "smtp.123-reg.co.uk")
         {
-            var booking = new NetworkCredential("booking@autobarnmotorservices.co.uk", "aB19cCd69");
+            var booking = new NetworkCredential("booking@autobarnmotorservices.co.uk", "aB19cCd69!");
             _client = new SmtpClient(host) {Credentials = booking};
         }
 

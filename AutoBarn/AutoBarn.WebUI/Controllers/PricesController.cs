@@ -1,13 +1,12 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Linq;
-using System.Web;
 using System.Web.Mvc;
 using AutoBarn.WebUI.Data;
 using AutoBarn.WebUI.Data.Entities;
 
-namespace AutoBarn.WebUI.Areas.Admin.Controllers
+namespace AutoBarn.WebUI.Controllers
 {
+    [Authorize]
     public class PricesController : Controller
     {
         private readonly IRepository<Model> _modelRepository;
