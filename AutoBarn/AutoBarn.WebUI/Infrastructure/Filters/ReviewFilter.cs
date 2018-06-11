@@ -6,7 +6,7 @@ using System.Web.Mvc;
 using AutoBarn.WebUI.Data;
 using AutoBarn.WebUI.Data.Entities;
 
-namespace AutoBarn.WebUI.Infrastructure.Filters
+namespace AutoBarn.WebUI.Services.Filters
 {
     public class ReviewInfoFilter : ActionFilterAttribute
     {

@@ -25,6 +25,7 @@
     <UseGlobalApplicationHostFile />
     <NuGetPackageImportStamp>
     </NuGetPackageImportStamp>
+    <Use64BitIISExpress />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -219,14 +220,14 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Infrastructure\ContactEmailService.cs" />
-    <Compile Include="Infrastructure\Emailer.cs" />
-    <Compile Include="Infrastructure\BookingEmailService.cs" />
+    <Compile Include="Services\ContactEmailService.cs" />
+    <Compile Include="Services\Emailer.cs" />
+    <Compile Include="Services\BookingEmailService.cs" />
     <Compile Include="Infrastructure\Filters\ReviewFilter.cs" />
-    <Compile Include="Infrastructure\IBookingEmailService.cs" />
-    <Compile Include="Infrastructure\IContactEmailService.cs" />
-    <Compile Include="Infrastructure\IEmailer.cs" />
-    <Compile Include="Infrastructure\MailMessageBuilder.cs" />
+    <Compile Include="Services\IBookingEmailService.cs" />
+    <Compile Include="Services\IContactEmailService.cs" />
+    <Compile Include="Services\IEmailer.cs" />
+    <Compile Include="Services\MailMessageBuilder.cs" />
     <Compile Include="Migrations\201511122207104_initial.cs" />
     <Compile Include="Migrations\201511122207104_initial.Designer.cs">
       <DependentUpon>201511122207104_initial.cs</DependentUpon>
@@ -477,7 +478,7 @@
     <Content Include="Views\Booking\ThankYou.cshtml" />
     <Content Include="Views\Home\ServiceMot.cshtml" />
     <Content Include="Views\German\Brands.cshtml" />
-    <Content Include="Views\Home\Team.cshtml" />
+    <Content Include="Views\Home\Ramp.cshtml" />
     <Content Include="Views\Error\Index.cshtml" />
     <Content Include="Views\Shared\_Services.cshtml" />
     <Content Include="Views\Shared\_Slider.cshtml" />
@@ -486,7 +487,9 @@
     <Content Include="Views\German\Mercedes_Servicing_specialists.cshtml" />
     <Content Include="Views\German\Motorhome_Servicing_And_Class_7_MOTs.cshtml" />
     <Content Include="Views\German\VW_Audi_Seat_And_Skoda_Servicing.cshtml" />
-    <None Include="Web.LIVE.config" />
+    <None Include="Web.LIVE.config">
+      <SubType>Designer</SubType>
+    </None>
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>

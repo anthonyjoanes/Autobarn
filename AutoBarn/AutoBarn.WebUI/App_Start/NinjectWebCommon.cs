@@ -1,7 +1,7 @@
 using System.Data.Entity;
 using System.Web.Configuration;
 using AutoBarn.WebUI.Data;
-using AutoBarn.WebUI.Infrastructure;
+using AutoBarn.WebUI.Services;
 
 [assembly: WebActivatorEx.PreApplicationStartMethod(typeof(AutoBarn.WebUI.App_Start.NinjectWebCommon), "Start")]
 [assembly: WebActivatorEx.ApplicationShutdownMethodAttribute(typeof(AutoBarn.WebUI.App_Start.NinjectWebCommon), "Stop")]
