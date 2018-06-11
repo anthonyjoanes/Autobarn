@@ -1,9 +1,14 @@
-﻿using System.Data.Entity;
-using System.Linq;
-
-namespace AutoBarn.WebUI.Data
+﻿namespace AutoBarn.WebUI.Data
 {
-    public class SqlRepository<T> : IRepository<T> where T : class
+    using System.Data.Entity;
+    using System.Linq;
+
+    /// <summary>
+    /// Base SQL Repository
+    /// </summary>
+    /// <typeparam name="T">Type of repository</typeparam>
+    public class SqlRepository<T> : IRepository<T> 
+        where T : class
     {
         private readonly DbContext _context;
         private readonly DbSet<T> _set;

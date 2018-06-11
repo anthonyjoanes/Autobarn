@@ -1,19 +1,15 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Data.Entity;
-using System.Linq;
-using System.Runtime.Caching;
-using System.Web;
-using System.Web.Mvc;
-using AutoBarn.WebUI.Data;
-using AutoBarn.WebUI.Data.Entities;
-using AutoBarn.WebUI.Infrastructure;
-using AutoBarn.WebUI.Infrastructure.Filters;
-using AutoBarn.WebUI.Models;
-using WebGrease.Css.Extensions;
-
-namespace AutoBarn.WebUI.Controllers
+﻿namespace AutoBarn.WebUI.Controllers
 {
+    using System;
+    using System.Data.Entity;
+    using System.Linq;
+    using System.Runtime.Caching;
+    using System.Web.Mvc;
+    using AutoBarn.WebUI.Data;
+    using AutoBarn.WebUI.Data.Entities;
+    using AutoBarn.WebUI.Models;
+    using AutoBarn.WebUI.Services;
+
     public class BookingController : Controller
     {
         private readonly IRepository<Make> _makeRepository;
@@ -101,35 +97,35 @@ namespace AutoBarn.WebUI.Controllers
             return Json(dates, JsonRequestBehavior.AllowGet);
         }
 
+        /// <summary>
+        /// Save a new booking submission from the Booking form page
+        /// </summary>
+        /// <param name="model">The Booking view model.</param>
+        /// <returns></returns>
         public ActionResult Save(NewBookingViewModel model)
         {
-
             if (model.BookingDate == null)
             {
                 throw new Exception("The booking date was null");
             }
 
-
-            var contact =
-                _contactRepository
-                    .GetAll().FirstOrDefault(c => c.Email == model.Contact.Email && c.Registration == model.Contact.Registration);
-
-            if (contact == null)
+            // obfuscate the identity fields for contacts now
+            // we shouldn't store user data anymore as part of the
+            // new GDPR rules, more work involved if we want to start
+            // doing things with the users data
+            var contact = new Contact
             {
-                contact = new Contact
-                {
-                    Firstname = model.Contact.Firstname,
-                    Lastname = model.Contact.Lastname,
-                    Email = model.Contact.Email,
-                    Telephone = model.Contact.Telephone,
-                    ModelId = model.SelectedModel.Id,
-                    Registration = model.Contact.Registration
-                };
+                Firstname = "XXXXXXX",
+                Lastname = "XXXXXXX",
+                Email = "XXXXXXX",
+                Telephone = "XXXXXXX",
+                ModelId = model.SelectedModel.Id,
+                Registration = "XXXXXXXXXX"
+            };
 
-                _contactRepository.Add(contact);
-                _contactRepository.Commit();
-            }
-
+            _contactRepository.Add(contact);
+            _contactRepository.Commit();
+            
             var booking = new Booking
             {
                 ModelId = model.SelectedModel.Id,
@@ -142,13 +138,11 @@ namespace AutoBarn.WebUI.Controllers
             _bookingRepository.Add(booking);
 
             _bookingRepository.Commit();
-
-            
-
+           
             _bookingEmailService.SetHtmlString(Server.MapPath("~/App_Data/bookingconfirmation.html"));
-            _bookingEmailService.SetPlaceholders(booking.Id, contact.Firstname, contact.Registration, booking.Date, booking.Notes);
-            _bookingEmailService.CreateMessage(contact.Email);
-            _bookingEmailService.CreateAutoBarnMessage(contact.Firstname, contact.Lastname, contact.Email, contact.Telephone);
+            _bookingEmailService.SetPlaceholders(booking.Id, model.Contact.Firstname, model.Contact.Registration, booking.Date, booking.Notes);
+            _bookingEmailService.CreateMessage(model.Contact.Email);
+            _bookingEmailService.CreateAutoBarnMessage(model.Contact.Firstname, model.Contact.Lastname, model.Contact.Email, model.Contact.Telephone);
             _bookingEmailService.SendEmail();
 
             return RedirectToAction("ThankYou", new { id = booking.Id});
@@ -162,7 +156,6 @@ namespace AutoBarn.WebUI.Controllers
                 .Include(x => x.Model.Make)
                 .Include(x => x.Service)
                 .Include(x => x.Contact).FirstOrDefault(x => x.Id == id);
-
 
             return View(booking);
         }

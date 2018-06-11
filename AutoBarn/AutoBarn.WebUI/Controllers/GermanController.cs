@@ -4,7 +4,7 @@ using System.Linq;
 using System.Runtime.Caching;
 using System.Web;
 using System.Web.Mvc;
-using AutoBarn.WebUI.Infrastructure.Filters;
+using AutoBarn.WebUI.Services.Filters;
 
 namespace AutoBarn.WebUI.Controllers
 {

@@ -19,9 +19,7 @@
     @Scripts.Render("~/bundles/googleanalytics")
 </head>
 <body style="">
-   
-
-<div class="top-line">
+   <div class="top-line">
     <div class="row instant-quote">
         <div class="col s12 center-align">
             <span class="glyphicon glyphicon-phone" aria-hidden="true"></span>
@@ -32,12 +30,11 @@
         <div class="col s12 center-align">
             <span><a href="@Url.Action("New", "Booking")">INSTANT ONLINE QUOTE</a></span>
         </div>
-    </div>
+  </div>
 </div>
 
 <nav id="nav-bar" role="navigation">
     <div class="nav-wrapper container">
-        @*<a id="logo-container" href="#" class="brand-logo">AUTO-BARN MOTOR SERVICES LTD</a>*@
         <a href="@Url.Action("Index", "Home")"><img src="~/Content/Images/auto-barn-logo.png" class="brand-logo"/></a>
         <ul class="right hide-on-med-and-down">
             <li><a href="@Url.Action("New", "Booking")">MAKE A BOOKING</a></li>
@@ -50,21 +47,9 @@
                     <li><a href="@Url.Action("Motorhome_Servicing_And_Class_7_MOTs", "German")" style="color: #3878E2;">Motorhome Servicing & Class 7 MOT's</a></li>
                 </ul>
             </li>
-            @*<li>
-                <!-- Dropdown Trigger -->
-                <a class='dropdown-button btn' href='#' data-activates='dropdown1'>Drop Me!</a>
-
-                <!-- Dropdown Structure -->
-                <ul id='dropdown1' class='dropdown-content'>
-                    <li><a href="#!">one</a></li>
-                    <li><a href="#!">two</a></li>
-                    <li class="divider"></li>
-                    <li><a href="#!">three</a></li>
-                </ul>
-            </li>*@
             <li><a href="@Url.Action("Index", "Gallery")">GALLERY</a></li>
             <li><a href="@Url.Action("Contact", "Home")">CONTACT US</a></li>
-            <li><a href="@Url.Action("Team", "Home")">MEET THE TEAM</a></li>
+            <li><a href="@Url.Action("Ramp", "Home")">RAMP HIRE</a></li>
         </ul>
         <ul id="nav-mobile" class="side-nav">
             <li><a href="@Url.Action("New", "Booking")">Make a booking</a></li>

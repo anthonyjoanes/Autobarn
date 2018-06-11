@@ -3,8 +3,8 @@ using System.Runtime.Caching;
 using System.Web.Mvc;
 using AutoBarn.WebUI.Data;
 using AutoBarn.WebUI.Data.Entities;
-using AutoBarn.WebUI.Infrastructure;
-using AutoBarn.WebUI.Infrastructure.Filters;
+using AutoBarn.WebUI.Services;
+using AutoBarn.WebUI.Services.Filters;
 using AutoBarn.WebUI.Models;
 
 namespace AutoBarn.WebUI.Controllers
@@ -48,9 +48,9 @@ namespace AutoBarn.WebUI.Controllers
             return View();
         }
 
-        public ActionResult Team()
+        public ActionResult Ramp()
         {
-            ViewBag.Message = "Meet the team.";
+            ViewBag.Message = "Ramp for Hire!";
             return View();
         }
 
