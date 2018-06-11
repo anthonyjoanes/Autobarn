@@ -1,6 +1,6 @@
 using System.Net.Mail;
 
-namespace AutoBarn.WebUI.Infrastructure
+namespace AutoBarn.WebUI.Services
 {
     public class MailMessageBuilder
     {

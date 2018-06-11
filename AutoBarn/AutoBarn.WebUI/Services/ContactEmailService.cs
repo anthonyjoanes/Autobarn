@@ -2,7 +2,7 @@
 using System.Net.Mail;
 using AutoBarn.WebUI.Models;
 
-namespace AutoBarn.WebUI.Infrastructure
+namespace AutoBarn.WebUI.Services
 {
     public class ContactEmailService : IContactEmailService
     {

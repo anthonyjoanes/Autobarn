@@ -3,7 +3,7 @@ using System.IO;
 using System.Net.Mail;
 using System.Text;
 
-namespace AutoBarn.WebUI.Infrastructure
+namespace AutoBarn.WebUI.Services
 {
     public class BookingEmailService : IBookingEmailService
     {

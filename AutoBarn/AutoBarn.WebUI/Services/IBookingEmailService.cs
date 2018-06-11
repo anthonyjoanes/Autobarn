@@ -1,4 +1,4 @@
-namespace AutoBarn.WebUI.Infrastructure
+namespace AutoBarn.WebUI.Services
 {
     public interface IBookingEmailService
     {
