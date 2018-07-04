@@ -316,6 +316,7 @@
     <Content Include="Content\Images\background2.jpg" />
     <Content Include="Content\Images\background3.jpg" />
     <Content Include="Content\Images\booking-banner.jpg" />
+    <Content Include="Content\Images\car_on_ramp.jpg" />
     <Content Include="Content\Images\checkatrade-logo.png" />
     <Content Include="Content\Images\Dan Edgar.JPG" />
     <Content Include="Content\Images\dummy-person.jpg" />
@@ -369,8 +370,12 @@
     <Content Include="Content\Images\home-image1.png" />
     <Content Include="Content\Images\home-image2.png" />
     <Content Include="Content\Images\ian picture.JPG" />
+    <Content Include="Content\Images\large_ramp.png" />
     <Content Include="Content\Images\make-a-booking-banner.png" />
     <Content Include="Content\Images\make-booking-image.png" />
+    <Content Include="Content\Images\ramp1.jpg" />
+    <Content Include="Content\Images\ramp_flyer.jpg" />
+    <Content Include="Content\Images\rentaramp.jpg" />
     <Content Include="Content\Images\Social\FB-FindUsonFacebook-online-100.png" />
     <Content Include="Content\Images\Social\FB-FindUsonFacebook-online-1024.png" />
     <Content Include="Content\Images\Social\FB-FindUsonFacebook-online-114.png" />
@@ -436,6 +441,7 @@
     <Content Include="Scripts\respond.js" />
     <Content Include="Scripts\respond.min.js" />
     <Content Include="Scripts\_references.js" />
+    <Content Include="Views\Booking\New.Mobile.cshtml" />
     <None Include="Views\Shared\_OtherMakes.cshtml" />
     <Content Include="Web.config">
       <SubType>Designer</SubType>
