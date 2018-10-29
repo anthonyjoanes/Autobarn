@@ -137,38 +137,5 @@
 @Scripts.Render("~/bundles/materialize")
 @RenderSection("scripts", required: false)
 
-
-    <script type="text/javascript">
-
- var mhProtocol = ((document.location.protocol == "https:") ? "https://" : "http://");
-
- var mhRand = new Date().getTime();
-
- document.write(unescape("%3Cscript"
-
- + " src='"+mhProtocol+"www.dynamicnumbers.mediahawk.co.uk/getVisitorParams.js?mhRand="+mhRand+"'"
-
- + " type='text/javascript'%3E%3C/script%3E"));
-
-    </script>
-
-    <script type="text/javascript">
-
-    var mhAccountRef = "VA-12684";
-
-    document.write(unescape("%3Cscript"
-        + " src='" + mhProtocol + "www.dynamicnumbers.mediahawk.co.uk/getVisitorNumber.php"
-        + "?mhAccountRef=" + mhAccountRef + mhUrlParamString + "&mhRand=" + mhRand + "'"
-        + "type='text/javascript'%3E%3C/script%3E"));
-
-    </script>
-
-    <script type="text/javascript">
-
- try {mhChangeTelNumber();}
-
- catch (err){}
-
-    </script>
 </body>
 </html>

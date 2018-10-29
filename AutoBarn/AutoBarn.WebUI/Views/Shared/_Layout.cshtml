@@ -1,22 +1,23 @@
 ﻿<!DOCTYPE html>
 <html>
 <head>
-    <meta charset="utf-8"/>
+    <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>@ViewBag.Title | Service & MOT | Car service | Engine Remapping Waterlooville | Car MOT | Hampshire car service | Waterlooville car MOT | Waterloovile MOT and servicing |</title>
-    <meta name="description" content="Auto-Barn are a family owned garage able repair, MOT and service all motor vehicles upto and including 3.5tonne commercial vehicles. Based in Waterlooville, Hampshire"/>
-    <meta name="keywords" content="Car service , Engine Remapping Waterlooville , Car MOT , Hampshire car service , Waterlooville car MOT , Waterloovile MOT and servicing, Auto-Barn Motor Services, Autobarn, Auto-Barn, autobahn, MOT, Service, Waterlooville Garages, Hampshire garages, Car Service, Car Repair, Car MOT"/>
+    <meta name="description" content="Auto-Barn are a family owned garage able repair, MOT and service all motor vehicles upto and including 3.5tonne commercial vehicles. Based in Waterlooville, Hampshire" />
+    <meta name="keywords" content="Car service , Engine Remapping Waterlooville , Car MOT , Hampshire car service , Waterlooville car MOT , Waterloovile MOT and servicing, Auto-Barn Motor Services, Autobarn, Auto-Barn, autobahn, MOT, Service, Waterlooville Garages, Hampshire garages, Car Service, Car Repair, Car MOT" />
 
     @Styles.Render("~/Content/materialize")
     @Scripts.Render("~/bundles/modernizr")
     @RenderSection("style", required: false)
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <link href='http://fonts.googleapis.com/css?family=Montserrat:400' rel='stylesheet' type='text/css'/>
-    <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Crimson+Text"/>
+    <link href='http://fonts.googleapis.com/css?family=Montserrat:400' rel='stylesheet' type='text/css' />
+    <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Crimson+Text" />
     @*<link rel="stylesheet" href="~/Content/bootstrap-image-gallery.min.css">*@
 
-    
+
     @Scripts.Render("~/bundles/googleanalytics")
+    @Scripts.Render("~/bundles/calltracking")
 </head>
 
 
@@ -35,7 +36,7 @@
 
 <nav id="nav-bar" role="navigation">
     <div class="nav-wrapper container">
-        @*<a id="logo-container" href="#" class="brand-logo">AUTO-BARN MOTOR SERVICES LTD</a>*@
+        @*<a id="logo-container" href="#" class="brand-logo">AUTO-BARN MOTOR SERVICES LTD</a>
         <a href="@Url.Action("Index", "Home")"><img src="~/Content/Images/auto-barn-logo.png" class="brand-logo"/></a>
         <ul class="right hide-on-med-and-down">
             <li><a href="@Url.Action("New", "Booking")">MAKE A BOOKING</a></li>
@@ -136,38 +137,6 @@
 @Scripts.Render("~/bundles/jquery")
 @Scripts.Render("~/bundles/materialize")
 @RenderSection("scripts", required: false)
-
-    <script type="text/javascript">
-
- var mhProtocol = ((document.location.protocol == "https:") ? "https://" : "http://");
-
- var mhRand = new Date().getTime();
-
- document.write(unescape("%3Cscript"
-
- + " src='"+mhProtocol+"www.dynamicnumbers.mediahawk.co.uk/getVisitorParams.js?mhRand="+mhRand+"'"
-
- + " type='text/javascript'%3E%3C/script%3E"));
-
-    </script>
-
-<script type="text/javascript">
-
-    var mhAccountRef = "VA-12684";
-
-    document.write(unescape("%3Cscript"
-        + " src='" + mhProtocol + "www.dynamicnumbers.mediahawk.co.uk/getVisitorNumber.php"
-        + "?mhAccountRef=" + mhAccountRef + mhUrlParamString + "&mhRand=" + mhRand + "'"
-        + "type='text/javascript'%3E%3C/script%3E"));
-
-</script>
-
-<script type="text/javascript">
-
- try {mhChangeTelNumber();}
-
- catch (err){}
-
-    </script>
+    
 </body>
 </html>
