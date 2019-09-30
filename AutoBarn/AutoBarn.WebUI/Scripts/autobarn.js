@@ -5,7 +5,7 @@
         $('.parallax').parallax();
         $('.slider').slider({ full_width: true, indicators: false });
         $('.materialboxed').materialbox();
-        $('.carousel').carousel();
+        //$('.carousel').carousel();
         $('.datepicker').pickadate({
             selectMonths: true, // Creates a dropdown to control month
             selectYears: 15 // Creates a dropdown of 15 years to control year
