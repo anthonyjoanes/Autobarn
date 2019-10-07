@@ -4,29 +4,21 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<div style="background-color: #084ca1; margin-bottom: -20px; margin-top: 0px;">
-    <div class="row">
-        <div class="col s12 m4 center-align">
-            <img src="~/Content/Images/Recovery/dka recovery services van.jpg" />
-        </div>
-        <div class="col s12 m4">
-            <div class="caption center-align" style="color: white;">
+<div class="slider">
+    <ul class="slides" style="height: 275px;">
+        <li>
+            <img src="~/Content/Images/Recovery/dka_recovery_services_van.jpg" />
+            <div class="caption center-align">
                 <h1>Autobarn Assist</h1>
-                <h2>24 hour cover</h2>
-                <h2>for when the worst happens</h2>
-                <h2>Call anytime 07831 852806</h2>
             </div>
-        </div>
-        <div class="col s12 m4 center-align">
-            <img src="~/Content/Images/car_on_ramp.jpg" />
-        </div>
-    </div>
+        </li>
+    </ul>
 </div>
 
-<div style="background-color: #F4F4F4; margin-bottom: -20px; margin-top: -27px;">
+<div style="background-color: #F4F4F4; padding-bottom: 10px; margin-top: -40px;">
 
-   
-
+    <div class="row">
+    </div>
     <div class="row">
         <div class="col s2 m2">&nbsp;</div>
         <div class="col s12 m4">
@@ -34,11 +26,12 @@
             <p>
                 To make sure that we offer all our customers the best service possible, we have partnered up with <b>DKA Recovery</b> company as our approved recovery agent.
                 They are on call 24 hours a day 365 days a year and offer customers help and advice when the garage is closed.
-                In the event of a breakdown simply call Dave on 07831 852806, he will advise you over the phone if he can and if needed will come and recover your car to our workshop and arrange for you to get home safely. Simply give him your current location and he can give you a quote before hand to make sure you are happy with the cost.
+                In the event of a breakdown simply call Dave on <a href="tel:+07831 852806">07831 852806</a>, he will advise you over the phone if he can and if needed will come and recover your car to our workshop and arrange for you to get home safely. Simply give him your current location and he can give you a quote before hand to make sure you are happy with the cost.
             </p>
+            <h2>Large 7.5t GVW Mercedes Atego</h2>
             <p>
                 With their large 7.5t GVW Mercedes Atego DKA can recover any vehicle from a motorcycle to a 3.5t motorhome. They have 24 hour access to our safe secure car park area at Autobarn Motor Services to ensure your vehicle is in safe hands.
-                If you would prefer the vehicle recovered home or to another garage of your choice then please just let Dave know. To obtain a quote simply call Dave on 07831 852806 and tell him where you are and the destination you would like the car to go to if it is not Autobarn.
+                If you would prefer the vehicle recovered home or to another garage of your choice then please just let Dave know. To obtain a quote simply call Dave on <a href="tel:+07831 852806">07831 852806</a> and tell him where you are and the destination you would like the car to go to if it is not Autobarn.
             </p>
 
         </div>
@@ -46,17 +39,41 @@
             <h2>Replacement Vehicle</h2>
             <p>
                 Subject to availability, once your vehicle is recovered to the Autobarn Dave will be able to lend you a courtesy vehicle to continue your journey. You will have use of the car until the Autobarn have fully repaired and tested your vehicle. During busy times there may be a delay but you will be kept mobile.
-                </p>
+            </p>
             <p>
-                For any replacement cars Dave will need to see your driving license and will need your national insurance number in order to check your license satisfies our insurance company. 
-               </p>
-            <p>
+                For any replacement cars Dave will need to see your driving license and will need your national insurance number in order to check your license satisfies our insurance company.
                 You must be over 21 years of age, have no more than 3 points on your license and no disqualifications in the last 5 years. Our excess is £250.
-                </p>
+            </p>
             <p>
                 If due to demand there is no car available that evening will try our best to get you mobile as soon as we possibly can.
             </p>
+            <h2>Call anytime <a href="tel:+07831 852806">07831 852806</a></h2>
+            <h3>24 hour cover</h3>
         </div>
         <div class="col s2 m2">&nbsp;</div>
     </div>
+    <div class="row">
+
+    </div>
 </div>
+
+@section style {
+    <link href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.9.2/themes/redmond/jquery-ui.css" rel="stylesheet" />
+    <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.9.2/jquery-ui.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.10.6/moment.min.js"></script>
+    <style>
+        .indicators {
+            display: none;
+        }
+    </style>
+}
+
+@section scripts {
+
+    <script>
+    $('.button-collapse').sideNav();
+        $('.parallax').parallax();
+        $('.slider').slider({ full_width: true });
+    </script>
+
+}
