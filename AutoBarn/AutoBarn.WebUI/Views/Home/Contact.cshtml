@@ -4,7 +4,7 @@
 }
 <div style="background-color: #F4F4F4; ">
     <div class="row">
-        <div id="map"></div>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d63900.05274275421!2d-1.070927808830944!3d50.906942804811735!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x487443f096fcdee7%3A0xb23b881fc1e04aca!2sAuto-Barn%20Motor%20Services%20Ltd!5e0!3m2!1sen!2suk!4v1569872471166!5m2!1sen!2suk" width="100%" height="450" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
         <div class="col s2 m2">&nbsp;</div>
         <div class="col s8 m8 center-align">
             <h1>Contact Auto-Barn Motor Services</h1>
@@ -61,40 +61,3 @@
     </div>
 
 </div>
-<style>
-    #map {
-        width: 100%;
-        height: 400px;
-    }
-</style>
-
-
-@section scripts{
-    <script src="https://maps.googleapis.com/maps/api/js"></script>
-
-<script>
-    function initialize() {
-
-        var location = new google.maps.LatLng(50.9131654, -1.0309247);
-        var mapCanvas = document.getElementById('map');
-        var mapOptions = {
-            center: location,
-            zoom: 11,
-            scrollwheel: false,
-            mapTypeId: google.maps.MapTypeId.ROADMAP
-        }
-        var map = new google.maps.Map(mapCanvas, mapOptions);
-
-        var iconBase = 'https://maps.google.com/mapfiles/kml/shapes/';
-        var marker = new google.maps.Marker({
-            position: location,
-            map: map,
-            icon: 'http://www.myiconfinder.com/uploads/iconsets/32-32-a5485b563efc4511e0cd8bd04ad0fe9e.png'
-        });
-
-    }
-  
-    google.maps.event.addDomListener(window, 'load', initialize);
-  
-</script>
-}
