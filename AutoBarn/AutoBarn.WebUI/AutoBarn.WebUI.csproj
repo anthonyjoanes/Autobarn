@@ -375,6 +375,9 @@
     <Content Include="Content\Images\make-booking-image.png" />
     <Content Include="Content\Images\ramp1.jpg" />
     <Content Include="Content\Images\ramp_flyer.jpg" />
+    <Content Include="Content\Images\Recovery\dka_recovery_services_van.jpg" />
+    <Content Include="Content\Images\Recovery\dka recovery services with jaguar onbaord.jpg" />
+    <Content Include="Content\Images\Recovery\dka recovery services with vehicle onboard.jpg" />
     <Content Include="Content\Images\rentaramp.jpg" />
     <Content Include="Content\Images\Social\FB-FindUsonFacebook-online-100.png" />
     <Content Include="Content\Images\Social\FB-FindUsonFacebook-online-1024.png" />
@@ -442,6 +445,7 @@
     <Content Include="Scripts\respond.min.js" />
     <Content Include="Scripts\_references.js" />
     <Content Include="Views\Booking\New.Mobile.cshtml" />
+    <Content Include="Views\Home\Recovery.cshtml" />
     <None Include="Views\Shared\_OtherMakes.cshtml" />
     <Content Include="Web.config">
       <SubType>Designer</SubType>

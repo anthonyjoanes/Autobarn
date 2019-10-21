@@ -38,7 +38,8 @@
         <a href="@Url.Action("Index", "Home")"><img src="~/Content/Images/auto-barn-logo.png" class="brand-logo"/></a>
         <ul class="right hide-on-med-and-down">
             <li><a href="@Url.Action("New", "Booking")">MAKE A BOOKING</a></li>
-            <li><a href="@Url.Action("ServiceMot", "Home")" data-activates='dropdown1' class='dropdown-button btn'>SERVICE & MOT</a>
+            <li>
+                <a href="@Url.Action("ServiceMot", "Home")" data-activates='dropdown1' class='dropdown-button btn'>SERVICE & MOT</a>
                 <!-- Dropdown Structure -->
                 <ul id='dropdown1' class='dropdown-content'>
                     <li><a href="@Url.Action("VW_Audi_Seat_And_Skoda_Servicing", "German")" style="color: #3878E2;">VW, Audi, Seat & Skoda Servicing</a></li>
@@ -48,8 +49,9 @@
                 </ul>
             </li>
             <li><a href="@Url.Action("Index", "Gallery")">GALLERY</a></li>
-            <li><a href="@Url.Action("Contact", "Home")">CONTACT US</a></li>
+            <li><a href="@Url.Action("Recovery", "Home")">BREAKDOWN SERVICE</a></li>
             <li><a href="@Url.Action("Ramp", "Home")">RAMP HIRE</a></li>
+            <li><a href="@Url.Action("Contact", "Home")">CONTACT US</a></li>
         </ul>
         <ul id="nav-mobile" class="side-nav">
             <li><a href="@Url.Action("New", "Booking")">Make a booking</a></li>
@@ -64,8 +66,8 @@
                 </ul>
             </li>
             <li><a href="@Url.Action("Index", "Gallery")">Gallery</a></li>
+            <li><a href="@Url.Action("Recovery", "Home")">Breakdown Service</a></li>
             <li><a href="@Url.Action("Contact", "Home")">Contact us</a></li>
-            <li><a href="@Url.Action("Team", "Home")">Meet the team</a></li>
         </ul>
         <a href="#" data-activates="nav-mobile" class="button-collapse"><i class="material-icons">menu</i></a>
     </div>
@@ -113,7 +115,7 @@
     </div>
     <div class="footer-copyright">
         <div class="container center-align">
-            Copyright Auto-Barn Motor Services 2015. All rights reserved.
+            Copyright Auto-Barn Motor Services 2015. All rights reserved. <a href="https://4plus12.co.uk/websites">Want a website like this?</a>
         </div>
     </div>
 </footer>

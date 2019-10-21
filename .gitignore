@@ -16,3 +16,6 @@ AutoBarn/AutoBarn.WebUI.Tests/bin/
 AutoBarn/.vs/
 AutoBarn/AutoBarn.WebUI/App_Data/
 >>>>>>> develop
+AutoBarn/AutoBarn.WebUI/Properties/PublishProfiles/ReleaseFileSystem.pubxml.user
+.vs/VSWorkspaceState.json
+.vs

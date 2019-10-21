@@ -54,6 +54,12 @@ namespace AutoBarn.WebUI.Controllers
             return View();
         }
 
+        public ActionResult Recovery()
+        {
+            ViewBag.Message = "Recovery";
+            return View();
+        }
+
         [HttpPost]
         public ActionResult Contact(ContactViewModel contact)
         {
