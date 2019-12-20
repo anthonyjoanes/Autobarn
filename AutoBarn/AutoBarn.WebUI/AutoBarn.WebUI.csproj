@@ -198,6 +198,7 @@
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="Controllers\BlockDateController.cs" />
     <Compile Include="Controllers\ManagementAdminController.cs" />
+    <Compile Include="Controllers\PegasusController.cs" />
     <Compile Include="Controllers\PricesController.cs" />
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\BookingController.cs" />
@@ -446,6 +447,12 @@
     <Content Include="Scripts\_references.js" />
     <Content Include="Views\Booking\New.Mobile.cshtml" />
     <Content Include="Views\Home\Recovery.cshtml" />
+    <Content Include="Views\Pegasus\Automatic-Electric-Side-Steps.cshtml" />
+    <Content Include="Views\Pegasus\Hard-Tops.cshtml" />
+    <Content Include="Views\Pegasus\Sports-Lids.cshtml" />
+    <Content Include="Views\Pegasus\Side-Steps.cshtml" />
+    <Content Include="Views\Pegasus\Top-Up-Covers.cshtml" />
+    <Content Include="Views\Pegasus\Accessories.cshtml" />
     <None Include="Views\Shared\_OtherMakes.cshtml" />
     <Content Include="Web.config">
       <SubType>Designer</SubType>
